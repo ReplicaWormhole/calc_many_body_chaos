@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage[marginpar=0pt]{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=3cm,lmargin=1.5cm,rmargin=1.5cm,footskip=1cm}
+\usepackage{amsfonts, amsmath, amssymb, amsthm,graphicx}
+\usepackage{physics}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{authblk}
+\usepackage{dsfont}
+
+\usepackage[hang]{footmisc}
+\setlength{\footnotemargin}{1em} % indent after the footnote number
+\renewcommand{\baselinestretch}{1.1}  % between the lines
+
+% custom total width of the footnote block
+\renewcommand{\footnotelayout}{%
+  \setlength{\parindent}{0pt}% no extra indent
+  \setlength{\leftskip}{2em}% shift whole block to the right
+  \setlength{\rightskip}{3em}% optional right margin
+}
+\usepackage{cite}
+\usepackage{caption}
+%\captionsetup[figure]{width=0.85\linewidth}
+%\captionsetup[figure]{font=footnotesize} 
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+\newcommand{\id}{\mathds{I}}
+
+\newcommand{\cA}{{\mathcal A}}
+\newcommand{\cB}{{\mathcal B}}
+\newcommand{\cC}{{\mathcal C}}
+\newcommand{\cD}{{\mathcal D}}
+\newcommand{\cE}{{\mathcal E}}
+\newcommand{\cF}{{\mathcal F}}
+\newcommand{\cG}{{\mathcal G}}
+\newcommand{\cH}{{\mathcal H}}
+\newcommand{\cI}{{\mathcal I}}
+\newcommand{\cJ}{{\mathcal J}}
+\newcommand{\cK}{{\mathcal K}}
+\newcommand{\cL}{{\mathcal L}}
+\newcommand{\cM}{{\mathcal M}}
+\newcommand{\cN}{{\mathcal N}}
+\newcommand{\cO}{{\mathcal O}}
+\newcommand{\cP}{{\mathcal P}}
+\newcommand{\cQ}{{\mathcal Q}}
+\newcommand{\cR}{{\mathcal R}}
+\newcommand{\cS}{{\mathcal S}}
+\newcommand{\cT}{{\mathcal T}}
+\newcommand{\cU}{{\mathcal U}}
+\newcommand{\cV}{{\mathcal V}}
+\newcommand{\cW}{{\mathcal W}}
+\newcommand{\cX}{{\mathcal X}}
+\newcommand{\cY}{{\mathcal Y}}
+\newcommand{\cZ}{{\mathcal Z}}
+
+\renewcommand\a{\alpha}
+\renewcommand\b{\beta}
+\renewcommand\c{\chi}
+\newcommand\C{\Chi}
+\renewcommand\d{\delta}
+\newcommand\D{\Delta}
+\newcommand\e{\epsilon}
+\newcommand\ve{\varepsilon}
+\newcommand\g{\gamma}
+\newcommand\G{\Gamma}
+\newcommand\h{\eta}
+\renewcommand\k{\kappa}
+\renewcommand\l{\lambda}
+\renewcommand\L{\Lambda}
+\newcommand\m{\mu}
+\newcommand\n{\nu}
+\newcommand\p{\phi}
+\renewcommand\P{\Phi}
+\newcommand\vp{\varphi}
+\newcommand\q{\theta}
+\newcommand\Q{\Theta}
+\renewcommand\r{\rho}
+\newcommand\s{\sigma}
+\renewcommand\S{\Sigma}
+\renewcommand\t{\tau}
+\renewcommand\u{\upsilon}
+\newcommand\U{\Upsilon}
+\newcommand\w{\omega}
+\newcommand\W{\Omega}
+\newcommand\x{\xi}
+\newcommand\X{\Xi}
+\newcommand\y{\psi}
+\newcommand\Y{\Psi}
+\newcommand\z{\zeta}
+
+
+
+\begin{document}
+Lagrange density:
+\begin{equation}
+    \mathcal{L} = \frac{1}{2}\tr\left( \dot{\Phi}^2 -(\nabla\Phi)^2 - m^2 \Phi^2 - 2g^2 \Phi^4\right).
+\end{equation}
+Squared commutator:
+\begin{equation}
+    C(t) = \frac{1}{N^4}\sum_{aba'b'}\int d^3\mathbf{x} \ \tr\Big( \sqrt{\rho}\, [\Phi_{ab}(t,\mathbf{x}),\Phi_{a'b'}]\sqrt{\rho}\, [\Phi_{ab}(t,\mathbf{x}),\Phi_{a'b'}]^\dag\Big).
+\end{equation}
+Retarded propagator $G_R$ and Wightman function $\tilde{G}$:
+\begin{align}
+\delta_{ab'}\delta_{ba'}G_R(\mathbf{x},t)&= \theta(t) \tr\Big(\rho\,  [\Phi_{ab}(\mathbf{x},t),\Phi_{a'b'}]\Big)\\
+\delta_{ab'}\delta_{ba'}\tilde{G}(\mathbf{x},t)&=\tr\Big(\sqrt{\rho}\, \Phi_{ab}(\mathbf{x},t)\sqrt{\rho}\,\Phi_{a'b'}\Big) .
+\end{align}
+If Fourier space these take the following form in terms of the spectral
+function $\r(k) = \r(k^0,|\vec{k}|)$:
+\begin{align}
+G_R(k) &= i\int \frac{d\omega}{2\pi}\frac{\rho(\omega, |\k|)}{k^0 - \omega + i\epsilon}\\
+\tilde{G}(k) &= \frac{\rho(k)}{2\sinh \frac{\beta k^0}{2}}.
+\end{align}
+For a free field, we have $\rho(\omega,\k) = \frac{\pi}{E_{\k}}[\delta(\omega-E_{\k}) - \delta(\omega + E_{\k})]$, and therefore
+\begin{align}
+G_R(k) &= \frac{i}{2E_{\k}}\left(\frac{1}{k^0 - E_{\k}+i\epsilon} - \frac{1}{k^0 + E_{\k} + i\epsilon}\right)\label{retardedG}\\
+\tilde{G}(k) &= \sum_{s = \pm}\frac{\pi\delta(k^0-sE_\k)}{2E_\k\sinh\frac{\beta E_\k}{2}}.\label{tildeG}
+\end{align}
+
+\end{document}
