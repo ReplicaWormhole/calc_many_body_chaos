@@ -18,7 +18,13 @@ no tadpoles*)
 tops = CreateTopologies[1, 2 -> 2, Adjacencies -> {4}, 
    ExcludeTopologies -> Tadpoles];
 
-(*3) Insert fields from Phi4Matrix.mod*)
-(*Phi4Matrix defines a single real scalar class S[1]*)
-diags = InsertFields[tops, {S[1], S[1]} -> {S[1], S[1]}, 
-  Model -> "Phi4Matrix", InsertionLevel -> {Classes}]
+(*3) Insert fields from Phi4MatrixSK.mod with fixed OTOC external assignment*)
+(* Incoming: contour 1 (r,a), Outgoing: contour 2 (r,a) *)
+diags = InsertFields[
+  tops,
+  {S[1, {a1, b1, 1, r}], S[1, {a2, b2, 1, a}]} ->
+    {S[1, {a3, b3, 2, r}], S[1, {a4, b4, 2, a}]},
+  Model -> "Phi4MatrixSK",
+  GenericModel -> "Lorentz",
+  InsertionLevel -> {Classes}
+]
