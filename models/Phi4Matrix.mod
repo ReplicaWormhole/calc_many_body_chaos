@@ -1,46 +1,80 @@
+(* File header comment start. *)
 (*
+(* File name marker. *)
   Phi4Matrix.mod
+(* Short description of the model. *)
     Minimal phi^4 matrix model for FeynArts
+(* File header comment end. *)
 *)
-
+(* Declare the FeynArts model name. *)
 M$ModelName = "Phi4Matrix";
-
+(* Comment describing the next block. *)
 (* Color indices for matrix-valued scalar *)
+(* Ensure Nc is defined, defaulting to 3. *)
 If[!ValueQ[Nc], Nc = 3];
+(* Define the range for the first color index. *)
 IndexRange[ Index[Colour] ] = NoUnfold[Range[Nc]];
+(* Define the range for the second color index. *)
 IndexRange[ Index[Colour2] ] = NoUnfold[Range[Nc]];
-
+(* Comment describing the next block. *)
 (* Timefold (1,2) and r/a indices for SK contour bookkeeping *)
+(* Define SK contour timefold index values. *)
 IndexRange[ Index[Time] ] = NoUnfold[{1, 2}];
+(* Define SK r/a basis index values. *)
 IndexRange[ Index[RA] ] = NoUnfold[{r, a}];
-
+(* Begin class (field) definitions for the model. *)
 M$ClassesDescription = {
+(* Define the scalar field class S[1]. *)
   S[1] == {
+(* Field is real/self-conjugate. *)
     SelfConjugate -> True,
+(* Attach matrix, contour, and r/a indices to the field. *)
     Indices -> {Index[Colour], Index[Colour2], Index[Time], Index[RA]},
+(* Mass parameter for the scalar. *)
     Mass -> mphi,
+(* Label used in diagram output. *)
     PropagatorLabel -> "phi",
+(* Use a dashed scalar propagator line. *)
     PropagatorType -> ScalarDash,
+(* No direction arrow for the propagator. *)
     PropagatorArrow -> None
+(* Close the field class definition. *)
   }
+(* Close the classes description list. *)
 };
-
+(* Comment block describing the interaction term. *)
 (*
+(* Lagrangian interaction definition. *)
   L_int = - g^2 Tr(Phi^4)
+(* Describe the trace contraction pattern. *)
   Trace contraction: Phi_{a1 b1} Phi_{a2 b2} Phi_{a3 b3} Phi_{a4 b4}
+(* State the index identifications implied by the trace. *)
   with deltas: b1=a2, b2=a3, b3=a4, b4=a1
+(* End of interaction description block. *)
 *)
+(* Begin coupling (vertex) definitions. *)
 M$CouplingMatrices = {
+(* Define the 4-point vertex for the matrix scalar. *)
   C[
+(* First field with indices a1,b1 and SK labels i1,l1. *)
     S[1, {a1_, b1_, i1_, l1_}],
+(* Second field with indices a2,b2 and SK labels i2,l2. *)
     S[1, {a2_, b2_, i2_, l2_}],
+(* Third field with indices a3,b3 and SK labels i3,l3. *)
     S[1, {a3_, b3_, i3_, l3_}],
+(* Fourth field with indices a4,b4 and SK labels i4,l4. *)
     S[1, {a4_, b4_, i4_, l4_}]
+(* Close the field list for the coupling. *)
   ] ==
+(* Overall coupling and phase factor. *)
     -I*g2 * {{
+(* Enforce cyclic trace contractions and multiply by SK vertex factor. *)
       IndexDelta[b1, a2] * IndexDelta[b2, a3] * IndexDelta[b3, a4] * IndexDelta[b4, a1] *
+(* Placeholder for SK contour/r-a vertex structure. *)
       SKV[i1, i2, i3, i4, l1, l2, l3, l4]
+(* Close the coupling matrix element. *)
     }}
+(* Close coupling list. *)
 };
-
+(* No additional model rules. *)
 M$LastModelRules = {};
