@@ -1,0 +1,1355 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     53523,       1347]
+NotebookOptionsPosition[     49939,       1290]
+NotebookOutlinePosition[     50366,       1307]
+CellTagsIndexPosition[     50323,       1304]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"AppendTo", "[", 
+   RowBox[{
+   "$Path", ",", "\"\</home/lev/Projects/mathematica/FeynArts-3.11\>\""}], 
+   "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Needs", "[", "\"\<FeynArts`\>\"", "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"L", "=", "1"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"top", "=", 
+    RowBox[{"CreateTopologies", "[", 
+     RowBox[{"L", ",", 
+      RowBox[{"2", "->", "2"}], ",", 
+      RowBox[{"Adjacencies", "->", 
+       RowBox[{"{", "4", "}"}]}], ",", 
+      RowBox[{"ExcludeTopologies", "->", "Tadpoles"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{"Optional", " ", "preview"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Paint", "[", 
+   RowBox[{"top", ",", 
+    RowBox[{"ColumnsXRows", "->", "4"}], ",", 
+    RowBox[{"PaintLevel", "->", 
+     RowBox[{"{", "Topologies", "}"}]}]}], "]"}], ";"}], "\n"}], "Input",
+ CellChangeTimes->{{3.980837612685421*^9, 3.9808376322641153`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"9c08eda1-f11b-41c6-98c5-971dc016fa5b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "SetDelayed", "wrsym", 
+   "\"Symbol \\!\\(\\*RowBox[{\\\"Discard\\\"}]\\) is Protected.\"", 2, 2, 1, 
+   27363988719881116564, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.980840351096895*^9, 3.980841260417109*^9, 
+  3.9808710037000217`*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"c4c61474-93c9-47b6-833c-f3e960a96330"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"\"\>"], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"41fdac09-4c00-4bab-8cd3-056842d31f55"],
+
+Cell[BoxData["\<\"FeynArts 3.11 (25 Mar 2022)\"\>"], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003703074*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"90e3aaa7-c450-47e7-bbc7-849de23abcf8"],
+
+Cell[BoxData["\<\"by Hagen Eck, Sepp Kueblbeck, and Thomas Hahn\"\>"], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003703692*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"e30aeec1-348e-4c27-96e1-6ddca5eb139e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" \"\>", 
+   "\[InvisibleSpace]", "\<\"aebe/cedf/efff.m\"\>", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 1, " ", "aebe/cedf/efff.m", ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003732745*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"2d86085a-0f36-47c2-a7a8-e4da83d4d8d8"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\" \"\>", 
+   "\[InvisibleSpace]", "\<\"aebe/cfde/efff.m\"\>", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 2, " ", "aebe/cfde/efff.m", ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003734294*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"1a5420ff-27e9-44e4-87d4-f496dedbc686"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\" \"\>", 
+   "\[InvisibleSpace]", "\<\"aebe/cfdf/efef.m\"\>", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 3, " ", "aebe/cfdf/efef.m", ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003734735*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"be61188b-28c9-4db7-a0cd-d65e2a9d88a1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\" \"\>", 
+   "\[InvisibleSpace]", "\<\"aebf/cede/efff.m\"\>", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 4, " ", "aebf/cede/efff.m", ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.9808710037351*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"f765f599-6140-4219-8f99-b36f42024d9b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "5", 
+   "\[InvisibleSpace]", "\<\" \"\>", 
+   "\[InvisibleSpace]", "\<\"aebf/cedf/efef.m\"\>", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 5, " ", "aebf/cedf/efef.m", ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.98087100373547*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"0cab1622-14bc-47d6-9aad-38395ac2b2cc"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "6", 
+   "\[InvisibleSpace]", "\<\" \"\>", 
+   "\[InvisibleSpace]", "\<\"aebf/cfde/efef.m\"\>", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 6, " ", "aebf/cfde/efef.m", ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003735836*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"2089a363-9fcd-426e-a8b3-b8ebd9d104d2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "7", 
+   "\[InvisibleSpace]", "\<\" \"\>", 
+   "\[InvisibleSpace]", "\<\"aebf/cfdf/efee.m\"\>", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 7, " ", "aebf/cfdf/efee.m", ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003736189*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"1a9c305f-2022-476f-b55e-c1c295355475"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 16.999999999996362`}, {
+         10.000000000003638`, 11.999999999996362`}}], 
+        LineBox[{{0., 7.}, {10., 12.}}], 
+        LineBox[{{20.000000000005457`, 17.000000000003638`}, {
+         10.000000000012733`, 12.000000000003638`}}], 
+        LineBox[{{19.99999999999818, 6.999999999996362}, {14.999999999998181`,
+          9.499999999996362}}], 
+        LineBox[{{9.999999999998181, 12.000000000003638`}, {
+         14.999999999998181`, 9.500000000003638}}], 
+        CircleBox[{13.75, 7.}, 2.7950849718747373, {-5.176036589385496, 
+         1.1071487177940904`}], 
+        {PointSize[0.04], PointBox[{10., 12.}], PointBox[{15., 9.5}]}, 
+        InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T1",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "\"aebe/cedf/efff.m\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "aebe/cedf/efff.m", "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {0, 66}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
+         10.000000000003638`, 9.999999999996362}}], 
+        LineBox[{{0., 5.}, {10., 10.}}], 
+        LineBox[{{20.000000000003638`, 15.}, {14.999999999998181`, 
+         12.499999999996362`}}], LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{9.999999999998181, 10.000000000003638`}, {
+         14.999999999998181`, 12.500000000003638`}}], 
+        CircleBox[{13.75, 14.5}, 2.358495283014151, {-1.0121970114513346`, 
+         5.270988295728252}], 
+        {PointSize[0.04], PointBox[{10., 10.}], PointBox[{15., 12.5}]}, 
+        InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T2",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "\"aebe/cfde/efff.m\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "aebe/cfde/efff.m", "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {22, 66}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], LineBox[{{0., 15.}, {6.000000000001819, 10.}}], 
+        LineBox[{{0., 5.000000000001819}, {6.000000000001819, 
+         10.000000000001819`}}], 
+        LineBox[{{20.00000000000182, 15.000000000001819`}, {14., 
+         9.999999999998181}}], 
+        LineBox[{{20.00000000000182, 5.000000000001819}, {14., 10.}}], 
+        CircleBox[{10., 10.899999999999999`}, 
+         4.1, {-2.9202782112420023`, -0.2213144423477913}], 
+        CircleBox[{10., 9.100000000000001}, 4.1, {0.2213144423477913, 
+         2.9202782112420023`}], 
+        {PointSize[0.04], PointBox[{6., 10.}], PointBox[{14., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T3",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "\"aebe/cfdf/efef.m\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "aebe/cfdf/efef.m", "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {44, 66}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
+         10.000000000003638`, 9.999999999996362}}], 
+        LineBox[{{-1.8189894035458565`*^-12, 5.000000000003638}, {
+         4.999999999998181, 7.500000000003638}}], 
+        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
+         10.000000000012733`, 10.000000000003638`}}], 
+        LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{10.000000000003638`, 10.}, {4.999999999998181, 
+         7.499999999996362}}], 
+        CircleBox[{5.8945, 5.711}, 2.0001628058735617, {-4.2487413713838835`, 
+         2.0344439357957027`}], 
+        {PointSize[0.04], PointBox[{10., 10.}], PointBox[{5., 7.5}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T4",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "\"aebf/cede/efff.m\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "aebf/cede/efff.m", "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {66, 66}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{2.5011104298755527`*^-12, 15.000000000003638`}, {
+         10.000000000002501`, 14.000000000003638`}}], 
+        LineBox[{{2.0463630789890885`*^-12, 5.000000000003638}, {
+         10.000000000002046`, 6.000000000003638}}], 
+        LineBox[{{19.99999999999818, 14.999999999996362`}, {
+         10.000000000002274`, 13.999999999996362`}}], 
+        LineBox[{{19.999999999997726`, 4.999999999996362}, {9.999999999997726,
+          5.999999999996362}}], 
+        CircleBox[{10.899999999999999`, 10.}, 
+         4.1, {-4.491074538036899, -1.7921107691426879`}], 
+        CircleBox[{9.100000000000001, 10.}, 4.1, {-1.3494818844471055`, 
+         1.3494818844471055`}], 
+        {PointSize[0.04], PointBox[{10., 14.}], PointBox[{10., 6.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T5",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "\"aebf/cedf/efef.m\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "aebf/cedf/efef.m", "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {0, 44}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{4.547473508864641*^-13, 15.000000000003638`}, {9.5, 
+         14.500000000003638`}}], 
+        LineBox[{{0., 5.000000000003638}, {9.499999999999545, 
+         5.500000000003638}}], 
+        LineBox[{{19.999999999996362`, 14.999999999998181`}, {
+         9.499999999994543, 5.499999999996362}}], 
+        LineBox[{{19.99999999999818, 4.999999999998181}, {9.500000000001819, 
+         14.499999999998181`}}], 
+        CircleBox[{10.5125, 10.}, 
+         4.6125, {-4.491074538036899, -1.7921107691426879`}], 
+        CircleBox[{5.43143243243243, 10.}, 
+         6.066567567567569, {-0.8357062686951535, 0.8357062686951535}], 
+        {PointSize[0.04], PointBox[{9.5, 14.5}], PointBox[{9.5, 5.5}]}, 
+        InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T6",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "\"aebf/cfde/efef.m\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "aebf/cfde/efef.m", "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {22, 44}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{-1.8189894035458565`*^-12, 15.000000000003638`}, {
+         4.999999999998181, 12.500000000003638`}}], 
+        LineBox[{{0., 5.}, {10., 10.}}], 
+        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
+         10.000000000012733`, 10.000000000003638`}}], 
+        LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{4.999999999998181, 12.500000000003638`}, {9.999999999998181,
+          10.000000000003638`}}], 
+        CircleBox[{6., 14.5}, 2.23606797749979, {-2.0344439357957027`, 
+         4.2487413713838835`}], 
+        {PointSize[0.04], PointBox[{5., 12.5}], PointBox[{10., 10.}]}, 
+        InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T7",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "\"aebf/cfdf/efee.m\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "aebf/cfdf/efee.m", "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {44, 44}, {0, 0}, {22, 22}], InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["2",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->9.206257928118394],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      9.206257928118394]& ], {39.5, 91.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]], 
+   InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["\[RightArrow]",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->9.206257928118394],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      9.206257928118394]& ], {44., 91.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]], 
+   InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["2",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->9.206257928118394],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      9.206257928118394]& ], {48.5, 91.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]]},
+  
+  AspectRatio->1.075,
+  ImageSize->{288, 288},
+  PlotRange->{{0, 88}, {0, 94.6}}]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003756029*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"46142a0d-4118-4f1b-bfcb-a5f1bee8eae2"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"1", ")"}], " ", "Load", " ", "FeynArts", " ", "and", " ", "add", 
+    " ", "the", " ", "local", " ", "model", " ", "path"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"$ModelPath", "=", 
+     RowBox[{"Append", "[", 
+      RowBox[{
+      "$ModelPath", ",", "\"\</home/lev/Projects/calc_mbcwc/models\>\""}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"2", ")"}], " ", "Generate", " ", 
+      RowBox[{"topologies", ":", 
+       RowBox[{"1", "-", "loop"}]}]}], ",", 
+     RowBox[{"2", "->", "2"}], ",", 
+     RowBox[{
+      RowBox[{"only", " ", "4"}], "-", 
+      RowBox[{"point", " ", "adjacencies"}]}], ",", 
+     RowBox[{"no", " ", "tadpoles"}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"top1", " ", "=", " ", 
+    RowBox[{"top", "[", 
+     RowBox[{"[", "1", "]"}], "]"}]}], "\n", 
+   RowBox[{"Paint", "[", "top1", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"3", ")"}], " ", "Insert", " ", "fields", " ", "from", " ", 
+     RowBox[{"Phi4MatrixSK", ".", "mod"}], " ", "with", " ", "fixed", " ", 
+     "OTOC", " ", "external", " ", "assignment"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"Incoming", ":", 
+      RowBox[{"contour", " ", "1", " ", 
+       RowBox[{"(", 
+        RowBox[{"r", ",", "a"}], ")"}]}]}], ",", 
+     RowBox[{"Outgoing", ":", 
+      RowBox[{"contour", " ", "2", " ", 
+       RowBox[{"(", 
+        RowBox[{"r", ",", "a"}], ")"}]}]}]}], "*)"}], "\n", 
+   RowBox[{"diags", "=", 
+    RowBox[{"InsertFields", "[", 
+     RowBox[{"top1", ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"S", "[", "1", "]"}], ",", 
+         RowBox[{"S", "[", "1", "]"}]}], "}"}], "->", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"S", "[", "1", "]"}], ",", 
+         RowBox[{"S", "[", "1", "]"}]}], "}"}]}], ",", 
+      RowBox[{"Model", "->", "\"\<Phi4MatrixSK\>\""}], ",", 
+      RowBox[{"GenericModel", "->", "\"\<Lorentz\>\""}], ",", 
+      RowBox[{"InsertionLevel", "->", 
+       RowBox[{"{", "Classes", "}"}]}]}], "]"}]}], "\n", "\n"}]}]], "Input",
+ CellChangeTimes->{{3.9808376572915916`*^9, 3.980837661676539*^9}, {
+  3.980840437729591*^9, 3.980840455816225*^9}, {3.9808407853277884`*^9, 
+  3.980840793340946*^9}, {3.980871016451021*^9, 3.980871039171969*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"9f75e74b-32df-44a0-bc29-d340760f7a39"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Topology", "[", "2", "]"}], "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Propagator", "[", "Incoming", "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Vertex", "[", "1", "]"}], "[", "1", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Propagator", "[", "Incoming", "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Vertex", "[", "1", "]"}], "[", "2", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Propagator", "[", "Outgoing", "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Vertex", "[", "1", "]"}], "[", "3", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Propagator", "[", "Outgoing", "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Vertex", "[", "1", "]"}], "[", "4", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", "6", "]"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Propagator", "[", "Internal", "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", "6", "]"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Propagator", "[", 
+     RowBox[{"Loop", "[", "1", "]"}], "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", "6", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", "6", "]"}]}], "]"}]}], 
+  "]"}]], "Output",
+ CellChangeTimes->{
+  3.980837662731319*^9, 3.980840254374578*^9, 3.9808403550462914`*^9, {
+   3.980840438246397*^9, 3.9808404655177507`*^9}, {3.980840786129731*^9, 
+   3.98084079381777*^9}, 3.980841264373871*^9, 3.9808710395956993`*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"65528b5e-63d2-451c-8f6c-278b1862c892"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" \"\>", 
+   "\[InvisibleSpace]", "\<\"aebe/cedf/efff.m\"\>", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 1, " ", "aebe/cedf/efff.m", ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.980871039597455*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"0291d49a-798e-462d-b0eb-031c88b1d040"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 16.999999999996362`}, {
+         10.000000000003638`, 11.999999999996362`}}], 
+        LineBox[{{0., 7.}, {10., 12.}}], 
+        LineBox[{{20.000000000005457`, 17.000000000003638`}, {
+         10.000000000012733`, 12.000000000003638`}}], 
+        LineBox[{{19.99999999999818, 6.999999999996362}, {14.999999999998181`,
+          9.499999999996362}}], 
+        LineBox[{{9.999999999998181, 12.000000000003638`}, {
+         14.999999999998181`, 9.500000000003638}}], 
+        CircleBox[{13.75, 7.}, 2.7950849718747373, {-5.176036589385496, 
+         1.1071487177940904`}], 
+        {PointSize[0.04], PointBox[{10., 12.}], PointBox[{15., 9.5}]}, 
+        InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T1",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->7.997355371900828],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           7.997355371900828]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "\"aebe/cedf/efff.m\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "aebe/cedf/efff.m", "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {0, 44}, {0, 0}, {22, 22}], InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["2",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->11.99603305785124],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      11.99603305785124]& ], {28.5, 69.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]], 
+   InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["\[RightArrow]",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->11.99603305785124],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      11.99603305785124]& ], {33., 69.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]], 
+   InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["2",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->11.99603305785124],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      11.99603305785124]& ], {37.5, 69.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]]},
+  
+  AspectRatio->1.0999999999999999`,
+  ImageSize->{288, 288},
+  PlotRange->{{0, 66}, {0, 72.6}}]], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.9808710396304493`*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"b6cb3b3f-7a66-4985-ba11-c60df8d53916"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FeynArtsGraphics", "[", 
+   RowBox[{"2", "\[Rule]", "2"}], "]"}], "[", 
+  TagBox[
+   RowBox[{"(", "\[NoBreak]", GridBox[{
+      {
+       InterpretationBox[
+        RowBox[{"\<\"[\"\>", "\[InvisibleSpace]", "\<\"T1\"\>", 
+         "\[InvisibleSpace]", "\<\"]\"\>"}],
+        SequenceForm["[", "T1", "]"],
+        Editable->False], "Null", "Null"},
+      {"Null", "Null", "Null"},
+      {"Null", "Null", "Null"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}], "\[NoBreak]", ")"}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], "]"}]], "Output",
+ CellChangeTimes->{
+  3.980837662731319*^9, 3.980840254374578*^9, 3.9808403550462914`*^9, {
+   3.980840438246397*^9, 3.9808404655177507`*^9}, {3.980840786129731*^9, 
+   3.98084079381777*^9}, 3.980841264373871*^9, 3.980871039633635*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"b268a2f6-43bd-4162-b9a9-b5c86befc147"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"\"\>"], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.980871039635306*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"a2ba233e-6c24-4f91-8a41-47ec7d94c919"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\"\>", "\[InvisibleSpace]", "\<\"loading \"\>", 
+   "\[InvisibleSpace]", "\<\"generic\"\>", 
+   "\[InvisibleSpace]", "\<\" model file \"\>", 
+   "\[InvisibleSpace]", \
+"\<\"/home/lev/Projects/mathematica/FeynArts-3.11/Models/Lorentz.gen\"\>"}],
+  SequenceForm[
+  "", "loading ", "generic", " model file ", 
+   "/home/lev/Projects/mathematica/FeynArts-3.11/Models/Lorentz.gen"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.980871039636601*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"dd28015c-1369-47c6-b8c0-7e4a8888fce2"],
+
+Cell[BoxData["\<\"> $GenericMixing is OFF\"\>"], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.980871039661273*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"017c7f6a-f1ad-4eb8-82e2-b46775311a47"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"generic model \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", "\<\"Lorentz\"\>", "}"}], 
+   "\[InvisibleSpace]", "\<\" initialized\"\>"}],
+  SequenceForm["generic model ", {"Lorentz"}, " initialized"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.980871039663158*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"f376edb9-b6af-4bd3-8c01-21fbc5b89954"],
+
+Cell[BoxData["\<\"\"\>"], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.980871039664064*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"a239c986-90e6-49b2-b6cd-5c8731630d15"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\"\>", "\[InvisibleSpace]", "\<\"loading \"\>", 
+   "\[InvisibleSpace]", "\<\"classes\"\>", 
+   "\[InvisibleSpace]", "\<\" model file \"\>", 
+   "\[InvisibleSpace]", \
+"\<\"/home/lev/Projects/calc_mbcwc/models/Phi4MatrixSK.mod\"\>"}],
+  SequenceForm[
+  "", "loading ", "classes", " model file ", 
+   "/home/lev/Projects/calc_mbcwc/models/Phi4MatrixSK.mod"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.980871039664864*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"4b3b406d-f13f-4eaf-8b2a-21d13f033c77"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> \"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" particles (incl. antiparticles) in \"\>", "\[InvisibleSpace]",
+    "1", "\[InvisibleSpace]", "\<\" classes\"\>"}],
+  SequenceForm["> ", 1, " particles (incl. antiparticles) in ", 1, " classes"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.980871039665813*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"5d289318-c989-41ac-bbbb-82cab0c16e8f"],
+
+Cell[BoxData["\<\"> $CounterTerms are ON\"\>"], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.980871039666679*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"0307071f-8a21-4ff2-81c4-82ce6f2d57a0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> \"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" vertices\"\>"}],
+  SequenceForm["> ", 1, " vertices"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.980871039667494*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"a4e72650-dc11-40c0-a718-4a78d0a2a4ce"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"classes model \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", "\<\"Phi4MatrixSK\"\>", "}"}], 
+   "\[InvisibleSpace]", "\<\" initialized\"\>"}],
+  SequenceForm["classes model ", {"Phi4MatrixSK"}, " initialized"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.9808710396682873`*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"cc8616a0-fba8-4102-a942-e79a78e01197"],
+
+Cell[BoxData["\<\"\"\>"], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.980871039669125*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"4874c6a5-6e4c-4dc1-8538-d9f5d8134d4c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"inserting at level(s) \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", "Classes", "}"}]}],
+  SequenceForm["inserting at level(s) ", {FeynArts`Classes}],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.9808710396702538`*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"a988d0a7-c1e7-45f7-a346-f7bf437918be"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\": \"\>", 
+   "\[InvisibleSpace]", "\<\"1 Classes insertion\"\>"}],
+  SequenceForm["> Top. ", 1, ": ", "1 Classes insertion"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.980871039671164*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"9ed29a62-8c26-4c2e-af6f-61cbc279dbf1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"in total: \"\>", 
+   "\[InvisibleSpace]", "\<\"1 Classes insertion\"\>"}],
+  SequenceForm["in total: ", "1 Classes insertion"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980840438247183*^9, 3.980840465518502*^9}, {
+   3.980840786130464*^9, 3.980840793818519*^9}, 3.9808412643761063`*^9, 
+   3.980871039672099*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"fec298c9-3d40-4d87-9f91-6dbd2a24b70b"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TopologyList", "[", 
+   RowBox[{
+    RowBox[{"Process", "\[Rule]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"S", "[", 
+         RowBox[{"1", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "1"}],
+             SequenceForm["Col", 1],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "1"}],
+             SequenceForm["Col", 1],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Con\"\>", "\[InvisibleSpace]", "1"}],
+             SequenceForm["Con", 1],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"RAx\"\>", "\[InvisibleSpace]", "1"}],
+             SequenceForm["RAx", 1],
+             Editable->False]}], "}"}]}], "]"}], ",", 
+        RowBox[{"S", "[", 
+         RowBox[{"1", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "2"}],
+             SequenceForm["Col", 2],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "2"}],
+             SequenceForm["Col", 2],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Con\"\>", "\[InvisibleSpace]", "2"}],
+             SequenceForm["Con", 2],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"RAx\"\>", "\[InvisibleSpace]", "2"}],
+             SequenceForm["RAx", 2],
+             Editable->False]}], "}"}]}], "]"}]}], "}"}], "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"S", "[", 
+         RowBox[{"1", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "3"}],
+             SequenceForm["Col", 3],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "3"}],
+             SequenceForm["Col", 3],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Con\"\>", "\[InvisibleSpace]", "3"}],
+             SequenceForm["Con", 3],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"RAx\"\>", "\[InvisibleSpace]", "3"}],
+             SequenceForm["RAx", 3],
+             Editable->False]}], "}"}]}], "]"}], ",", 
+        RowBox[{"S", "[", 
+         RowBox[{"1", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "4"}],
+             SequenceForm["Col", 4],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "4"}],
+             SequenceForm["Col", 4],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Con\"\>", "\[InvisibleSpace]", "4"}],
+             SequenceForm["Con", 4],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"RAx\"\>", "\[InvisibleSpace]", "4"}],
+             SequenceForm["RAx", 4],
+             Editable->False]}], "}"}]}], "]"}]}], "}"}]}]}], ",", 
+    RowBox[{"Model", "\[Rule]", 
+     RowBox[{"{", "\<\"Phi4MatrixSK\"\>", "}"}]}], ",", 
+    RowBox[{"GenericModel", "\[Rule]", 
+     RowBox[{"{", "\<\"Lorentz\"\>", "}"}]}], ",", 
+    RowBox[{"InsertionLevel", "\[Rule]", 
+     RowBox[{"{", "Classes", "}"}]}], ",", 
+    RowBox[{"ExcludeParticles", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"ExcludeFieldPoints", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"LastSelections", "\[Rule]", 
+     RowBox[{"{", "}"}]}]}], "]"}], "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Topology", "[", "2", "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Propagator", "[", "Incoming", "]"}], "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Vertex", "[", "1", "]"}], "[", "1", "]"}], ",", 
+       RowBox[{
+        RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}], ",", 
+       RowBox[{"Field", "[", "1", "]"}]}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Propagator", "[", "Incoming", "]"}], "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Vertex", "[", "1", "]"}], "[", "2", "]"}], ",", 
+       RowBox[{
+        RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}], ",", 
+       RowBox[{"Field", "[", "2", "]"}]}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Propagator", "[", "Outgoing", "]"}], "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Vertex", "[", "1", "]"}], "[", "3", "]"}], ",", 
+       RowBox[{
+        RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}], ",", 
+       RowBox[{"Field", "[", "3", "]"}]}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Propagator", "[", "Outgoing", "]"}], "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Vertex", "[", "1", "]"}], "[", "4", "]"}], ",", 
+       RowBox[{
+        RowBox[{"Vertex", "[", "4", "]"}], "[", "6", "]"}], ",", 
+       RowBox[{"Field", "[", "4", "]"}]}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Propagator", "[", "Internal", "]"}], "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}], ",", 
+       RowBox[{
+        RowBox[{"Vertex", "[", "4", "]"}], "[", "6", "]"}], ",", 
+       RowBox[{"Field", "[", "5", "]"}]}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Propagator", "[", 
+       RowBox[{"Loop", "[", "1", "]"}], "]"}], "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Vertex", "[", "4", "]"}], "[", "6", "]"}], ",", 
+       RowBox[{
+        RowBox[{"Vertex", "[", "4", "]"}], "[", "6", "]"}], ",", 
+       RowBox[{"Field", "[", "6", "]"}]}], "]"}]}], "]"}], "\[Rule]", 
+   RowBox[{
+    RowBox[{"Insertions", "[", "Generic", "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"FeynmanGraph", "[", 
+       RowBox[{"2", ",", 
+        RowBox[{"Generic", "\[Equal]", "1"}]}], "]"}], "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Field", "[", "1", "]"}], "\[Rule]", 
+        RowBox[{"S", "[", 
+         RowBox[{"1", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "1"}],
+             SequenceForm["Col", 1],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "1"}],
+             SequenceForm["Col", 1],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Con\"\>", "\[InvisibleSpace]", "1"}],
+             SequenceForm["Con", 1],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"RAx\"\>", "\[InvisibleSpace]", "1"}],
+             SequenceForm["RAx", 1],
+             Editable->False]}], "}"}]}], "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"Field", "[", "2", "]"}], "\[Rule]", 
+        RowBox[{"S", "[", 
+         RowBox[{"1", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "2"}],
+             SequenceForm["Col", 2],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "2"}],
+             SequenceForm["Col", 2],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Con\"\>", "\[InvisibleSpace]", "2"}],
+             SequenceForm["Con", 2],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"RAx\"\>", "\[InvisibleSpace]", "2"}],
+             SequenceForm["RAx", 2],
+             Editable->False]}], "}"}]}], "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"Field", "[", "3", "]"}], "\[Rule]", 
+        RowBox[{"S", "[", 
+         RowBox[{"1", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "3"}],
+             SequenceForm["Col", 3],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "3"}],
+             SequenceForm["Col", 3],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Con\"\>", "\[InvisibleSpace]", "3"}],
+             SequenceForm["Con", 3],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"RAx\"\>", "\[InvisibleSpace]", "3"}],
+             SequenceForm["RAx", 3],
+             Editable->False]}], "}"}]}], "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"Field", "[", "4", "]"}], "\[Rule]", 
+        RowBox[{"S", "[", 
+         RowBox[{"1", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "4"}],
+             SequenceForm["Col", 4],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "4"}],
+             SequenceForm["Col", 4],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"Con\"\>", "\[InvisibleSpace]", "4"}],
+             SequenceForm["Con", 4],
+             Editable->False], ",", 
+            InterpretationBox[
+             RowBox[{"\<\"RAx\"\>", "\[InvisibleSpace]", "4"}],
+             SequenceForm["RAx", 4],
+             Editable->False]}], "}"}]}], "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"Field", "[", "5", "]"}], "\[Rule]", "S"}], ",", 
+       RowBox[{
+        RowBox[{"Field", "[", "6", "]"}], "\[Rule]", "S"}]}], "]"}], "\[Rule]", 
+     RowBox[{
+      RowBox[{"Insertions", "[", "Classes", "]"}], "[", 
+      RowBox[{
+       RowBox[{"FeynmanGraph", "[", 
+        RowBox[{"2", ",", 
+         RowBox[{"Classes", "\[Equal]", "1"}]}], "]"}], "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Field", "[", "1", "]"}], "\[Rule]", 
+         RowBox[{"S", "[", 
+          RowBox[{"1", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             InterpretationBox[
+              RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "1"}],
+              SequenceForm["Col", 1],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "1"}],
+              SequenceForm["Col", 1],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"Con\"\>", "\[InvisibleSpace]", "1"}],
+              SequenceForm["Con", 1],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"RAx\"\>", "\[InvisibleSpace]", "1"}],
+              SequenceForm["RAx", 1],
+              Editable->False]}], "}"}]}], "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"Field", "[", "2", "]"}], "\[Rule]", 
+         RowBox[{"S", "[", 
+          RowBox[{"1", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             InterpretationBox[
+              RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "2"}],
+              SequenceForm["Col", 2],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "2"}],
+              SequenceForm["Col", 2],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"Con\"\>", "\[InvisibleSpace]", "2"}],
+              SequenceForm["Con", 2],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"RAx\"\>", "\[InvisibleSpace]", "2"}],
+              SequenceForm["RAx", 2],
+              Editable->False]}], "}"}]}], "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"Field", "[", "3", "]"}], "\[Rule]", 
+         RowBox[{"S", "[", 
+          RowBox[{"1", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             InterpretationBox[
+              RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "3"}],
+              SequenceForm["Col", 3],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "3"}],
+              SequenceForm["Col", 3],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"Con\"\>", "\[InvisibleSpace]", "3"}],
+              SequenceForm["Con", 3],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"RAx\"\>", "\[InvisibleSpace]", "3"}],
+              SequenceForm["RAx", 3],
+              Editable->False]}], "}"}]}], "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"Field", "[", "4", "]"}], "\[Rule]", 
+         RowBox[{"S", "[", 
+          RowBox[{"1", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             InterpretationBox[
+              RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "4"}],
+              SequenceForm["Col", 4],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "4"}],
+              SequenceForm["Col", 4],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"Con\"\>", "\[InvisibleSpace]", "4"}],
+              SequenceForm["Con", 4],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"RAx\"\>", "\[InvisibleSpace]", "4"}],
+              SequenceForm["RAx", 4],
+              Editable->False]}], "}"}]}], "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"Field", "[", "5", "]"}], "\[Rule]", 
+         RowBox[{"S", "[", 
+          RowBox[{"1", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             InterpretationBox[
+              RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "3"}],
+              SequenceForm["Col", 3],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "1"}],
+              SequenceForm["Col", 1],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"Con\"\>", "\[InvisibleSpace]", "3"}],
+              SequenceForm["Con", 3],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"RAx\"\>", "\[InvisibleSpace]", "5"}],
+              SequenceForm["RAx", 5],
+              Editable->False]}], "}"}]}], "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"Field", "[", "6", "]"}], "\[Rule]", 
+         RowBox[{"S", "[", 
+          RowBox[{"1", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             InterpretationBox[
+              RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "1"}],
+              SequenceForm["Col", 1],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"Col\"\>", "\[InvisibleSpace]", "4"}],
+              SequenceForm["Col", 4],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"Con\"\>", "\[InvisibleSpace]", "3"}],
+              SequenceForm["Con", 3],
+              Editable->False], ",", 
+             InterpretationBox[
+              RowBox[{"\<\"RAx\"\>", "\[InvisibleSpace]", "6"}],
+              SequenceForm["RAx", 6],
+              Editable->False]}], "}"}]}], "]"}]}]}], "]"}], "]"}]}], "]"}]}],
+   "]"}]], "Output",
+ CellChangeTimes->{
+  3.980837662731319*^9, 3.980840254374578*^9, 3.9808403550462914`*^9, {
+   3.980840438246397*^9, 3.9808404655177507`*^9}, {3.980840786129731*^9, 
+   3.98084079381777*^9}, 3.980841264373871*^9, 3.980871039674623*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"ab235eba-2f91-43a8-9856-a1fa699696f3"]
+}, Open  ]]
+},
+WindowSize->{606, 683.25},
+WindowMargins->{{-2.25, Automatic}, {Automatic, -22.5}},
+Magnification:>1. Inherited,
+FrontEndVersion->"14.3 for Linux x86 (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b1654d8d-6a65-4be4-9d1e-38284c4d21c2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 1109, 31, 209, "Input",ExpressionUUID->"9c08eda1-f11b-41c6-98c5-971dc016fa5b"],
+Cell[1688, 55, 417, 11, 26, "Message",ExpressionUUID->"c4c61474-93c9-47b6-833c-f3e960a96330"],
+Cell[CellGroupData[{
+Cell[2130, 70, 302, 6, 23, "Print",ExpressionUUID->"41fdac09-4c00-4bab-8cd3-056842d31f55"],
+Cell[2435, 78, 329, 6, 23, "Print",ExpressionUUID->"90e3aaa7-c450-47e7-bbc7-849de23abcf8"],
+Cell[2767, 86, 347, 6, 23, "Print",ExpressionUUID->"e30aeec1-348e-4c27-96e1-6ddca5eb139e"],
+Cell[3117, 94, 640, 14, 23, "Print",ExpressionUUID->"2d86085a-0f36-47c2-a7a8-e4da83d4d8d8"],
+Cell[3760, 110, 640, 14, 23, "Print",ExpressionUUID->"1a5420ff-27e9-44e4-87d4-f496dedbc686"],
+Cell[4403, 126, 640, 14, 23, "Print",ExpressionUUID->"be61188b-28c9-4db7-a0cd-d65e2a9d88a1"],
+Cell[5046, 142, 638, 14, 23, "Print",ExpressionUUID->"f765f599-6140-4219-8f99-b36f42024d9b"],
+Cell[5687, 158, 639, 14, 23, "Print",ExpressionUUID->"0cab1622-14bc-47d6-9aad-38395ac2b2cc"],
+Cell[6329, 174, 640, 14, 23, "Print",ExpressionUUID->"2089a363-9fcd-426e-a8b3-b8ebd9d104d2"],
+Cell[6972, 190, 640, 14, 23, "Print",ExpressionUUID->"1a9c305f-2022-476f-b55e-c1c295355475"],
+Cell[7615, 206, 10753, 258, 296, "Print",ExpressionUUID->"46142a0d-4118-4f1b-bfcb-a5f1bee8eae2"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18417, 470, 2535, 64, 329, "Input",ExpressionUUID->"9f75e74b-32df-44a0-bc29-d340760f7a39"],
+Cell[20955, 536, 1915, 52, 133, "Output",ExpressionUUID->"65528b5e-63d2-451c-8f6c-278b1862c892"],
+Cell[CellGroupData[{
+Cell[22895, 592, 642, 14, 23, "Print",ExpressionUUID->"0291d49a-798e-462d-b0eb-031c88b1d040"],
+Cell[23540, 608, 2783, 72, 296, "Print",ExpressionUUID->"b6cb3b3f-7a66-4985-ba11-c60df8d53916"]
+}, Open  ]],
+Cell[26338, 683, 1164, 29, 62, "Output",ExpressionUUID->"b268a2f6-43bd-4162-b9a9-b5c86befc147"],
+Cell[CellGroupData[{
+Cell[27527, 716, 304, 6, 23, "Print",ExpressionUUID->"a2ba233e-6c24-4f91-8a41-47ec7d94c919"],
+Cell[27834, 724, 726, 16, 41, "Print",ExpressionUUID->"dd28015c-1369-47c6-b8c0-7e4a8888fce2"],
+Cell[28563, 742, 327, 6, 23, "Print",ExpressionUUID->"017c7f6a-f1ad-4eb8-82e2-b46775311a47"],
+Cell[28893, 750, 547, 12, 23, "Print",ExpressionUUID->"f376edb9-b6af-4bd3-8c01-21fbc5b89954"],
+Cell[29443, 764, 304, 6, 23, "Print",ExpressionUUID->"a239c986-90e6-49b2-b6cd-5c8731630d15"],
+Cell[29750, 772, 706, 16, 41, "Print",ExpressionUUID->"4b3b406d-f13f-4eaf-8b2a-21d13f033c77"],
+Cell[30459, 790, 609, 12, 23, "Print",ExpressionUUID->"5d289318-c989-41ac-bbbb-82cab0c16e8f"],
+Cell[31071, 804, 326, 6, 23, "Print",ExpressionUUID->"0307071f-8a21-4ff2-81c4-82ce6f2d57a0"],
+Cell[31400, 812, 469, 11, 23, "Print",ExpressionUUID->"a4e72650-dc11-40c0-a718-4a78d0a2a4ce"],
+Cell[31872, 825, 559, 12, 23, "Print",ExpressionUUID->"cc8616a0-fba8-4102-a942-e79a78e01197"],
+Cell[32434, 839, 304, 6, 23, "Print",ExpressionUUID->"4874c6a5-6e4c-4dc1-8538-d9f5d8134d4c"],
+Cell[32741, 847, 499, 11, 23, "Print",ExpressionUUID->"a988d0a7-c1e7-45f7-a346-f7bf437918be"],
+Cell[33243, 860, 544, 12, 23, "Print",ExpressionUUID->"9ed29a62-8c26-4c2e-af6f-61cbc279dbf1"],
+Cell[33790, 874, 476, 11, 23, "Print",ExpressionUUID->"fec298c9-3d40-4d87-9f91-6dbd2a24b70b"]
+}, Open  ]],
+Cell[34281, 888, 15642, 399, 513, "Output",ExpressionUUID->"ab235eba-2f91-43a8-9856-a1fa699696f3"]
+}, Open  ]]
+}
+]
+*)
+
