@@ -11,6 +11,8 @@ from __future__ import annotations
 import argparse
 import itertools
 import re
+import subprocess
+import shutil
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
@@ -425,7 +427,7 @@ def write_latex_report(results: List[Dict[str, object]], out_path: Path, nc_symb
             lines.append(r"\[\text{No surviving SK contributions for this topology.}\]")
             continue
 
-        lines.append(r"\begin{align*}")
+        lines.append(r"\noindent Explicit surviving terms:")
         for i, t in enumerate(terms, start=1):
             coeff_ltx = t["coeff_latex"]
             nc_ltx = t["nc_factor_latex"]
@@ -434,13 +436,44 @@ def write_latex_report(results: List[Dict[str, object]], out_path: Path, nc_symb
                 rhs = rf"{coeff_ltx}\,{nc_ltx}\,{prop_prod}"
             else:
                 rhs = rf"{coeff_ltx}\,{prop_prod}"
-            lines.append(rf"\mathcal{{T}}_{{{i}}} &= {rhs} \\")
-        lines.append(r"\end{align*}")
+            lines.append(r"\begin{equation*}")
+            lines.append(rf"\mathcal{{T}}_{{{i}}} = {rhs}")
+            lines.append(r"\end{equation*}")
 
     lines.append(r"\end{document}")
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def compile_latex(tex_path: Path) -> Path:
+    latexmk = shutil.which("latexmk")
+    if latexmk is None:
+        raise RuntimeError("latexmk not found in PATH; cannot compile LaTeX output")
+
+    cmd = [
+        latexmk,
+        "-pdf",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        tex_path.name,
+    ]
+    try:
+        subprocess.run(
+            cmd,
+            cwd=tex_path.parent,
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+        )
+    except subprocess.CalledProcessError as exc:
+        tail = "\n".join((exc.stdout or "").splitlines()[-40:])
+        raise RuntimeError(f"LaTeX compilation failed for {tex_path.name}:\n{tail}") from exc
+    pdf_path = tex_path.with_suffix(".pdf")
+    if not pdf_path.exists():
+        raise RuntimeError(f"LaTeX compilation finished but PDF not found: {pdf_path}")
+    return pdf_path
 
 
 def parse_args() -> argparse.Namespace:
@@ -453,6 +486,11 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--Nc-symbol", default="N_c", help="LaTeX symbol for matrix size")
     parser.add_argument("--g-symbol", default="g_2", help="Symbol for coupling")
+    parser.add_argument(
+        "--no-compile",
+        action="store_true",
+        help="Generate .tex but skip automatic PDF compilation",
+    )
     return parser.parse_args()
 
 
@@ -481,6 +519,11 @@ def main() -> None:
 
     write_latex_report(results, output_path, nc_symbol=args.Nc_symbol, g_symbol=args.g_symbol)
     print(f"Wrote LaTeX report to {output_path}")
+    if args.no_compile:
+        print("Skipping PDF compilation (--no-compile set)")
+    else:
+        pdf_path = compile_latex(output_path)
+        print(f"Compiled PDF report to {pdf_path}")
 
 
 if __name__ == "__main__":
