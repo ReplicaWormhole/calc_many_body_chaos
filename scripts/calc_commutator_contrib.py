@@ -53,6 +53,12 @@ class ExternalLeg:
     coord: str
 
 
+@dataclass(frozen=True)
+class PropagatorTerm:
+    raw_token: str
+    translated_token: str
+
+
 class DSU:
     def __init__(self) -> None:
         self.parent: Dict[str, str] = {}
@@ -262,6 +268,43 @@ def count_nc_loops(props: List[Propagator], fixed_external: Dict[Tuple[int, int]
     return len(internal_components)
 
 
+def translate_propagator(c1: int, c2: int, l1: str, l2: str, x1: str, x2: str) -> str | None:
+    args = f"\\left({x1},{x2}\\right)"
+    if c1 == c2:
+        if l1 == "r" and l2 == "r":
+            return f"G_K{args}"
+        if l1 == "r" and l2 == "a":
+            return f"G_R{args}"
+        if l1 == "a" and l2 == "r":
+            return f"G_A{args}"
+        if l1 == "a" and l2 == "a":
+            return None
+    elif c1 == 1 and c2 == 2:
+        if l1 == "r" and l2 == "r":
+            return f"G^< {args}".replace(" ", "")
+        return None
+    elif c1 == 2 and c2 == 1:
+        if l1 == "r" and l2 == "r":
+            return f"G^> {args}".replace(" ", "")
+        return None
+    raise ValueError(f"Unsupported contour/ra combination: c1={c1}, c2={c2}, l1={l1}, l2={l2}")
+
+
+def build_propagator_term(
+    c1: int,
+    c2: int,
+    l1: str,
+    l2: str,
+    x1: str,
+    x2: str,
+) -> PropagatorTerm | None:
+    raw_token = f"G^{{{c1}{c2}}}_{{{l1}{l2}}}\\left({x1},{x2}\\right)"
+    translated_token = translate_propagator(c1, c2, l1, l2, x1, x2)
+    if translated_token is None:
+        return None
+    return PropagatorTerm(raw_token=raw_token, translated_token=translated_token)
+
+
 def enumerate_terms(
     topo: TopologyData,
     g_symbol: sp.Symbol,
@@ -336,7 +379,7 @@ def enumerate_terms(
 
             surviving_assignments += 1
 
-            prop_terms: List[str] = []
+            prop_terms: List[PropagatorTerm] = []
             for p in props:
                 c1 = fixed_external[(p.edge_id, 0)].contour if (p.edge_id, 0) in fixed_external else c_assign[p.v1]
                 c2 = fixed_external[(p.edge_id, 1)].contour if (p.edge_id, 1) in fixed_external else c_assign[p.v2]
@@ -346,10 +389,16 @@ def enumerate_terms(
                 x1 = fixed_external[(p.edge_id, 0)].coord if (p.edge_id, 0) in fixed_external else z_map[p.v1]
                 x2 = fixed_external[(p.edge_id, 1)].coord if (p.edge_id, 1) in fixed_external else z_map[p.v2]
 
-                token = f"G^{{{c1}{c2}}}_{{{l1}{l2}}}\\left({x1},{x2}\\right)"
-                prop_terms.append(token)
+                prop_term = build_propagator_term(c1, c2, l1, l2, x1, x2)
+                if prop_term is None:
+                    coeff = sp.Integer(0)
+                    break
+                prop_terms.append(prop_term)
 
-            key = (nc_net, tuple(sorted(prop_terms)))
+            if coeff == 0:
+                continue
+
+            key = (nc_net, tuple(sorted(t.translated_token for t in prop_terms)))
             aggregated[key] += coeff
 
     terms_out: List[Dict[str, object]] = []
@@ -399,6 +448,14 @@ def write_latex_report(results: List[Dict[str, object]], out_path: Path, nc_symb
     lines.append(
         r"Propagator notation: $G^{c_1 c_2}_{\ell_1\ell_2}(z,y)$ "
         r"(upper indices: time folds, lower indices: r/a labels)."
+    )
+    lines.append(
+        r"Translation table used: same-fold $G_{rr}\to G_K=\frac12(G^>+G^<)$, "
+        r"$G_{ra}\to G_R$, $G_{ar}\to G_A$, $G_{aa}\to 0$; "
+        r"cross-fold $G^{12}_{rr}\to G^<$, $G^{21}_{rr}\to G^>$, and any cross-fold propagator with an $a$ endpoint vanishes."
+    )
+    lines.append(
+        r"Contour ordering convention: contour $(2)$ is later than contour $(1)$, matching \texttt{contour\_ra\_translation.txt}."
     )
     lines.append(
         rf"Each term carries explicit net matrix-size factor ${{{nc_symbol}}}^{{p-4}}$ "
