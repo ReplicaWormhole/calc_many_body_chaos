@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     53523,       1347]
-NotebookOptionsPosition[     49939,       1290]
-NotebookOutlinePosition[     50366,       1307]
-CellTagsIndexPosition[     50323,       1304]
+NotebookDataLength[    150689,       3549]
+NotebookOptionsPosition[    143352,       3450]
+NotebookOutlinePosition[    143782,       3467]
+CellTagsIndexPosition[    143739,       3464]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -31,17 +31,18 @@ Cell[BoxData[{
    RowBox[{"Needs", "[", "\"\<FeynArts`\>\"", "]"}], ";"}], 
   "\[IndentingNewLine]"}], "\n", 
  RowBox[{
-  RowBox[{"L", "=", "1"}], ";"}], "\n", 
+  RowBox[{"L", "=", "2"}], ";"}], "\n", 
  RowBox[{
-  RowBox[{
-   RowBox[{"top", "=", 
-    RowBox[{"CreateTopologies", "[", 
-     RowBox[{"L", ",", 
-      RowBox[{"2", "->", "2"}], ",", 
-      RowBox[{"Adjacencies", "->", 
-       RowBox[{"{", "4", "}"}]}], ",", 
-      RowBox[{"ExcludeTopologies", "->", "Tadpoles"}]}], "]"}]}], ";"}], 
-  "\[IndentingNewLine]", "\n", 
+  RowBox[{"top", "=", 
+   RowBox[{"CreateTopologies", "[", 
+    RowBox[{"L", ",", 
+     RowBox[{"2", "->", "2"}], ",", 
+     RowBox[{"Adjacencies", "->", 
+      RowBox[{"{", "4", "}"}]}], ",", 
+     RowBox[{"ExcludeTopologies", "->", "Tadpoles"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"top", "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "\n", 
   RowBox[{"(*", 
    RowBox[{"Optional", " ", "preview"}], "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
@@ -50,159 +51,790 @@ Cell[BoxData[{
     RowBox[{"ColumnsXRows", "->", "4"}], ",", 
     RowBox[{"PaintLevel", "->", 
      RowBox[{"{", "Topologies", "}"}]}]}], "]"}], ";"}], "\n"}], "Input",
- CellChangeTimes->{{3.980837612685421*^9, 3.9808376322641153`*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"9c08eda1-f11b-41c6-98c5-971dc016fa5b"],
+ CellChangeTimes->{{3.980837612685421*^9, 3.9808376322641153`*^9}, {
+  3.981178509254794*^9, 3.981178509663991*^9}, {3.9815357014165907`*^9, 
+  3.9815357033141747`*^9}},
+ CellLabel->"In[65]:=",ExpressionUUID->"9c08eda1-f11b-41c6-98c5-971dc016fa5b"],
 
 Cell[BoxData[
- TemplateBox[{
-  "SetDelayed", "wrsym", 
-   "\"Symbol \\!\\(\\*RowBox[{\\\"Discard\\\"}]\\) is Protected.\"", 2, 2, 1, 
-   27363988719881116564, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{3.980840351096895*^9, 3.980841260417109*^9, 
-  3.9808710037000217`*^9},
- CellLabel->
-  "During evaluation of \
-In[1]:=",ExpressionUUID->"c4c61474-93c9-47b6-833c-f3e960a96330"],
+ RowBox[{
+  RowBox[{"Topology", "[", "2", "]"}], "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Propagator", "[", "Incoming", "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Vertex", "[", "1", "]"}], "[", "1", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", 
+      RowBox[{"-", "1"}], "]"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Propagator", "[", "Incoming", "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Vertex", "[", "1", "]"}], "[", "2", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", 
+      RowBox[{"-", "2"}], "]"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Propagator", "[", "Outgoing", "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Vertex", "[", "1", "]"}], "[", "3", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Propagator", "[", "Outgoing", "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Vertex", "[", "1", "]"}], "[", "4", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Propagator", "[", 
+     RowBox[{"Loop", "[", "1", "]"}], "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", 
+      RowBox[{"-", "2"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", 
+      RowBox[{"-", "1"}], "]"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Propagator", "[", 
+     RowBox[{"Loop", "[", "1", "]"}], "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", 
+      RowBox[{"-", "2"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", 
+      RowBox[{"-", "1"}], "]"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Propagator", "[", 
+     RowBox[{"Loop", "[", "1", "]"}], "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", 
+      RowBox[{"-", "2"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Propagator", "[", 
+     RowBox[{"Loop", "[", "1", "]"}], "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", 
+      RowBox[{"-", "1"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}]}], "]"}]}], 
+  "]"}]], "Output",
+ CellChangeTimes->{3.9815357037281103`*^9},
+ CellLabel->"Out[69]=",ExpressionUUID->"e13aa263-dacc-4eda-a8f8-f45165e4f090"],
 
 Cell[CellGroupData[{
-
-Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
-   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
-   3.980871003702729*^9},
- CellLabel->
-  "During evaluation of \
-In[1]:=",ExpressionUUID->"41fdac09-4c00-4bab-8cd3-056842d31f55"],
-
-Cell[BoxData["\<\"FeynArts 3.11 (25 Mar 2022)\"\>"], "Print",
- CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
-   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
-   3.980871003703074*^9},
- CellLabel->
-  "During evaluation of \
-In[1]:=",ExpressionUUID->"90e3aaa7-c450-47e7-bbc7-849de23abcf8"],
-
-Cell[BoxData["\<\"by Hagen Eck, Sepp Kueblbeck, and Thomas Hahn\"\>"], "Print",
- CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
-   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
-   3.980871003703692*^9},
- CellLabel->
-  "During evaluation of \
-In[1]:=",ExpressionUUID->"e30aeec1-348e-4c27-96e1-6ddca5eb139e"],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "1", 
    "\[InvisibleSpace]", "\<\" \"\>", 
-   "\[InvisibleSpace]", "\<\"aebe/cedf/efff.m\"\>", 
+   "\[InvisibleSpace]", "\<\"a1b2/cede/21212e1e.m\"\>", 
    "\[InvisibleSpace]", "\<\", \"\>", 
    "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
-  SequenceForm["> Top. ", 1, " ", "aebe/cedf/efff.m", ", ", "0 diagrams"],
+  SequenceForm["> Top. ", 1, " ", "a1b2/cede/21212e1e.m", ", ", "0 diagrams"],
+  
   Editable->False]], "Print",
  CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
    3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
-   3.980871003732745*^9},
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703729602*^9},
  CellLabel->
   "During evaluation of \
-In[1]:=",ExpressionUUID->"2d86085a-0f36-47c2-a7a8-e4da83d4d8d8"],
+In[65]:=",ExpressionUUID->"b1575f55-67e7-4542-bf1a-f212c4ba2f01"],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "2", 
    "\[InvisibleSpace]", "\<\" \"\>", 
-   "\[InvisibleSpace]", "\<\"aebe/cfde/efff.m\"\>", 
+   "\[InvisibleSpace]", "\<\"a1be/c2de/21212e1e.m\"\>", 
    "\[InvisibleSpace]", "\<\", \"\>", 
    "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
-  SequenceForm["> Top. ", 2, " ", "aebe/cfde/efff.m", ", ", "0 diagrams"],
+  SequenceForm["> Top. ", 2, " ", "a1be/c2de/21212e1e.m", ", ", "0 diagrams"],
+  
   Editable->False]], "Print",
  CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
    3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
-   3.980871003734294*^9},
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703730551*^9},
  CellLabel->
   "During evaluation of \
-In[1]:=",ExpressionUUID->"1a5420ff-27e9-44e4-87d4-f496dedbc686"],
+In[65]:=",ExpressionUUID->"fec30a63-be30-4d9e-8c58-7f2a94cd5fe1"],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "3", 
    "\[InvisibleSpace]", "\<\" \"\>", 
-   "\[InvisibleSpace]", "\<\"aebe/cfdf/efef.m\"\>", 
+   "\[InvisibleSpace]", "\<\"a1be/ced2/21212e1e.m\"\>", 
    "\[InvisibleSpace]", "\<\", \"\>", 
    "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
-  SequenceForm["> Top. ", 3, " ", "aebe/cfdf/efef.m", ", ", "0 diagrams"],
+  SequenceForm["> Top. ", 3, " ", "a1be/ced2/21212e1e.m", ", ", "0 diagrams"],
+  
   Editable->False]], "Print",
  CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
    3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
-   3.980871003734735*^9},
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703731587*^9},
  CellLabel->
   "During evaluation of \
-In[1]:=",ExpressionUUID->"be61188b-28c9-4db7-a0cd-d65e2a9d88a1"],
+In[65]:=",ExpressionUUID->"8b5e0137-e93a-4e54-aa47-1858c0796666"],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "4", 
-   "\[InvisibleSpace]", "\<\" \"\>", 
-   "\[InvisibleSpace]", "\<\"aebf/cede/efff.m\"\>", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"VFlip", "[", "\<\"a1be/ced2/21212e1e.m\"\>", "]"}], 
    "\[InvisibleSpace]", "\<\", \"\>", 
    "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
-  SequenceForm["> Top. ", 4, " ", "aebf/cede/efff.m", ", ", "0 diagrams"],
+  SequenceForm["> Top. ", 4, " ", 
+   FeynArts`VFlip["a1be/ced2/21212e1e.m"], ", ", "0 diagrams"],
   Editable->False]], "Print",
  CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
    3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
-   3.9808710037351*^9},
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703732316*^9},
  CellLabel->
   "During evaluation of \
-In[1]:=",ExpressionUUID->"f765f599-6140-4219-8f99-b36f42024d9b"],
+In[65]:=",ExpressionUUID->"a03bd241-20ca-4bf9-8367-705078c9e270"],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "5", 
-   "\[InvisibleSpace]", "\<\" \"\>", 
-   "\[InvisibleSpace]", "\<\"aebf/cedf/efef.m\"\>", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"VFlip", "[", "\<\"a1be/c2de/21212e1e.m\"\>", "]"}], 
    "\[InvisibleSpace]", "\<\", \"\>", 
    "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
-  SequenceForm["> Top. ", 5, " ", "aebf/cedf/efef.m", ", ", "0 diagrams"],
+  SequenceForm["> Top. ", 5, " ", 
+   FeynArts`VFlip["a1be/c2de/21212e1e.m"], ", ", "0 diagrams"],
   Editable->False]], "Print",
  CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
    3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
-   3.98087100373547*^9},
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703733016*^9},
  CellLabel->
   "During evaluation of \
-In[1]:=",ExpressionUUID->"0cab1622-14bc-47d6-9aad-38395ac2b2cc"],
+In[65]:=",ExpressionUUID->"0cd85020-dbd2-458b-86dc-33177885a3c5"],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "6", 
-   "\[InvisibleSpace]", "\<\" \"\>", 
-   "\[InvisibleSpace]", "\<\"aebf/cfde/efef.m\"\>", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"HFlip", "[", "\<\"a1b2/cede/21212e1e.m\"\>", "]"}], 
    "\[InvisibleSpace]", "\<\", \"\>", 
    "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
-  SequenceForm["> Top. ", 6, " ", "aebf/cfde/efef.m", ", ", "0 diagrams"],
+  SequenceForm["> Top. ", 6, " ", 
+   FeynArts`HFlip["a1b2/cede/21212e1e.m"], ", ", "0 diagrams"],
   Editable->False]], "Print",
  CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
    3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
-   3.980871003735836*^9},
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703733679*^9},
  CellLabel->
   "During evaluation of \
-In[1]:=",ExpressionUUID->"2089a363-9fcd-426e-a8b3-b8ebd9d104d2"],
+In[65]:=",ExpressionUUID->"0d2f9cb1-8b9b-4c15-bac1-d851f87abdf8"],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "7", 
    "\[InvisibleSpace]", "\<\" \"\>", 
-   "\[InvisibleSpace]", "\<\"aebf/cfdf/efee.m\"\>", 
+   "\[InvisibleSpace]", "\<\"aebe/cfdf/efegfggg.m\"\>", 
    "\[InvisibleSpace]", "\<\", \"\>", 
    "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
-  SequenceForm["> Top. ", 7, " ", "aebf/cfdf/efee.m", ", ", "0 diagrams"],
+  SequenceForm["> Top. ", 7, " ", "aebe/cfdf/efegfggg.m", ", ", "0 diagrams"],
+  
   Editable->False]], "Print",
  CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
    3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
-   3.980871003736189*^9},
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703734355*^9},
  CellLabel->
   "During evaluation of \
-In[1]:=",ExpressionUUID->"1a9c305f-2022-476f-b55e-c1c295355475"],
+In[65]:=",ExpressionUUID->"43225270-2886-402e-a98b-20e0d6027ffd"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "8", 
+   "\[InvisibleSpace]", "\<\" \"\>", 
+   "\[InvisibleSpace]", "\<\"aebf/cedf/efegfggg.m\"\>", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 8, " ", "aebf/cedf/efegfggg.m", ", ", "0 diagrams"],
+  
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703735025*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"1227c6c5-7624-4fa6-a84f-19b8f6625bd5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "9", 
+   "\[InvisibleSpace]", "\<\" \"\>", 
+   "\[InvisibleSpace]", "\<\"aebf/cfde/efegfggg.m\"\>", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 9, " ", "aebf/cfde/efegfggg.m", ", ", "0 diagrams"],
+  
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703735837*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"304d0bf4-c01a-489f-8cfc-d5199ecfb220"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "10", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", "Automatic", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 10, " ", Automatic, ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703736497*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"f6a3f68b-7f80-42c3-9a51-81ee9a2cb655"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "11", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"VFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 11, " ", 
+   FeynArts`VFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.9815357037371817`*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"99cc975a-0446-4fdb-ba08-2d14c2a87721"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "12", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", "Automatic", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 12, " ", Automatic, ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703737894*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"435d48a2-0ce9-4c87-938d-a68cd5e6dcee"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "13", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", "Automatic", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 13, " ", Automatic, ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703738727*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"2c958559-bdc3-4017-9ccf-d9c47159e35d"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "14", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"HFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 14, " ", 
+   FeynArts`HFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703739421*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"b2d288f5-a1e1-429c-b908-4038e233aa4b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "15", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", "Automatic", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 15, " ", Automatic, ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703740158*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"fe6ac4a7-1b91-4ad9-8298-babc109f48a4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "16", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", "Automatic", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 16, " ", Automatic, ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.9815357037407913`*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"a4f7b640-3f30-499b-9900-a49f4223b7c2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "17", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"HFlip", "[", 
+    RowBox[{"VFlip", "[", "Automatic", "]"}], "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 17, " ", 
+   FeynArts`HFlip[
+    FeynArts`VFlip[Automatic]], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703741563*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"cb8860f5-09d7-4ec2-b331-db3142544f87"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "18", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", "Automatic", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 18, " ", Automatic, ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.9815357037422457`*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"b02909a9-ef93-40ee-ab8b-c309a1df1bd1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "19", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", "Automatic", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 19, " ", Automatic, ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.9815357037429323`*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"aeb080c2-a7cf-4e2f-89f2-9b33f3621d4e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "20", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"VFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 20, " ", 
+   FeynArts`VFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703743555*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"0cc5a56b-3c4c-418d-8e35-974d418639da"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "21", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"HFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 21, " ", 
+   FeynArts`HFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.9815357037442217`*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"03fb6fe7-1e47-4666-95c9-5ca9ebe08f42"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "22", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"VFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 22, " ", 
+   FeynArts`VFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703744917*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"2f170566-51a5-4268-b235-da7717efe3bc"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "23", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"VFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 23, " ", 
+   FeynArts`VFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703745596*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"1ffc31e2-ad50-4f77-baa2-d50344907f9c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "24", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"HFlip", "[", 
+    RowBox[{"VFlip", "[", "Automatic", "]"}], "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 24, " ", 
+   FeynArts`HFlip[
+    FeynArts`VFlip[Automatic]], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.9815357037464037`*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"5b122804-1293-43e7-8699-5bce721576b4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "25", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"VFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 25, " ", 
+   FeynArts`VFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703747101*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"e13dfc3f-1d8a-4696-bb32-5e6814524ccd"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "26", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"VFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 26, " ", 
+   FeynArts`VFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.98153570374783*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"23c143ad-f5cd-412d-b869-442e70fb6b30"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "27", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"HFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 27, " ", 
+   FeynArts`HFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703770217*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"dadb7ce2-abe6-44c4-a8db-8c1cc6cfd9f3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "28", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"HFlip", "[", 
+    RowBox[{"VFlip", "[", "Automatic", "]"}], "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 28, " ", 
+   FeynArts`HFlip[
+    FeynArts`VFlip[Automatic]], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703772028*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"8a84663e-301d-4092-94d5-0138e22263a5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "29", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"HFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 29, " ", 
+   FeynArts`HFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703772729*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"f7f6d01b-851d-4cba-a592-b2c1482af5a0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "30", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"HFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 30, " ", 
+   FeynArts`HFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.9815357037735367`*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"9bbe007a-8004-4227-a912-6618fd429201"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "31", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"HFlip", "[", 
+    RowBox[{"VFlip", "[", "Automatic", "]"}], "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 31, " ", 
+   FeynArts`HFlip[
+    FeynArts`VFlip[Automatic]], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.9815357037743473`*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"430fe10e-ff41-4de2-bcb3-f3973f689c86"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "32", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", "Automatic", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 32, " ", Automatic, ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703775243*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"c0bdf989-eb9a-4973-94a2-a9a2ab89d5fe"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "33", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"VFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 33, " ", 
+   FeynArts`VFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703776147*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"39166fad-8f31-4593-9186-3fa3fee4ebf7"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "34", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", "Automatic", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 34, " ", Automatic, ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703776885*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"32f72aa8-30ee-4914-8752-b7d290d7d33f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "35", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"HFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 35, " ", 
+   FeynArts`HFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703777524*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"92719282-a903-49bd-a68e-8764710d0b3f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "36", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", "Automatic", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 36, " ", Automatic, ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703778243*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"69692b27-4c26-44f2-ac5e-8563e2b6d831"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "37", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", "Automatic", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 37, " ", Automatic, ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703778954*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"eed484f8-abf6-4888-85c7-2632daed65c8"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "38", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"HFlip", "[", 
+    RowBox[{"VFlip", "[", "Automatic", "]"}], "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 38, " ", 
+   FeynArts`HFlip[
+    FeynArts`VFlip[Automatic]], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.9815357037795763`*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"cdffa293-5c4b-49c8-8ca9-65c9770e7f28"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "39", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", "Automatic", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 39, " ", Automatic, ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.9815357037802277`*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"f8336a5a-fdf8-49a3-bd87-03ad1efbec2b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "40", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"VFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 40, " ", 
+   FeynArts`VFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703780864*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"3be63551-3cf7-4b98-b933-3671f3d9950b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "41", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"HFlip", "[", "Automatic", "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 41, " ", 
+   FeynArts`HFlip[Automatic], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703781499*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"acda4af6-4c02-4095-a836-4484512a6732"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "42", 
+   "\[InvisibleSpace]", "\<\" \"\>", "\[InvisibleSpace]", 
+   RowBox[{"HFlip", "[", 
+    RowBox[{"VFlip", "[", "Automatic", "]"}], "]"}], 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 42, " ", 
+   FeynArts`HFlip[
+    FeynArts`VFlip[Automatic]], ", ", "0 diagrams"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703782158*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"a44851fc-c03a-44cf-9cb2-922b6537f7f8"],
 
 Cell[BoxData[
  GraphicsBox[{InsetBox[
@@ -210,19 +842,23 @@ Cell[BoxData[
      TagBox[
       TooltipBox[
        {Thickness[0.005], 
-        LineBox[{{3.637978807091713*^-12, 16.999999999996362`}, {
-         10.000000000003638`, 11.999999999996362`}}], 
-        LineBox[{{0., 7.}, {10., 12.}}], 
-        LineBox[{{20.000000000005457`, 17.000000000003638`}, {
-         10.000000000012733`, 12.000000000003638`}}], 
-        LineBox[{{19.99999999999818, 6.999999999996362}, {14.999999999998181`,
-          9.499999999996362}}], 
-        LineBox[{{9.999999999998181, 12.000000000003638`}, {
-         14.999999999998181`, 9.500000000003638}}], 
-        CircleBox[{13.75, 7.}, 2.7950849718747373, {-5.176036589385496, 
-         1.1071487177940904`}], 
-        {PointSize[0.04], PointBox[{10., 12.}], PointBox[{15., 9.5}]}, 
-        InsetBox[
+        LineBox[{{1.8189894035458565`*^-12, 15.000000000003638`}, {
+         6.0000000000027285`, 14.000000000003638`}}], 
+        LineBox[{{9.094947017729282*^-13, 5.000000000003638}, {
+         6.000000000002274, 6.000000000003638}}], 
+        LineBox[{{20.00000000000182, 15.000000000001819`}, {14., 
+         9.999999999998181}}], 
+        LineBox[{{20.00000000000182, 5.000000000001819}, {14., 10.}}], 
+        CircleBox[{1.416666666666667, 10.}, 
+         6.083333333333333, {-0.7175413405411445, 0.7175413405411445}], 
+        CircleBox[{10.583333333333332`, 10.}, 6.083333333333333, {
+         2.4240513130486487`, 3.8591339941309375`}], 
+        LineBox[{{6.000000000001819, 6.}, {14.000000000003638`, 
+         10.000000000003638`}}], 
+        LineBox[{{6.000000000001819, 13.999999999996362`}, {
+         13.999999999998181`, 10.}}], 
+        {PointSize[0.04], PointBox[{6., 6.}], PointBox[{6., 14.}], 
+         PointBox[{14., 10.}]}, InsetBox[
          TagBox[
           StyleBox[
            TagBox["T1",
@@ -233,26 +869,30 @@ Cell[BoxData[
           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
            6.137505285412264]& ], {10., -0.5}, NCache[
          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
-       "\"aebe/cedf/efff.m\"",
+       "\"a1b2/cede/21212e1e.m\"",
        TooltipStyle->"TextStyling"],
-      Annotation[#, "aebe/cedf/efff.m", "Tooltip"]& ],
+      Annotation[#, "a1b2/cede/21212e1e.m", "Tooltip"]& ],
      AspectRatio->1,
      PlotRange->{{-1, 21}, {-1, 21}}], {0, 66}, {0, 0}, {22, 22}], InsetBox[
     GraphicsBox[
      TagBox[
       TooltipBox[
        {Thickness[0.005], 
-        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
-         10.000000000003638`, 9.999999999996362}}], 
-        LineBox[{{0., 5.}, {10., 10.}}], 
-        LineBox[{{20.000000000003638`, 15.}, {14.999999999998181`, 
-         12.499999999996362`}}], LineBox[{{20., 5.}, {10., 10.}}], 
-        LineBox[{{9.999999999998181, 10.000000000003638`}, {
-         14.999999999998181`, 12.500000000003638`}}], 
-        CircleBox[{13.75, 14.5}, 2.358495283014151, {-1.0121970114513346`, 
-         5.270988295728252}], 
-        {PointSize[0.04], PointBox[{10., 10.}], PointBox[{15., 12.5}]}, 
-        InsetBox[
+        LineBox[{{1.8189894035458565`*^-12, 15.000000000003638`}, {
+         6.0000000000027285`, 14.000000000003638`}}], 
+        LineBox[{{2.0463630789890885`*^-12, 5.000000000003638}, {
+         10.000000000002046`, 6.000000000003638}}], 
+        LineBox[{{19.99999999999818, 15.}, {14.000000000002274`, 14.}}], 
+        LineBox[{{19.999999999997726`, 4.999999999996362}, {9.999999999997726,
+          5.999999999996362}}], 
+        CircleBox[{10., 9.416666666666668}, 6.083333333333333, {
+         0.853254986253752, 2.288337667336041}], 
+        CircleBox[{10., 18.583333333333332`}, 6.083333333333333, {
+         3.9948476398435453`, 5.429930320925834}], 
+        LineBox[{{14., 13.999999999996362`}, {10.000000000003638`, 6.}}], 
+        LineBox[{{6., 13.999999999998181`}, {10., 6.000000000001819}}], 
+        {PointSize[0.04], PointBox[{14., 14.}], PointBox[{6., 14.}], 
+         PointBox[{10., 6.}]}, InsetBox[
          TagBox[
           StyleBox[
            TagBox["T2",
@@ -263,25 +903,31 @@ Cell[BoxData[
           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
            6.137505285412264]& ], {10., -0.5}, NCache[
          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
-       "\"aebe/cfde/efff.m\"",
+       "\"a1be/c2de/21212e1e.m\"",
        TooltipStyle->"TextStyling"],
-      Annotation[#, "aebe/cfde/efff.m", "Tooltip"]& ],
+      Annotation[#, "a1be/c2de/21212e1e.m", "Tooltip"]& ],
      AspectRatio->1,
      PlotRange->{{-1, 21}, {-1, 21}}], {22, 66}, {0, 0}, {22, 22}], InsetBox[
     GraphicsBox[
      TagBox[
       TooltipBox[
-       {Thickness[0.005], LineBox[{{0., 15.}, {6.000000000001819, 10.}}], 
-        LineBox[{{0., 5.000000000001819}, {6.000000000001819, 
-         10.000000000001819`}}], 
-        LineBox[{{20.00000000000182, 15.000000000001819`}, {14., 
-         9.999999999998181}}], 
-        LineBox[{{20.00000000000182, 5.000000000001819}, {14., 10.}}], 
-        CircleBox[{10., 10.899999999999999`}, 
-         4.1, {-2.9202782112420023`, -0.2213144423477913}], 
-        CircleBox[{10., 9.100000000000001}, 4.1, {0.2213144423477913, 
-         2.9202782112420023`}], 
-        {PointSize[0.04], PointBox[{6., 10.}], PointBox[{14., 10.}]}, InsetBox[
+       {Thickness[0.005], 
+        LineBox[{{1.8189894035458565`*^-12, 15.000000000003638`}, {
+         6.0000000000027285`, 14.000000000003638`}}], 
+        LineBox[{{2.0463630789890885`*^-12, 5.000000000003638}, {
+         10.000000000002046`, 6.000000000003638}}], 
+        LineBox[{{19.99999999999818, 14.999999999996362`}, {9.999999999996362,
+          5.999999999994543}}], 
+        LineBox[{{20.000000000003638`, 4.999999999996362}, {
+         14.000000000003638`, 13.999999999996362`}}], 
+        CircleBox[{10., 9.416666666666668}, 6.083333333333333, {
+         0.853254986253752, 2.288337667336041}], 
+        CircleBox[{10., 18.583333333333332`}, 6.083333333333333, {
+         3.9948476398435453`, 5.429930320925834}], 
+        LineBox[{{14., 13.999999999996362`}, {10.000000000003638`, 6.}}], 
+        LineBox[{{6., 13.999999999998181`}, {10., 6.000000000001819}}], 
+        {PointSize[0.04], PointBox[{14., 14.}], PointBox[{6., 14.}], 
+         PointBox[{10., 6.}]}, InsetBox[
          TagBox[
           StyleBox[
            TagBox["T3",
@@ -292,27 +938,31 @@ Cell[BoxData[
           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
            6.137505285412264]& ], {10., -0.5}, NCache[
          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
-       "\"aebe/cfdf/efef.m\"",
+       "\"a1be/ced2/21212e1e.m\"",
        TooltipStyle->"TextStyling"],
-      Annotation[#, "aebe/cfdf/efef.m", "Tooltip"]& ],
+      Annotation[#, "a1be/ced2/21212e1e.m", "Tooltip"]& ],
      AspectRatio->1,
      PlotRange->{{-1, 21}, {-1, 21}}], {44, 66}, {0, 0}, {22, 22}], InsetBox[
     GraphicsBox[
      TagBox[
       TooltipBox[
        {Thickness[0.005], 
-        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
-         10.000000000003638`, 9.999999999996362}}], 
-        LineBox[{{-1.8189894035458565`*^-12, 5.000000000003638}, {
-         4.999999999998181, 7.500000000003638}}], 
-        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
-         10.000000000012733`, 10.000000000003638`}}], 
-        LineBox[{{20., 5.}, {10., 10.}}], 
-        LineBox[{{10.000000000003638`, 10.}, {4.999999999998181, 
-         7.499999999996362}}], 
-        CircleBox[{5.8945, 5.711}, 2.0001628058735617, {-4.2487413713838835`, 
-         2.0344439357957027`}], 
-        {PointSize[0.04], PointBox[{10., 10.}], PointBox[{5., 7.5}]}, InsetBox[
+        LineBox[{{2.5011104298755527`*^-12, 15.000000000003638`}, {
+         10.000000000002501`, 14.000000000003638`}}], 
+        LineBox[{{9.094947017729282*^-13, 5.000000000003638}, {
+         6.000000000002274, 6.000000000003638}}], 
+        LineBox[{{20., 14.999999999998181`}, {13.999999999996362`, 
+         5.999999999996362}}], 
+        LineBox[{{20.00000000000182, 4.999999999998181}, {10., 
+         13.999999999998181`}}], 
+        CircleBox[{10., 10.583333333333332`}, 6.083333333333333, {
+         3.9948476398435453`, 5.429930320925834}], 
+        CircleBox[{10., 1.416666666666667}, 6.083333333333333, {
+         0.853254986253752, 2.288337667336041}], 
+        LineBox[{{14., 6.}, {10., 13.999999999998181`}}], 
+        LineBox[{{6., 6.000000000001819}, {10., 14.}}], 
+        {PointSize[0.04], PointBox[{14., 6.}], PointBox[{6., 6.}], 
+         PointBox[{10., 14.}]}, InsetBox[
          TagBox[
           StyleBox[
            TagBox["T4",
@@ -323,11 +973,111 @@ Cell[BoxData[
           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
            6.137505285412264]& ], {10., -0.5}, NCache[
          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
-       "\"aebf/cede/efff.m\"",
-       TooltipStyle->"TextStyling"],
-      Annotation[#, "aebf/cede/efff.m", "Tooltip"]& ],
+       RowBox[{"VFlip", "[", "\"a1be/ced2/21212e1e.m\"", "]"}]],
+      Annotation[#, 
+       FeynArts`VFlip["a1be/ced2/21212e1e.m"], "Tooltip"]& ],
      AspectRatio->1,
      PlotRange->{{-1, 21}, {-1, 21}}], {66, 66}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{2.5011104298755527`*^-12, 15.000000000003638`}, {
+         10.000000000002501`, 14.000000000003638`}}], 
+        LineBox[{{9.094947017729282*^-13, 5.000000000003638}, {
+         6.000000000002274, 6.000000000003638}}], 
+        LineBox[{{19.99999999999818, 14.999999999996362`}, {
+         10.000000000002274`, 13.999999999996362`}}], 
+        LineBox[{{19.999999999997726`, 4.999999999996362}, {
+         13.999999999996817`, 5.999999999996362}}], 
+        CircleBox[{10., 10.583333333333332`}, 6.083333333333333, {
+         3.9948476398435453`, 5.429930320925834}], 
+        CircleBox[{10., 1.416666666666667}, 6.083333333333333, {
+         0.853254986253752, 2.288337667336041}], 
+        LineBox[{{14., 6.}, {10., 13.999999999998181`}}], 
+        LineBox[{{6., 6.000000000001819}, {10., 14.}}], 
+        {PointSize[0.04], PointBox[{14., 6.}], PointBox[{6., 6.}], 
+         PointBox[{10., 14.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T5",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"VFlip", "[", "\"a1be/c2de/21212e1e.m\"", "]"}]],
+      Annotation[#, 
+       FeynArts`VFlip["a1be/c2de/21212e1e.m"], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {0, 44}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], LineBox[{{0., 15.}, {6.000000000001819, 10.}}], 
+        LineBox[{{0., 5.000000000001819}, {6.000000000001819, 
+         10.000000000001819`}}], 
+        LineBox[{{19.99999999999818, 15.}, {14.000000000002274`, 14.}}], 
+        LineBox[{{19.999999999997726`, 4.999999999996362}, {
+         13.999999999996817`, 5.999999999996362}}], 
+        CircleBox[{18.583333333333332`, 10.}, 6.083333333333333, {
+         2.4240513130486487`, 3.8591339941309375`}], 
+        CircleBox[{9.416666666666668, 10.}, 
+         6.083333333333333, {-0.7175413405411445, 0.7175413405411445}], 
+        LineBox[{{13.999999999998181`, 6.}, {5.999999999998181, 10.}}], 
+        LineBox[{{14., 13.999999999996362`}, {6.000000000003638, 10.}}], 
+        {PointSize[0.04], PointBox[{14., 6.}], PointBox[{14., 14.}], 
+         PointBox[{6., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T6",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"HFlip", "[", "\"a1b2/cede/21212e1e.m\"", "]"}]],
+      Annotation[#, 
+       FeynArts`HFlip["a1b2/cede/21212e1e.m"], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {22, 44}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], LineBox[{{0., 15.}, {6.000000000001819, 10.}}], 
+        LineBox[{{0., 5.000000000001819}, {6.000000000001819, 
+         10.000000000001819`}}], 
+        LineBox[{{20.00000000000182, 15.000000000001819`}, {14., 
+         9.999999999998181}}], 
+        LineBox[{{20.00000000000182, 5.000000000001819}, {14., 10.}}], 
+        CircleBox[{10., 13.}, 5., {-2.498091544796509, -0.6435011087932845}], 
+        CircleBox[{9.731671641791046, 7.536656716417911}, 4.471401723723385, {
+         1.5107503531874735`, 2.5581375184039317`}], 
+        CircleBox[{9.970577253218885, 6.941154506437768}, 5.058931055644369, {
+         0.6493171423258599, 1.564980293262321}], 
+        CircleBox[{10., 13.75}, 1.75, {-1.5707963267948966`, 
+         4.71238898038469}], 
+        {PointSize[0.04], PointBox[{6., 10.}], PointBox[{14., 10.}], 
+         PointBox[{10., 12.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T7",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "\"aebe/cfdf/efegfggg.m\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "aebe/cfdf/efegfggg.m", "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {44, 44}, {0, 0}, {22, 22}], InsetBox[
     GraphicsBox[
      TagBox[
       TooltipBox[
@@ -340,14 +1090,18 @@ Cell[BoxData[
          10.000000000002274`, 13.999999999996362`}}], 
         LineBox[{{19.999999999997726`, 4.999999999996362}, {9.999999999997726,
           5.999999999996362}}], 
-        CircleBox[{10.899999999999999`, 10.}, 
-         4.1, {-4.491074538036899, -1.7921107691426879`}], 
-        CircleBox[{9.100000000000001, 10.}, 4.1, {-1.3494818844471055`, 
-         1.3494818844471055`}], 
-        {PointSize[0.04], PointBox[{10., 14.}], PointBox[{10., 6.}]}, InsetBox[
+        CircleBox[{5.416666666666667, 10.}, 
+         6.083333333333333, {-0.7175413405411445, 0.7175413405411445}], 
+        CircleBox[{14.238347150259067`, 10.129369818652851`}, 
+         5.739805272556259, {-3.881674963471311, -3.1190516842494196`}], 
+        CircleBox[{14.238347150259067`, 9.870630181347149}, 
+         5.739805272556259, {3.1190516842494196`, 3.881674963471311}], 
+        CircleBox[{6.75, 10.}, 1.75, {0., 6.283185307179586}], 
+        {PointSize[0.04], PointBox[{10., 14.}], PointBox[{10., 6.}], 
+         PointBox[{8.5, 10.}]}, InsetBox[
          TagBox[
           StyleBox[
-           TagBox["T5",
+           TagBox["T8",
             DisplayForm],
            FontFamily->"Helvetica",
            FontSize->6.137505285412264],
@@ -355,32 +1109,35 @@ Cell[BoxData[
           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
            6.137505285412264]& ], {10., -0.5}, NCache[
          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
-       "\"aebf/cedf/efef.m\"",
+       "\"aebf/cedf/efegfggg.m\"",
        TooltipStyle->"TextStyling"],
-      Annotation[#, "aebf/cedf/efef.m", "Tooltip"]& ],
+      Annotation[#, "aebf/cedf/efegfggg.m", "Tooltip"]& ],
      AspectRatio->1,
-     PlotRange->{{-1, 21}, {-1, 21}}], {0, 44}, {0, 0}, {22, 22}], InsetBox[
+     PlotRange->{{-1, 21}, {-1, 21}}], {66, 44}, {0, 0}, {22, 22}], InsetBox[
     GraphicsBox[
      TagBox[
       TooltipBox[
        {Thickness[0.005], 
-        LineBox[{{4.547473508864641*^-13, 15.000000000003638`}, {9.5, 
-         14.500000000003638`}}], 
-        LineBox[{{0., 5.000000000003638}, {9.499999999999545, 
-         5.500000000003638}}], 
-        LineBox[{{19.999999999996362`, 14.999999999998181`}, {
-         9.499999999994543, 5.499999999996362}}], 
-        LineBox[{{19.99999999999818, 4.999999999998181}, {9.500000000001819, 
-         14.499999999998181`}}], 
-        CircleBox[{10.5125, 10.}, 
-         4.6125, {-4.491074538036899, -1.7921107691426879`}], 
-        CircleBox[{5.43143243243243, 10.}, 
-         6.066567567567569, {-0.8357062686951535, 0.8357062686951535}], 
-        {PointSize[0.04], PointBox[{9.5, 14.5}], PointBox[{9.5, 5.5}]}, 
-        InsetBox[
+        LineBox[{{2.5011104298755527`*^-12, 15.000000000003638`}, {
+         10.000000000002501`, 14.000000000003638`}}], 
+        LineBox[{{2.0463630789890885`*^-12, 5.000000000003638}, {
+         10.000000000002046`, 6.000000000003638}}], 
+        LineBox[{{19.99999999999818, 14.999999999996362`}, {9.999999999996362,
+          5.999999999994543}}], 
+        LineBox[{{20.00000000000182, 4.999999999998181}, {10., 
+         13.999999999998181`}}], 
+        CircleBox[{5.416666666666667, 10.}, 
+         6.083333333333333, {-0.7175413405411445, 0.7175413405411445}], 
+        CircleBox[{13.469444444444445`, 10.417708333333334`}, 
+         4.986968852735683, {-3.942992208555948, -3.0577344391647827`}], 
+        CircleBox[{14.238347150259067`, 9.870630181347149}, 
+         5.739805272556259, {3.1190516842494196`, 3.881674963471311}], 
+        CircleBox[{6.75, 10.}, 1.75, {0., 6.283185307179586}], 
+        {PointSize[0.04], PointBox[{10., 14.}], PointBox[{10., 6.}], 
+         PointBox[{8.5, 10.}]}, InsetBox[
          TagBox[
           StyleBox[
-           TagBox["T6",
+           TagBox["T9",
             DisplayForm],
            FontFamily->"Helvetica",
            FontSize->6.137505285412264],
@@ -388,11 +1145,180 @@ Cell[BoxData[
           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
            6.137505285412264]& ], {10., -0.5}, NCache[
          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
-       "\"aebf/cfde/efef.m\"",
+       "\"aebf/cfde/efegfggg.m\"",
        TooltipStyle->"TextStyling"],
-      Annotation[#, "aebf/cfde/efef.m", "Tooltip"]& ],
+      Annotation[#, "aebf/cfde/efegfggg.m", "Tooltip"]& ],
      AspectRatio->1,
-     PlotRange->{{-1, 21}, {-1, 21}}], {22, 44}, {0, 0}, {22, 22}], InsetBox[
+     PlotRange->{{-1, 21}, {-1, 21}}], {0, 22}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], LineBox[{{0., 15.}, {7., 10.5}}], 
+        LineBox[{{-1.8189894035458565`*^-12, 5.000000000003638}, {
+         4.999999999998181, 7.500000000003638}}], 
+        LineBox[{{20.00000000000182, 15.000000000001819`}, {14., 
+         9.999999999998181}}], 
+        LineBox[{{20.00000000000182, 5.000000000001819}, {14., 10.}}], 
+        LineBox[{{4.999999999996362, 7.499999999998181}, {6.999999999996362, 
+         10.499999999998181`}}], 
+        CircleBox[{5.8945, 5.711}, 2.0001628058735617, {-4.2487413713838835`, 
+         2.0344439357957027`}], 
+        CircleBox[{10.55625, 11.0375}, 
+         3.596640142202163, {-2.9915856760272925`, -0.29262190713308156`}], 
+        CircleBox[{10.44375, 9.4625}, 3.596640142202163, {
+         0.15000697756250103`, 2.848970746456712}], 
+        {PointSize[0.04], PointBox[{5., 7.5}], PointBox[{7., 10.5}], 
+         PointBox[{14., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T10",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "Automatic"],
+      Annotation[#, Automatic, "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {22, 22}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{-1.8189894035458565`*^-12, 15.000000000003638`}, {
+         4.999999999998181, 12.500000000003638`}}], 
+        LineBox[{{0., 5.000000000003638}, {7.000000000001819, 
+         9.500000000003638}}], 
+        LineBox[{{20.00000000000182, 15.000000000001819`}, {14., 
+         9.999999999998181}}], 
+        LineBox[{{20.00000000000182, 5.000000000001819}, {14., 10.}}], 
+        LineBox[{{7., 9.499999999998181}, {5., 12.499999999998181`}}], 
+        CircleBox[{10.55625, 8.9625}, 3.596640142202163, {
+         0.29262190713308156`, 2.9915856760272925`}], 
+        CircleBox[{10.44375, 10.5375}, 
+         3.596640142202163, {-2.848970746456712, -0.15000697756250103`}], 
+        CircleBox[{5.8945, 14.289}, 2.0001628058735617, {-2.0344439357957027`,
+          4.2487413713838835`}], 
+        {PointSize[0.04], PointBox[{7., 9.5}], PointBox[{5., 12.5}], 
+         PointBox[{14., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T11",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"VFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`VFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {44, 22}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{-1.8189894035458565`*^-12, 15.000000000003638`}, {
+         4.999999999998181, 12.500000000003638`}}], 
+        LineBox[{{-1.8189894035458565`*^-12, 5.000000000003638}, {
+         4.999999999998181, 7.500000000003638}}], 
+        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
+         10.000000000012733`, 10.000000000003638`}}], 
+        LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{4.999999999998181, 7.500000000003638}, {9.999999999998181, 
+         10.000000000003638`}}], 
+        LineBox[{{4.999999999998181, 12.500000000003638`}, {9.999999999998181,
+          10.000000000003638`}}], 
+        CircleBox[{5.8945, 5.711}, 2.0001628058735617, {-4.2487413713838835`, 
+         2.0344439357957027`}], 
+        CircleBox[{5.8945, 14.289}, 2.0001628058735617, {-2.0344439357957027`,
+          4.2487413713838835`}], 
+        {PointSize[0.04], PointBox[{5., 7.5}], PointBox[{5., 12.5}], 
+         PointBox[{10., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T12",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "Automatic"],
+      Annotation[#, Automatic, "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {66, 22}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{9.094947017729282*^-13, 15.}, {9., 11.5}}], 
+        LineBox[{{-1.8189894035458565`*^-12, 5.}, {9.999999999997272, 8.}}], 
+        LineBox[{{20.000000000003638`, 15.}, {14.999999999998181`, 
+         12.499999999996362`}}], 
+        LineBox[{{20.00000000000091, 5.}, {10.000000000001819`, 8.}}], 
+        LineBox[{{14.999999999998181`, 12.5}, {9.000000000002274, 11.5}}], 
+        CircleBox[{15.8945, 10.711}, 2.000162805873562, {-4.2487413713838835`,
+          2.0344439357957027`}], 
+        CircleBox[{9.893749999999999, 9.862499999999999}, 
+         1.8655281591281325, {-4.212774879031787, -1.5138111101375764`}], 
+        CircleBox[{9.106250000000001, 9.637500000000001}, 
+         1.8655281591281325, {-1.0711822254419943`, 1.6277815434522167`}], 
+        {PointSize[0.04], PointBox[{15., 12.5}], PointBox[{9., 11.5}], 
+         PointBox[{10., 8.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T13",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "Automatic"],
+      Annotation[#, Automatic, "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {0, 0}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{-1.8189894035458565`*^-12, 15.000000000003638`}, {
+         4.999999999998181, 12.500000000003638`}}], 
+        LineBox[{{-1.8189894035458565`*^-12, 5.}, {9.999999999997272, 8.}}], 
+        LineBox[{{20., 15.}, {11.00000000000091, 11.5}}], 
+        LineBox[{{20.00000000000091, 5.}, {10.000000000001819`, 8.}}], 
+        LineBox[{{10.999999999997726`, 11.499999999996362`}, {
+         4.999999999996817, 12.499999999996362`}}], 
+        CircleBox[{10.106250000000001`, 9.862499999999999}, 
+         1.8655281591281325, {-1.627781543452217, 1.071182225441994}], 
+        CircleBox[{10.893749999999999`, 9.637500000000001}, 
+         1.8655281591281325, {-4.76937419704201, -2.0704104281477993`}], 
+        CircleBox[{4.1055, 10.711}, 2.0001628058735617, {-5.176036589385496, 
+         1.1071487177940904`}], 
+        {PointSize[0.04], PointBox[{11., 11.5}], PointBox[{5., 12.5}], 
+         PointBox[{10., 8.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T14",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"HFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`HFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {22, 0}, {0, 0}, {22, 22}], InsetBox[
     GraphicsBox[
      TagBox[
       TooltipBox[
@@ -400,18 +1326,21 @@ Cell[BoxData[
         LineBox[{{-1.8189894035458565`*^-12, 15.000000000003638`}, {
          4.999999999998181, 12.500000000003638`}}], 
         LineBox[{{0., 5.}, {10., 10.}}], 
-        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
-         10.000000000012733`, 10.000000000003638`}}], 
-        LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{20.000000000003638`, 15.}, {14.999999999998181`, 
+         12.499999999996362`}}], LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{15.000000000003638`, 12.5}, {9.999999999998181, 
+         9.999999999996362}}], 
         LineBox[{{4.999999999998181, 12.500000000003638`}, {9.999999999998181,
           10.000000000003638`}}], 
-        CircleBox[{6., 14.5}, 2.23606797749979, {-2.0344439357957027`, 
-         4.2487413713838835`}], 
-        {PointSize[0.04], PointBox[{5., 12.5}], PointBox[{10., 10.}]}, 
-        InsetBox[
+        CircleBox[{15.8945, 10.711}, 2.000162805873562, {-4.2487413713838835`,
+          2.0344439357957027`}], 
+        CircleBox[{5.8945, 14.289}, 2.0001628058735617, {-2.0344439357957027`,
+          4.2487413713838835`}], 
+        {PointSize[0.04], PointBox[{15., 12.5}], PointBox[{5., 12.5}], 
+         PointBox[{10., 10.}]}, InsetBox[
          TagBox[
           StyleBox[
-           TagBox["T7",
+           TagBox["T15",
             DisplayForm],
            FontFamily->"Helvetica",
            FontSize->6.137505285412264],
@@ -419,11 +1348,43 @@ Cell[BoxData[
           StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
            6.137505285412264]& ], {10., -0.5}, NCache[
          ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
-       "\"aebf/cfdf/efee.m\"",
-       TooltipStyle->"TextStyling"],
-      Annotation[#, "aebf/cfdf/efee.m", "Tooltip"]& ],
+       "Automatic"],
+      Annotation[#, Automatic, "Tooltip"]& ],
      AspectRatio->1,
-     PlotRange->{{-1, 21}, {-1, 21}}], {44, 44}, {0, 0}, {22, 22}], InsetBox[
+     PlotRange->{{-1, 21}, {-1, 21}}], {44, 0}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{-3.637978807091713*^-12, 15.}, {8.999999999996362, 10.5}}], 
+        LineBox[{{1.8189894035458565`*^-12, 5.000000000003638}, {14., 12.}}], 
+        LineBox[{{19.99999999999818, 15.}, {14.000000000003638`, 
+         12.000000000003638`}}], 
+        LineBox[{{19.99999999999818, 4.999999999996362}, {14.999999999998181`,
+          7.499999999996362}}], 
+        LineBox[{{15.000000000001819`, 7.5}, {9.000000000001819, 10.5}}], 
+        CircleBox[{15.8945, 9.289}, 2.000162805873562, {-2.0344439357957027`, 
+         4.2487413713838835`}], 
+        CircleBox[{11.33125, 11.8125}, 
+         2.6753285429083284, {-2.6288214167641346`, 0.07014235213007636}], 
+        CircleBox[{11.66875, 10.6875}, 2.6753285429083284, {
+         0.5127712368256581, 3.211735005719869}], 
+        {PointSize[0.04], PointBox[{15., 7.5}], PointBox[{9., 10.5}], 
+         PointBox[{14., 12.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T16",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "Automatic"],
+      Annotation[#, Automatic, "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {66, 0}, {0, 0}, {22, 22}], InsetBox[
     TagBox[
      StyleBox[
       TagBox["2",
@@ -459,10 +1420,1007 @@ Cell[BoxData[
   PlotRange->{{0, 88}, {0, 94.6}}]], "Print",
  CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
    3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
-   3.980871003756029*^9},
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.9815357038356247`*^9},
  CellLabel->
   "During evaluation of \
-In[1]:=",ExpressionUUID->"46142a0d-4118-4f1b-bfcb-a5f1bee8eae2"]
+In[65]:=",ExpressionUUID->"20dc795d-c90f-47aa-8b3c-f9ad1b9cadd1"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{-1.8189894035458565`*^-12, 15.000000000003638`}, {
+         4.999999999998181, 12.500000000003638`}}], 
+        LineBox[{{-3.637978807091713*^-12, 4.999999999996362}, {
+         5.999999999996362, 7.999999999996362}}], 
+        LineBox[{{20., 15.}, {6.000000000001819, 8.000000000003638}}], 
+        LineBox[{{19.99999999999818, 5.}, {10.999999999998181`, 9.5}}], 
+        LineBox[{{11.000000000001819`, 9.5}, {5.000000000001819, 12.5}}], 
+        CircleBox[{8.66875, 8.1875}, 
+         2.6753285429083284, {-5.770414070353929, -3.0714503014597176`}], 
+        CircleBox[{8.33125, 9.3125}, 
+         2.6753285429083284, {-2.6288214167641355`, 0.07014235213007547}], 
+        CircleBox[{4.1055, 10.711}, 2.0001628058735617, {-5.176036589385496, 
+         1.1071487177940904`}], 
+        {PointSize[0.04], PointBox[{11., 9.5}], PointBox[{5., 12.5}], 
+         PointBox[{6., 8.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T17",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"HFlip", "[", 
+         RowBox[{"VFlip", "[", "Automatic", "]"}], "]"}]],
+      Annotation[#, 
+       FeynArts`HFlip[
+        FeynArts`VFlip[Automatic]], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {0, 66}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{-1.8189894035458565`*^-12, 15.000000000003638`}, {
+         4.999999999998181, 12.500000000003638`}}], 
+        LineBox[{{0., 5.}, {10., 10.}}], 
+        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
+         10.000000000012733`, 10.000000000003638`}}], 
+        LineBox[{{19.99999999999818, 4.999999999996362}, {14.999999999998181`,
+          7.499999999996362}}], 
+        LineBox[{{14.999999999998181`, 7.499999999996362}, {9.999999999998181,
+          9.999999999996362}}], 
+        LineBox[{{4.999999999998181, 12.500000000003638`}, {9.999999999998181,
+          10.000000000003638`}}], 
+        CircleBox[{15.8945, 9.289}, 2.000162805873562, {-2.0344439357957027`, 
+         4.2487413713838835`}], 
+        CircleBox[{5.8945, 14.289}, 2.0001628058735617, {-2.0344439357957027`,
+          4.2487413713838835`}], 
+        {PointSize[0.04], PointBox[{15., 7.5}], PointBox[{5., 12.5}], 
+         PointBox[{10., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T18",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "Automatic"],
+      Annotation[#, Automatic, "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {22, 66}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{-3.637978807091713*^-12, 15.000000000003638`}, {
+         3.3329999999932625`, 13.333000000002357`}}], 
+        LineBox[{{0., 5.}, {10., 10.}}], 
+        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
+         10.000000000012733`, 10.000000000003638`}}], 
+        LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{6.666999999997643, 11.66700000000128}, {3.3329999999987194`,
+          13.333000000002357`}}], 
+        LineBox[{{6.666999999997643, 11.667000000004919`}, {9.999999999994543,
+          10.000000000003638`}}], 
+        CircleBox[{7.5615, 13.4555}, 
+         1.9997156047798403, {-2.0345557550952478`, 4.2486295520843385`}], 
+        CircleBox[{4.2275, 15.122}, 2.0001628058735617, {-2.0344439357957027`,
+          4.2487413713838835`}], 
+        {PointSize[0.04], PointBox[{6.667, 11.667}], 
+         PointBox[{3.333, 13.333}], PointBox[{10., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T19",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "Automatic"],
+      Annotation[#, Automatic, "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {44, 66}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{1.8189894035458565`*^-12, 15.}, {14., 8.}}], 
+        LineBox[{{-1.8189894035458565`*^-12, 5.}, {8.999999999998181, 9.5}}], 
+        LineBox[{{20.000000000003638`, 15.}, {14.999999999998181`, 
+         12.499999999996362`}}], 
+        LineBox[{{20.00000000000182, 5.}, {14.000000000001819`, 8.}}], 
+        LineBox[{{14.999999999998181`, 12.5}, {9.000000000003638, 
+         9.500000000003638}}], 
+        CircleBox[{15.8945, 10.711}, 2.000162805873562, {-4.2487413713838835`,
+          2.0344439357957027`}], 
+        CircleBox[{11.33125, 8.1875}, 
+         2.6753285429083284, {-0.07014235213007636, 2.6288214167641346`}], 
+        CircleBox[{11.66875, 9.3125}, 
+         2.6753285429083284, {-3.211735005719869, -0.5127712368256581}], 
+        {PointSize[0.04], PointBox[{15., 12.5}], PointBox[{9., 9.5}], 
+         PointBox[{14., 8.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T20",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"VFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`VFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {66, 66}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{1.8189894035458565`*^-12, 14.999999999996362`}, {
+         6.000000000005457, 11.999999999992724`}}], 
+        LineBox[{{-1.8189894035458565`*^-12, 5.000000000003638}, {
+         4.999999999998181, 7.500000000003638}}], 
+        LineBox[{{20.000000000005457`, 15.}, {10.999999999996362`, 
+         10.499999999996362`}}], 
+        LineBox[{{20., 5.}, {6.000000000001819, 11.999999999996362`}}], 
+        LineBox[{{10.999999999998181`, 10.5}, {5.000000000003638, 
+         7.500000000003638}}], 
+        CircleBox[{8.66875, 11.8125}, 2.6753285429083284, {
+         3.0714503014597176`, 5.770414070353929}], 
+        CircleBox[{8.33125, 10.6875}, 
+         2.6753285429083284, {-0.07014235213007547, 2.6288214167641355`}], 
+        CircleBox[{4.1055, 9.289}, 2.0001628058735617, {-1.1071487177940904`, 
+         5.176036589385496}], 
+        {PointSize[0.04], PointBox[{11., 10.5}], PointBox[{5., 7.5}], 
+         PointBox[{6., 12.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T21",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"HFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`HFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {0, 44}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
+         10.000000000003638`, 9.999999999996362}}], 
+        LineBox[{{-1.8189894035458565`*^-12, 5.000000000003638}, {
+         4.999999999998181, 7.500000000003638}}], 
+        LineBox[{{20.000000000003638`, 15.}, {14.999999999998181`, 
+         12.499999999996362`}}], LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{15.000000000003638`, 12.5}, {9.999999999998181, 
+         9.999999999996362}}], 
+        LineBox[{{4.999999999998181, 7.500000000003638}, {9.999999999998181, 
+         10.000000000003638`}}], 
+        CircleBox[{15.8945, 10.711}, 2.000162805873562, {-4.2487413713838835`,
+          2.0344439357957027`}], 
+        CircleBox[{5.8945, 5.711}, 2.0001628058735617, {-4.2487413713838835`, 
+         2.0344439357957027`}], 
+        {PointSize[0.04], PointBox[{15., 12.5}], PointBox[{5., 7.5}], 
+         PointBox[{10., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T22",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"VFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`VFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {22, 44}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{-9.094947017729282*^-13, 15.}, {9.999999999998181, 12.}}], 
+        LineBox[{{0., 5.}, {8.99999999999909, 8.5}}], 
+        LineBox[{{19.999999999993634`, 15.}, {9.999999999989996, 
+         11.999999999996362`}}], 
+        LineBox[{{19.99999999999818, 4.999999999996362}, {14.999999999998181`,
+          7.499999999996362}}], 
+        LineBox[{{14.999999999997726`, 7.499999999996362}, {8.999999999996817,
+          8.499999999996362}}], 
+        CircleBox[{15.8945, 9.289}, 2.000162805873562, {-2.0344439357957027`, 
+         4.2487413713838835`}], 
+        CircleBox[{9.893749999999999, 10.137500000000001`}, 
+         1.8655281591281325, {1.5138111101375764`, 4.212774879031787}], 
+        CircleBox[{9.106250000000001, 10.362499999999999`}, 
+         1.8655281591281325, {-1.6277815434522167`, 1.0711822254419943`}], 
+        {PointSize[0.04], PointBox[{15., 7.5}], PointBox[{9., 8.5}], 
+         PointBox[{10., 12.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T23",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"VFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`VFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {44, 44}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{-9.094947017729282*^-13, 15.}, {9.999999999998181, 12.}}], 
+        LineBox[{{-1.8189894035458565`*^-12, 5.000000000003638}, {
+         4.999999999998181, 7.500000000003638}}], 
+        LineBox[{{19.999999999993634`, 15.}, {9.999999999989996, 
+         11.999999999996362`}}], 
+        LineBox[{{19.99999999999818, 5.}, {10.99999999999909, 
+         8.499999999996362}}], 
+        LineBox[{{10.999999999998181`, 8.5}, {5.000000000002274, 7.5}}], 
+        CircleBox[{10.106250000000001`, 10.137500000000001`}, 
+         1.8655281591281325, {-1.071182225441994, 1.627781543452217}], 
+        CircleBox[{10.893749999999999`, 10.362499999999999`}, 
+         1.8655281591281325, {2.0704104281477993`, 4.76937419704201}], 
+        CircleBox[{4.1055, 9.289}, 2.0001628058735617, {-1.1071487177940904`, 
+         5.176036589385496}], 
+        {PointSize[0.04], PointBox[{11., 8.5}], PointBox[{5., 7.5}], 
+         PointBox[{10., 12.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T24",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"HFlip", "[", 
+         RowBox[{"VFlip", "[", "Automatic", "]"}], "]"}]],
+      Annotation[#, 
+       FeynArts`HFlip[
+        FeynArts`VFlip[Automatic]], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {66, 44}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
+         10.000000000003638`, 9.999999999996362}}], 
+        LineBox[{{-1.8189894035458565`*^-12, 5.000000000003638}, {
+         4.999999999998181, 7.500000000003638}}], 
+        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
+         10.000000000012733`, 10.000000000003638`}}], 
+        LineBox[{{19.99999999999818, 4.999999999996362}, {14.999999999998181`,
+          7.499999999996362}}], 
+        LineBox[{{14.999999999998181`, 7.499999999996362}, {9.999999999998181,
+          9.999999999996362}}], 
+        LineBox[{{4.999999999998181, 7.500000000003638}, {9.999999999998181, 
+         10.000000000003638`}}], 
+        CircleBox[{15.8945, 9.289}, 2.000162805873562, {-2.0344439357957027`, 
+         4.2487413713838835`}], 
+        CircleBox[{5.8945, 5.711}, 2.0001628058735617, {-4.2487413713838835`, 
+         2.0344439357957027`}], 
+        {PointSize[0.04], PointBox[{15., 7.5}], PointBox[{5., 7.5}], 
+         PointBox[{10., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T25",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"VFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`VFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {0, 22}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
+         10.000000000003638`, 9.999999999996362}}], 
+        LineBox[{{1.8189894035458565`*^-12, 5.000000000003638}, {
+         3.3330000000023574`, 6.6670000000049185`}}], 
+        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
+         10.000000000012733`, 10.000000000003638`}}], 
+        LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{6.666999999997643, 8.333000000002357}, {3.3330000000023574`,
+          6.667000000001281}}], 
+        LineBox[{{6.6670000000031, 8.333000000002357}, {10.000000000003638`, 
+         10.000000000003638`}}], 
+        CircleBox[{7.5615, 6.5445}, 1.9997156047798397, {-4.2486295520843385`,
+          2.0345557550952478`}], 
+        CircleBox[{4.2275, 4.878}, 2.0001628058735617, {-4.2487413713838835`, 
+         2.0344439357957027`}], 
+        {PointSize[0.04], PointBox[{6.667, 8.333}], PointBox[{3.333, 6.667}], 
+         PointBox[{10., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T26",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"VFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`VFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {22, 22}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], LineBox[{{0., 15.}, {6.000000000001819, 10.}}], 
+        LineBox[{{0., 5.000000000001819}, {6.000000000001819, 
+         10.000000000001819`}}], 
+        LineBox[{{19.999999999992724`, 14.999999999996362`}, {
+         12.999999999992724`, 10.499999999992724`}}], 
+        LineBox[{{19.99999999999818, 4.999999999996362}, {14.999999999998181`,
+          7.499999999996362}}], 
+        LineBox[{{15., 7.499999999998181}, {13., 10.499999999998181`}}], 
+        CircleBox[{14.1055, 5.711}, 2.000162805873562, {-5.176036589385497, 
+         1.1071487177940895`}], 
+        CircleBox[{9.44375, 11.0375}, 
+         3.596640142202163, {-2.848970746456712, -0.15000697756250103`}], 
+        CircleBox[{9.55625, 9.4625}, 
+         3.596640142202163, {-5.990563400046505, -3.291599631152294}], 
+        {PointSize[0.04], PointBox[{15., 7.5}], PointBox[{13., 10.5}], 
+         PointBox[{6., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T27",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"HFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`HFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {44, 22}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], LineBox[{{0., 15.}, {6.000000000001819, 10.}}], 
+        LineBox[{{0., 5.000000000001819}, {6.000000000001819, 
+         10.000000000001819`}}], 
+        LineBox[{{20.000000000003638`, 15.}, {14.999999999998181`, 
+         12.499999999996362`}}], 
+        LineBox[{{19.99999999999818, 5.}, {12.999999999998181`, 9.5}}], 
+        LineBox[{{12.999999999996362`, 9.499999999998181}, {
+         14.999999999996362`, 12.499999999998181`}}], 
+        CircleBox[{9.44375, 8.9625}, 3.596640142202163, {0.15000697756250103`,
+          2.848970746456712}], 
+        CircleBox[{9.55625, 10.5375}, 3.596640142202163, {3.291599631152294, 
+         5.990563400046505}], 
+        CircleBox[{14.1055, 14.289}, 2.000162805873562, {-1.1071487177940895`,
+          5.176036589385497}], 
+        {PointSize[0.04], PointBox[{13., 9.5}], PointBox[{15., 12.5}], 
+         PointBox[{6., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T28",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"HFlip", "[", 
+         RowBox[{"VFlip", "[", "Automatic", "]"}], "]"}]],
+      Annotation[#, 
+       FeynArts`HFlip[
+        FeynArts`VFlip[Automatic]], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {66, 22}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
+         10.000000000003638`, 9.999999999996362}}], 
+        LineBox[{{0., 5.}, {10., 10.}}], 
+        LineBox[{{20.000000000003638`, 15.}, {14.999999999998181`, 
+         12.499999999996362`}}], 
+        LineBox[{{19.99999999999818, 4.999999999996362}, {14.999999999998181`,
+          7.499999999996362}}], 
+        LineBox[{{14.999999999998181`, 7.499999999996362}, {9.999999999998181,
+          9.999999999996362}}], 
+        LineBox[{{15.000000000003638`, 12.5}, {9.999999999998181, 
+         9.999999999996362}}], 
+        CircleBox[{14.1055, 5.711}, 2.000162805873562, {-5.176036589385497, 
+         1.1071487177940895`}], 
+        CircleBox[{14.1055, 14.289}, 2.000162805873562, {-1.1071487177940895`,
+          5.176036589385497}], 
+        {PointSize[0.04], PointBox[{15., 7.5}], PointBox[{15., 12.5}], 
+         PointBox[{10., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T29",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"HFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`HFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {0, 0}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
+         10.000000000003638`, 9.999999999996362}}], 
+        LineBox[{{0., 5.}, {10., 10.}}], 
+        LineBox[{{20.000000000003638`, 15.}, {16.66699999999946, 
+         13.33299999999872}}], LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{13.333000000002357`, 11.66700000000128}, {16.6670000000031, 
+         13.333000000002357`}}], 
+        LineBox[{{13.333000000002357`, 11.66700000000128}, {9.999999999998181,
+          10.}}], 
+        CircleBox[{12.438500000000001`, 13.4555}, 
+         1.9997156047798401, {-1.1070368984945453`, 5.176148408685041}], 
+        CircleBox[{15.7725, 15.122}, 2.000162805873562, {-1.1071487177940895`,
+          5.176036589385497}], 
+        {PointSize[0.04], PointBox[{13.333, 11.667}], 
+         PointBox[{16.667, 13.333}], PointBox[{10., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T30",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"HFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`HFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {22, 0}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
+         10.000000000003638`, 9.999999999996362}}], 
+        LineBox[{{0., 5.}, {10., 10.}}], 
+        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
+         10.000000000012733`, 10.000000000003638`}}], 
+        LineBox[{{20., 4.999999999996362}, {16.66699999999946, 
+         6.666999999997643}}], 
+        LineBox[{{13.333000000002357`, 8.33299999999872}, {
+         16.666999999997643`, 6.667000000001281}}], 
+        LineBox[{{13.33299999999872, 8.332999999995081}, {9.999999999998181, 
+         9.999999999996362}}], 
+        CircleBox[{12.438500000000001`, 6.5445}, 
+         1.9997156047798392, {-5.176148408685041, 1.1070368984945453`}], 
+        CircleBox[{15.7725, 4.878}, 2.000162805873562, {-5.176036589385497, 
+         1.1071487177940895`}], 
+        {PointSize[0.04], PointBox[{13.333, 8.333}], 
+         PointBox[{16.667, 6.667}], PointBox[{10., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T31",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"HFlip", "[", 
+         RowBox[{"VFlip", "[", "Automatic", "]"}], "]"}]],
+      Annotation[#, 
+       FeynArts`HFlip[
+        FeynArts`VFlip[Automatic]], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {44, 0}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
+         10.000000000003638`, 9.999999999996362}}], 
+        LineBox[{{0., 5.}, {10., 10.}}], 
+        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
+         10.000000000012733`, 10.000000000003638`}}], 
+        LineBox[{{19.99999999999818, 4.999999999996362}, {14.999999999998181`,
+          7.499999999996362}}], 
+        LineBox[{{9.999999999998181, 10.000000000003638`}, {
+         14.999999999998181`, 7.500000000003638}}], 
+        CircleBox[{15.984062500000004`, 11.480025}, 
+         4.099875364511859, {-1.81318539684678, 0.885778372047431}], 
+        CircleBox[{17.5939375, 10.674975000000002`}, 4.099875364511859, {
+         1.3284072567430134`, 4.027371025637224}], 
+        CircleBox[{17.683500000000002`, 12.8665}, 
+         1.9997156047798392, {-5.176148408685039, 1.1070368984945471`}], 
+        {PointSize[0.04], PointBox[{10., 10.}], PointBox[{15., 7.5}], 
+         PointBox[{18.578, 14.655000000000001`}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T32",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "Automatic"],
+      Annotation[#, Automatic, "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {66, 0}, {0, 0}, {22, 22}], InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["2",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->9.206257928118394],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      9.206257928118394]& ], {39.5, 91.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]], 
+   InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["\[RightArrow]",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->9.206257928118394],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      9.206257928118394]& ], {44., 91.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]], 
+   InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["2",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->9.206257928118394],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      9.206257928118394]& ], {48.5, 91.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]]},
+  
+  AspectRatio->1.075,
+  ImageSize->{288, 288},
+  PlotRange->{{0, 88}, {0, 94.6}}]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.9815357038959703`*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"6fba37ec-cdee-405f-8964-733f5dfadfc8"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
+         10.000000000003638`, 9.999999999996362}}], 
+        LineBox[{{0., 5.}, {10., 10.}}], 
+        LineBox[{{20.000000000003638`, 15.}, {14.999999999998181`, 
+         12.499999999996362`}}], LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{9.999999999998181, 10.000000000003638`}, {
+         14.999999999998181`, 12.500000000003638`}}], 
+        CircleBox[{15.984062500000002`, 8.519975}, 
+         4.099875364511859, {-0.885778372047431, 1.81318539684678}], 
+        CircleBox[{17.593937500000003`, 9.325024999999998}, 
+         4.099875364511859, {-4.027371025637224, -1.3284072567430134`}], 
+        CircleBox[{17.683500000000002`, 7.1335}, 
+         1.9997156047798386, {-1.1070368984945471`, 5.176148408685039}], 
+        {PointSize[0.04], PointBox[{10., 10.}], PointBox[{15., 12.5}], 
+         PointBox[{18.578, 5.345}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T33",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"VFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`VFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {0, 66}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], LineBox[{{0., 15.}, {6.000000000001819, 10.}}], 
+        LineBox[{{0., 5.000000000001819}, {6.000000000001819, 
+         10.000000000001819`}}], 
+        LineBox[{{20.00000000000182, 15.000000000001819`}, {14., 
+         9.999999999998181}}], 
+        LineBox[{{20.00000000000182, 5.000000000001819}, {14., 10.}}], 
+        CircleBox[{7.550000000000001, 12.45}, 
+         2.899137802864845, {-2.134880047844554, 0.564083721049657}], 
+        CircleBox[{8.45, 11.55}, 2.899137802864845, {1.0067126057452396`, 
+         3.7056763746394505`}], 
+        CircleBox[{11.55, 11.55}, 2.899137802864845, {-0.564083721049657, 
+         2.134880047844554}], 
+        CircleBox[{12.45, 12.45}, 2.899137802864845, {2.577508932540136, 
+         5.276472701434347}], 
+        {PointSize[0.04], PointBox[{6., 10.}], PointBox[{14., 10.}], 
+         PointBox[{10., 14.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T34",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "Automatic"],
+      Annotation[#, Automatic, "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {22, 66}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
+         10.000000000003638`, 9.999999999996362}}], 
+        LineBox[{{-1.8189894035458565`*^-12, 5.000000000003638}, {
+         4.999999999998181, 7.500000000003638}}], 
+        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
+         10.000000000012733`, 10.000000000003638`}}], 
+        LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{10.000000000003638`, 10.}, {4.999999999998181, 
+         7.499999999996362}}], 
+        CircleBox[{4.0159375, 11.480025}, 4.09987536451186, {
+         2.2558142815423623`, 4.954778050436573}], 
+        CircleBox[{2.4060625000000004`, 10.674975000000002`}, 
+         4.09987536451186, {-0.885778372047431, 1.81318539684678}], 
+        CircleBox[{2.3165, 12.8665}, 
+         1.9997156047798406, {-4.2486295520843385`, 2.0345557550952478`}], 
+        {PointSize[0.04], PointBox[{10., 10.}], PointBox[{5., 7.5}], 
+         PointBox[{1.422, 14.655000000000001`}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T35",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"HFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`HFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {44, 66}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{-9.094947017729282*^-13, 15.}, {9.999999999998181, 12.}}], 
+        LineBox[{{-1.8189894035458565`*^-12, 5.}, {9.999999999997272, 8.}}], 
+        LineBox[{{19.999999999993634`, 15.}, {9.999999999989996, 
+         11.999999999996362`}}], 
+        LineBox[{{20.00000000000091, 5.}, {10.000000000001819`, 8.}}], 
+        CircleBox[{11.225, 11.225}, 
+         1.4495689014324225, {-3.7056763746394505`, -1.0067126057452396`}], 
+        CircleBox[{10.775, 10.775}, 1.4495689014324225, {-0.564083721049657, 
+         2.134880047844554}], 
+        CircleBox[{10.775, 9.225}, 1.4495689014324225, {-2.134880047844554, 
+         0.564083721049657}], 
+        CircleBox[{11.225, 8.775}, 1.4495689014324225, {1.0067126057452396`, 
+         3.7056763746394505`}], 
+        {PointSize[0.04], PointBox[{10., 12.}], PointBox[{10., 8.}], 
+         PointBox[{12., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T36",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "Automatic"],
+      Annotation[#, Automatic, "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {66, 66}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{1.8189894035458565`*^-12, 15.}, {14., 8.}}], 
+        LineBox[{{1.8189894035458565`*^-12, 5.000000000003638}, {14., 12.}}], 
+        LineBox[{{19.99999999999818, 15.}, {14.000000000003638`, 
+         12.000000000003638`}}], 
+        LineBox[{{20.00000000000182, 5.}, {14.000000000001819`, 8.}}], 
+        CircleBox[{9.539, 8.0469}, 4.461246530959705, {-0.010512950494956375`,
+          2.6884508183992546`}], 
+        CircleBox[{9.988999999999999, 9.9531}, 4.461246530959705, {
+         3.1310797030948367`, 5.830043471989048}], 
+        CircleBox[{9.988999999999999, 10.0469}, 
+         4.461246530959705, {-5.830043471989048, -3.1310797030948367`}], 
+        CircleBox[{9.539, 11.9531}, 4.461246530959705, {-2.6884508183992546`, 
+         0.010512950494956375`}], 
+        {PointSize[0.04], PointBox[{14., 8.}], PointBox[{14., 12.}], 
+         PointBox[{5.5280000000000005`, 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T37",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "Automatic"],
+      Annotation[#, Automatic, "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {0, 44}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{-1.8189894035458565`*^-12, 15.000000000003638`}, {
+         4.999999999998181, 12.500000000003638`}}], 
+        LineBox[{{0., 5.}, {10., 10.}}], 
+        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
+         10.000000000012733`, 10.000000000003638`}}], 
+        LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{4.999999999998181, 12.500000000003638`}, {9.999999999998181,
+          10.000000000003638`}}], 
+        CircleBox[{4.015937499999998, 8.519975}, 
+         4.099875364511859, {-4.954778050436573, -2.2558142815423623`}], 
+        CircleBox[{2.406062500000002, 9.325024999999998}, 
+         4.099875364511859, {-1.81318539684678, 0.885778372047431}], 
+        CircleBox[{2.3165, 7.1335}, 1.9997156047798397, {-2.0345557550952478`,
+          4.2486295520843385`}], 
+        {PointSize[0.04], PointBox[{5., 12.5}], PointBox[{10., 10.}], 
+         PointBox[{1.422, 5.345}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T38",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"HFlip", "[", 
+         RowBox[{"VFlip", "[", "Automatic", "]"}], "]"}]],
+      Annotation[#, 
+       FeynArts`HFlip[
+        FeynArts`VFlip[Automatic]], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {22, 44}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 15.}, {3.000000000005457, 
+         13.499999999996362`}}], LineBox[{{0., 5.}, {10., 10.}}], 
+        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
+         10.000000000012733`, 10.000000000003638`}}], 
+        LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{7.000000000003638, 11.5}, {10.000000000005457`, 
+         9.999999999996362}}], 
+        CircleBox[{4.775, 12.05}, 2.2919696769372844, {-0.24233316665301485`, 
+         2.456630602241196}], 
+        LineBox[{{6.999999999998181, 11.499999999996362`}, {2.999999999998181,
+          13.499999999996362`}}], 
+        CircleBox[{5.225, 12.95}, 2.2919696769372844, {2.8992594869367783`, 
+         5.598223255830989}], 
+        {PointSize[0.04], PointBox[{7., 11.5}], PointBox[{3., 13.5}], 
+         PointBox[{10., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T39",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "Automatic"],
+      Annotation[#, Automatic, "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {44, 44}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
+         10.000000000003638`, 9.999999999996362}}], 
+        LineBox[{{-1.8189894035458565`*^-12, 5.}, {2.999999999996362, 6.5}}], 
+        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
+         10.000000000012733`, 10.000000000003638`}}], 
+        LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{6.999999999998181, 8.5}, {9.999999999996362, 10.}}], 
+        CircleBox[{4.775, 7.949999999999999}, 
+         2.2919696769372844, {-2.456630602241196, 0.24233316665301485`}], 
+        LineBox[{{6.999999999996362, 8.5}, {2.999999999989086, 
+         6.499999999992724}}], 
+        CircleBox[{5.225, 7.050000000000001}, 
+         2.2919696769372844, {-5.598223255830989, -2.8992594869367783`}], 
+        {PointSize[0.04], PointBox[{7., 8.5}], PointBox[{3., 6.5}], 
+         PointBox[{10., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T40",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"VFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`VFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {66, 44}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
+         10.000000000003638`, 9.999999999996362}}], 
+        LineBox[{{0., 5.}, {10., 10.}}], 
+        LineBox[{{19.999999999996362`, 15.}, {17.000000000003638`, 
+         13.500000000003638`}}], LineBox[{{20., 5.}, {10., 10.}}], 
+        LineBox[{{12.999999999996362`, 11.5}, {10.000000000003638`, 
+         10.000000000003638`}}], 
+        CircleBox[{15.225, 12.05}, 2.2919696769372844, {0.6849620513485974, 
+         3.3839258202428084`}], 
+        LineBox[{{12.999999999998181`, 11.500000000003638`}, {
+         16.99999999999818, 13.500000000003638`}}], 
+        CircleBox[{14.775, 12.95}, 2.2919696769372844, {-2.456630602241196, 
+         0.24233316665301485`}], 
+        {PointSize[0.04], PointBox[{13., 11.5}], PointBox[{17., 13.5}], 
+         PointBox[{10., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T41",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"HFlip", "[", "Automatic", "]"}]],
+      Annotation[#, 
+       FeynArts`HFlip[Automatic], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {0, 22}, {0, 0}, {22, 22}], InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{3.637978807091713*^-12, 14.999999999996362`}, {
+         10.000000000003638`, 9.999999999996362}}], 
+        LineBox[{{0., 5.}, {10., 10.}}], 
+        LineBox[{{20.000000000005457`, 15.000000000003638`}, {
+         10.000000000012733`, 10.000000000003638`}}], 
+        LineBox[{{20.00000000000182, 5.}, {17.00000000000182, 
+         6.499999999996362}}], 
+        LineBox[{{13.000000000001819`, 8.5}, {10.000000000001819`, 
+         9.999999999996362}}], 
+        CircleBox[{15.225, 7.949999999999999}, 
+         2.2919696769372844, {-3.3839258202428084`, -0.6849620513485974}], 
+        LineBox[{{12.999999999998181`, 8.500000000003638}, {
+         16.999999999996362`, 6.500000000003638}}], 
+        CircleBox[{14.775, 7.050000000000001}, 
+         2.2919696769372844, {-0.24233316665301485`, 2.456630602241196}], 
+        {PointSize[0.04], PointBox[{13., 8.5}], PointBox[{17., 6.5}], 
+         PointBox[{10., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T42",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->6.137505285412264],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           6.137505285412264]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       RowBox[{"HFlip", "[", 
+         RowBox[{"VFlip", "[", "Automatic", "]"}], "]"}]],
+      Annotation[#, 
+       FeynArts`HFlip[
+        FeynArts`VFlip[Automatic]], "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {22, 22}, {0, 0}, {22, 22}], InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["2",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->9.206257928118394],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      9.206257928118394]& ], {39.5, 91.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]], 
+   InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["\[RightArrow]",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->9.206257928118394],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      9.206257928118394]& ], {44., 91.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]], 
+   InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["2",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->9.206257928118394],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      9.206257928118394]& ], {48.5, 91.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]]},
+  
+  AspectRatio->1.075,
+  ImageSize->{288, 288},
+  PlotRange->{{0, 88}, {0, 94.6}}]], "Print",
+ CellChangeTimes->{{3.980837615165044*^9, 3.980837632817974*^9}, 
+   3.980840251746986*^9, 3.980840351109743*^9, 3.9808412604198427`*^9, 
+   3.980871003702729*^9, 3.9811785105448713`*^9, 3.981535703945866*^9},
+ CellLabel->
+  "During evaluation of \
+In[65]:=",ExpressionUUID->"8437b180-77c8-4ac9-b667-42cba969c193"]
 }, Open  ]]
 }, Open  ]],
 
@@ -1286,9 +3244,211 @@ Cell[BoxData[
    3.980840438246397*^9, 3.9808404655177507`*^9}, {3.980840786129731*^9, 
    3.98084079381777*^9}, 3.980841264373871*^9, 3.980871039674623*^9},
  CellLabel->"Out[9]=",ExpressionUUID->"ab235eba-2f91-43a8-9856-a1fa699696f3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Paint", "[", 
+  RowBox[{
+   RowBox[{"Topology", "[", "2", "]"}], "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Propagator", "[", "Incoming", "]"}], "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Vertex", "[", "1", "]"}], "[", "1", "]"}], ",", 
+      RowBox[{
+       RowBox[{"Vertex", "[", "4", "]"}], "[", 
+       RowBox[{"-", "1"}], "]"}]}], "]"}], ",", 
+    RowBox[{
+     RowBox[{"Propagator", "[", "Incoming", "]"}], "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Vertex", "[", "1", "]"}], "[", "2", "]"}], ",", 
+      RowBox[{
+       RowBox[{"Vertex", "[", "4", "]"}], "[", 
+       RowBox[{"-", "2"}], "]"}]}], "]"}], ",", 
+    RowBox[{
+     RowBox[{"Propagator", "[", "Outgoing", "]"}], "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Vertex", "[", "1", "]"}], "[", "3", "]"}], ",", 
+      RowBox[{
+       RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}]}], "]"}], ",", 
+    RowBox[{
+     RowBox[{"Propagator", "[", "Outgoing", "]"}], "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Vertex", "[", "1", "]"}], "[", "4", "]"}], ",", 
+      RowBox[{
+       RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}]}], "]"}], ",", 
+    RowBox[{
+     RowBox[{"Propagator", "[", 
+      RowBox[{"Loop", "[", "1", "]"}], "]"}], "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Vertex", "[", "4", "]"}], "[", 
+       RowBox[{"-", "2"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"Vertex", "[", "4", "]"}], "[", 
+       RowBox[{"-", "1"}], "]"}]}], "]"}], ",", 
+    RowBox[{
+     RowBox[{"Propagator", "[", 
+      RowBox[{"Loop", "[", "1", "]"}], "]"}], "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Vertex", "[", "4", "]"}], "[", 
+       RowBox[{"-", "2"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"Vertex", "[", "4", "]"}], "[", 
+       RowBox[{"-", "1"}], "]"}]}], "]"}], ",", 
+    RowBox[{
+     RowBox[{"Propagator", "[", 
+      RowBox[{"Loop", "[", "1", "]"}], "]"}], "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Vertex", "[", "4", "]"}], "[", 
+       RowBox[{"-", "2"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}]}], "]"}], ",", 
+    RowBox[{
+     RowBox[{"Propagator", "[", 
+      RowBox[{"Loop", "[", "1", "]"}], "]"}], "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Vertex", "[", "4", "]"}], "[", 
+       RowBox[{"-", "1"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}]}], "]"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.981595362499886*^9, 3.981595363594404*^9}},
+ CellLabel->"In[71]:=",ExpressionUUID->"fa97b17e-a4ef-4925-9702-278b5ba93c14"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"> Top. \"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" \"\>", 
+   "\[InvisibleSpace]", "\<\"a1b2/cede/21212e1e.m\"\>", 
+   "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", "\<\"0 diagrams\"\>"}],
+  SequenceForm["> Top. ", 1, " ", "a1b2/cede/21212e1e.m", ", ", "0 diagrams"],
+  
+  Editable->False]], "Print",
+ CellChangeTimes->{3.981595364122898*^9},
+ CellLabel->
+  "During evaluation of \
+In[71]:=",ExpressionUUID->"4bc588f1-475c-4d4c-aeed-8e2ed0ea445a"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    GraphicsBox[
+     TagBox[
+      TooltipBox[
+       {Thickness[0.005], 
+        LineBox[{{1.8189894035458565`*^-12, 15.000000000003638`}, {
+         6.0000000000027285`, 14.000000000003638`}}], 
+        LineBox[{{9.094947017729282*^-13, 5.000000000003638}, {
+         6.000000000002274, 6.000000000003638}}], 
+        LineBox[{{20.00000000000182, 15.000000000001819`}, {14., 
+         9.999999999998181}}], 
+        LineBox[{{20.00000000000182, 5.000000000001819}, {14., 10.}}], 
+        CircleBox[{1.416666666666667, 10.}, 
+         6.083333333333333, {-0.7175413405411445, 0.7175413405411445}], 
+        CircleBox[{10.583333333333332`, 10.}, 6.083333333333333, {
+         2.4240513130486487`, 3.8591339941309375`}], 
+        LineBox[{{6.000000000001819, 6.}, {14.000000000003638`, 
+         10.000000000003638`}}], 
+        LineBox[{{6.000000000001819, 13.999999999996362`}, {
+         13.999999999998181`, 10.}}], 
+        {PointSize[0.04], PointBox[{6., 6.}], PointBox[{6., 14.}], 
+         PointBox[{14., 10.}]}, InsetBox[
+         TagBox[
+          StyleBox[
+           TagBox["T1",
+            DisplayForm],
+           FontFamily->"Helvetica",
+           FontSize->7.997355371900828],
+          
+          StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+           7.997355371900828]& ], {10., -0.5}, NCache[
+         ImageScaled[{Rational[1, 2], 0}], ImageScaled[{0.5, 0}]]]},
+       "\"a1b2/cede/21212e1e.m\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "a1b2/cede/21212e1e.m", "Tooltip"]& ],
+     AspectRatio->1,
+     PlotRange->{{-1, 21}, {-1, 21}}], {0, 44}, {0, 0}, {22, 22}], InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["2",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->11.99603305785124],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      11.99603305785124]& ], {28.5, 69.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]], 
+   InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["\[RightArrow]",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->11.99603305785124],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      11.99603305785124]& ], {33., 69.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]], 
+   InsetBox[
+    TagBox[
+     StyleBox[
+      TagBox["2",
+       DisplayForm],
+      FontFamily->"Helvetica",
+      FontSize->11.99603305785124],
+     StyleForm[#, FontFamily -> "Helvetica", FontSize -> 
+      11.99603305785124]& ], {37.5, 69.96}, NCache[
+    ImageScaled[{Rational[1, 2], Rational[1, 2]}], ImageScaled[{0.5, 0.5}]]]},
+  
+  AspectRatio->1.0999999999999999`,
+  ImageSize->{288, 288},
+  PlotRange->{{0, 66}, {0, 72.6}}]], "Print",
+ CellChangeTimes->{3.981595364139228*^9},
+ CellLabel->
+  "During evaluation of \
+In[71]:=",ExpressionUUID->"d08c885c-501d-4e3f-ab34-a0312db7091d"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FeynArtsGraphics", "[", 
+   RowBox[{"2", "\[Rule]", "2"}], "]"}], "[", 
+  TagBox[
+   RowBox[{"(", "\[NoBreak]", GridBox[{
+      {
+       InterpretationBox[
+        RowBox[{"\<\"[\"\>", "\[InvisibleSpace]", "\<\"T1\"\>", 
+         "\[InvisibleSpace]", "\<\"]\"\>"}],
+        SequenceForm["[", "T1", "]"],
+        Editable->False], "Null", "Null"},
+      {"Null", "Null", "Null"},
+      {"Null", "Null", "Null"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}], "\[NoBreak]", ")"}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], "]"}]], "Output",
+ CellChangeTimes->{3.981595364152996*^9},
+ CellLabel->"Out[71]=",ExpressionUUID->"abb2cd53-20a5-4598-acfa-bb45f60b5047"]
 }, Open  ]]
 },
-WindowSize->{606, 683.25},
+WindowSize->{690.75, 851.25},
 WindowMargins->{{-2.25, Automatic}, {Automatic, -22.5}},
 Magnification:>1. Inherited,
 FrontEndVersion->"14.3 for Linux x86 (64-bit) (July 8, 2025)",
@@ -1307,47 +3467,89 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[576, 22, 1109, 31, 209, "Input",ExpressionUUID->"9c08eda1-f11b-41c6-98c5-971dc016fa5b"],
-Cell[1688, 55, 417, 11, 26, "Message",ExpressionUUID->"c4c61474-93c9-47b6-833c-f3e960a96330"],
+Cell[576, 22, 1260, 34, 209, "Input",ExpressionUUID->"9c08eda1-f11b-41c6-98c5-971dc016fa5b"],
+Cell[1839, 58, 2471, 74, 173, "Output",ExpressionUUID->"e13aa263-dacc-4eda-a8f8-f45165e4f090"],
 Cell[CellGroupData[{
-Cell[2130, 70, 302, 6, 23, "Print",ExpressionUUID->"41fdac09-4c00-4bab-8cd3-056842d31f55"],
-Cell[2435, 78, 329, 6, 23, "Print",ExpressionUUID->"90e3aaa7-c450-47e7-bbc7-849de23abcf8"],
-Cell[2767, 86, 347, 6, 23, "Print",ExpressionUUID->"e30aeec1-348e-4c27-96e1-6ddca5eb139e"],
-Cell[3117, 94, 640, 14, 23, "Print",ExpressionUUID->"2d86085a-0f36-47c2-a7a8-e4da83d4d8d8"],
-Cell[3760, 110, 640, 14, 23, "Print",ExpressionUUID->"1a5420ff-27e9-44e4-87d4-f496dedbc686"],
-Cell[4403, 126, 640, 14, 23, "Print",ExpressionUUID->"be61188b-28c9-4db7-a0cd-d65e2a9d88a1"],
-Cell[5046, 142, 638, 14, 23, "Print",ExpressionUUID->"f765f599-6140-4219-8f99-b36f42024d9b"],
-Cell[5687, 158, 639, 14, 23, "Print",ExpressionUUID->"0cab1622-14bc-47d6-9aad-38395ac2b2cc"],
-Cell[6329, 174, 640, 14, 23, "Print",ExpressionUUID->"2089a363-9fcd-426e-a8b3-b8ebd9d104d2"],
-Cell[6972, 190, 640, 14, 23, "Print",ExpressionUUID->"1a9c305f-2022-476f-b55e-c1c295355475"],
-Cell[7615, 206, 10753, 258, 296, "Print",ExpressionUUID->"46142a0d-4118-4f1b-bfcb-a5f1bee8eae2"]
+Cell[4335, 136, 698, 15, 23, "Print",ExpressionUUID->"b1575f55-67e7-4542-bf1a-f212c4ba2f01"],
+Cell[5036, 153, 698, 15, 23, "Print",ExpressionUUID->"fec30a63-be30-4d9e-8c58-7f2a94cd5fe1"],
+Cell[5737, 170, 698, 15, 23, "Print",ExpressionUUID->"8b5e0137-e93a-4e54-aa47-1858c0796666"],
+Cell[6438, 187, 744, 15, 23, "Print",ExpressionUUID->"a03bd241-20ca-4bf9-8367-705078c9e270"],
+Cell[7185, 204, 744, 15, 23, "Print",ExpressionUUID->"0cd85020-dbd2-458b-86dc-33177885a3c5"],
+Cell[7932, 221, 744, 15, 23, "Print",ExpressionUUID->"0d2f9cb1-8b9b-4c15-bac1-d851f87abdf8"],
+Cell[8679, 238, 698, 15, 23, "Print",ExpressionUUID->"43225270-2886-402e-a98b-20e0d6027ffd"],
+Cell[9380, 255, 698, 15, 23, "Print",ExpressionUUID->"1227c6c5-7624-4fa6-a84f-19b8f6625bd5"],
+Cell[10081, 272, 698, 15, 23, "Print",ExpressionUUID->"304d0bf4-c01a-489f-8cfc-d5199ecfb220"],
+Cell[10782, 289, 661, 13, 23, "Print",ExpressionUUID->"f6a3f68b-7f80-42c3-9a51-81ee9a2cb655"],
+Cell[11446, 304, 716, 15, 23, "Print",ExpressionUUID->"99cc975a-0446-4fdb-ba08-2d14c2a87721"],
+Cell[12165, 321, 661, 13, 23, "Print",ExpressionUUID->"435d48a2-0ce9-4c87-938d-a68cd5e6dcee"],
+Cell[12829, 336, 661, 13, 23, "Print",ExpressionUUID->"2c958559-bdc3-4017-9ccf-d9c47159e35d"],
+Cell[13493, 351, 714, 15, 23, "Print",ExpressionUUID->"b2d288f5-a1e1-429c-b908-4038e233aa4b"],
+Cell[14210, 368, 661, 13, 23, "Print",ExpressionUUID->"fe6ac4a7-1b91-4ad9-8298-babc109f48a4"],
+Cell[14874, 383, 663, 13, 23, "Print",ExpressionUUID->"a4f7b640-3f30-499b-9900-a49f4223b7c2"],
+Cell[15540, 398, 769, 17, 23, "Print",ExpressionUUID->"cb8860f5-09d7-4ec2-b331-db3142544f87"],
+Cell[16312, 417, 663, 13, 23, "Print",ExpressionUUID->"b02909a9-ef93-40ee-ab8b-c309a1df1bd1"],
+Cell[16978, 432, 663, 13, 23, "Print",ExpressionUUID->"aeb080c2-a7cf-4e2f-89f2-9b33f3621d4e"],
+Cell[17644, 447, 714, 15, 23, "Print",ExpressionUUID->"0cc5a56b-3c4c-418d-8e35-974d418639da"],
+Cell[18361, 464, 716, 15, 23, "Print",ExpressionUUID->"03fb6fe7-1e47-4666-95c9-5ca9ebe08f42"],
+Cell[19080, 481, 714, 15, 23, "Print",ExpressionUUID->"2f170566-51a5-4268-b235-da7717efe3bc"],
+Cell[19797, 498, 714, 15, 23, "Print",ExpressionUUID->"1ffc31e2-ad50-4f77-baa2-d50344907f9c"],
+Cell[20514, 515, 771, 17, 23, "Print",ExpressionUUID->"5b122804-1293-43e7-8699-5bce721576b4"],
+Cell[21288, 534, 714, 15, 23, "Print",ExpressionUUID->"e13dfc3f-1d8a-4696-bb32-5e6814524ccd"],
+Cell[22005, 551, 713, 15, 23, "Print",ExpressionUUID->"23c143ad-f5cd-412d-b869-442e70fb6b30"],
+Cell[22721, 568, 714, 15, 23, "Print",ExpressionUUID->"dadb7ce2-abe6-44c4-a8db-8c1cc6cfd9f3"],
+Cell[23438, 585, 769, 17, 23, "Print",ExpressionUUID->"8a84663e-301d-4092-94d5-0138e22263a5"],
+Cell[24210, 604, 714, 15, 23, "Print",ExpressionUUID->"f7f6d01b-851d-4cba-a592-b2c1482af5a0"],
+Cell[24927, 621, 716, 15, 23, "Print",ExpressionUUID->"9bbe007a-8004-4227-a912-6618fd429201"],
+Cell[25646, 638, 771, 17, 23, "Print",ExpressionUUID->"430fe10e-ff41-4de2-bcb3-f3973f689c86"],
+Cell[26420, 657, 661, 13, 23, "Print",ExpressionUUID->"c0bdf989-eb9a-4973-94a2-a9a2ab89d5fe"],
+Cell[27084, 672, 714, 15, 23, "Print",ExpressionUUID->"39166fad-8f31-4593-9186-3fa3fee4ebf7"],
+Cell[27801, 689, 661, 13, 23, "Print",ExpressionUUID->"32f72aa8-30ee-4914-8752-b7d290d7d33f"],
+Cell[28465, 704, 714, 15, 23, "Print",ExpressionUUID->"92719282-a903-49bd-a68e-8764710d0b3f"],
+Cell[29182, 721, 661, 13, 23, "Print",ExpressionUUID->"69692b27-4c26-44f2-ac5e-8563e2b6d831"],
+Cell[29846, 736, 661, 13, 23, "Print",ExpressionUUID->"eed484f8-abf6-4888-85c7-2632daed65c8"],
+Cell[30510, 751, 771, 17, 23, "Print",ExpressionUUID->"cdffa293-5c4b-49c8-8ca9-65c9770e7f28"],
+Cell[31284, 770, 663, 13, 23, "Print",ExpressionUUID->"f8336a5a-fdf8-49a3-bd87-03ad1efbec2b"],
+Cell[31950, 785, 714, 15, 23, "Print",ExpressionUUID->"3be63551-3cf7-4b98-b933-3671f3d9950b"],
+Cell[32667, 802, 714, 15, 23, "Print",ExpressionUUID->"acda4af6-4c02-4095-a836-4484512a6732"],
+Cell[33384, 819, 769, 17, 23, "Print",ExpressionUUID->"a44851fc-c03a-44cf-9cb2-922b6537f7f8"],
+Cell[34156, 838, 26578, 587, 296, "Print",ExpressionUUID->"20dc795d-c90f-47aa-8b3c-f9ad1b9cadd1"],
+Cell[60737, 1427, 27010, 608, 296, "Print",ExpressionUUID->"6fba37ec-cdee-405f-8964-733f5dfadfc8"],
+Cell[87750, 2037, 16937, 385, 296, "Print",ExpressionUUID->"8437b180-77c8-4ac9-b667-42cba969c193"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18417, 470, 2535, 64, 329, "Input",ExpressionUUID->"9f75e74b-32df-44a0-bc29-d340760f7a39"],
-Cell[20955, 536, 1915, 52, 133, "Output",ExpressionUUID->"65528b5e-63d2-451c-8f6c-278b1862c892"],
+Cell[104736, 2428, 2535, 64, 289, "Input",ExpressionUUID->"9f75e74b-32df-44a0-bc29-d340760f7a39"],
+Cell[107274, 2494, 1915, 52, 133, "Output",ExpressionUUID->"65528b5e-63d2-451c-8f6c-278b1862c892"],
 Cell[CellGroupData[{
-Cell[22895, 592, 642, 14, 23, "Print",ExpressionUUID->"0291d49a-798e-462d-b0eb-031c88b1d040"],
-Cell[23540, 608, 2783, 72, 296, "Print",ExpressionUUID->"b6cb3b3f-7a66-4985-ba11-c60df8d53916"]
+Cell[109214, 2550, 642, 14, 23, "Print",ExpressionUUID->"0291d49a-798e-462d-b0eb-031c88b1d040"],
+Cell[109859, 2566, 2783, 72, 296, "Print",ExpressionUUID->"b6cb3b3f-7a66-4985-ba11-c60df8d53916"]
 }, Open  ]],
-Cell[26338, 683, 1164, 29, 62, "Output",ExpressionUUID->"b268a2f6-43bd-4162-b9a9-b5c86befc147"],
+Cell[112657, 2641, 1164, 29, 62, "Output",ExpressionUUID->"b268a2f6-43bd-4162-b9a9-b5c86befc147"],
 Cell[CellGroupData[{
-Cell[27527, 716, 304, 6, 23, "Print",ExpressionUUID->"a2ba233e-6c24-4f91-8a41-47ec7d94c919"],
-Cell[27834, 724, 726, 16, 41, "Print",ExpressionUUID->"dd28015c-1369-47c6-b8c0-7e4a8888fce2"],
-Cell[28563, 742, 327, 6, 23, "Print",ExpressionUUID->"017c7f6a-f1ad-4eb8-82e2-b46775311a47"],
-Cell[28893, 750, 547, 12, 23, "Print",ExpressionUUID->"f376edb9-b6af-4bd3-8c01-21fbc5b89954"],
-Cell[29443, 764, 304, 6, 23, "Print",ExpressionUUID->"a239c986-90e6-49b2-b6cd-5c8731630d15"],
-Cell[29750, 772, 706, 16, 41, "Print",ExpressionUUID->"4b3b406d-f13f-4eaf-8b2a-21d13f033c77"],
-Cell[30459, 790, 609, 12, 23, "Print",ExpressionUUID->"5d289318-c989-41ac-bbbb-82cab0c16e8f"],
-Cell[31071, 804, 326, 6, 23, "Print",ExpressionUUID->"0307071f-8a21-4ff2-81c4-82ce6f2d57a0"],
-Cell[31400, 812, 469, 11, 23, "Print",ExpressionUUID->"a4e72650-dc11-40c0-a718-4a78d0a2a4ce"],
-Cell[31872, 825, 559, 12, 23, "Print",ExpressionUUID->"cc8616a0-fba8-4102-a942-e79a78e01197"],
-Cell[32434, 839, 304, 6, 23, "Print",ExpressionUUID->"4874c6a5-6e4c-4dc1-8538-d9f5d8134d4c"],
-Cell[32741, 847, 499, 11, 23, "Print",ExpressionUUID->"a988d0a7-c1e7-45f7-a346-f7bf437918be"],
-Cell[33243, 860, 544, 12, 23, "Print",ExpressionUUID->"9ed29a62-8c26-4c2e-af6f-61cbc279dbf1"],
-Cell[33790, 874, 476, 11, 23, "Print",ExpressionUUID->"fec298c9-3d40-4d87-9f91-6dbd2a24b70b"]
+Cell[113846, 2674, 304, 6, 23, "Print",ExpressionUUID->"a2ba233e-6c24-4f91-8a41-47ec7d94c919"],
+Cell[114153, 2682, 726, 16, 41, "Print",ExpressionUUID->"dd28015c-1369-47c6-b8c0-7e4a8888fce2"],
+Cell[114882, 2700, 327, 6, 23, "Print",ExpressionUUID->"017c7f6a-f1ad-4eb8-82e2-b46775311a47"],
+Cell[115212, 2708, 547, 12, 23, "Print",ExpressionUUID->"f376edb9-b6af-4bd3-8c01-21fbc5b89954"],
+Cell[115762, 2722, 304, 6, 23, "Print",ExpressionUUID->"a239c986-90e6-49b2-b6cd-5c8731630d15"],
+Cell[116069, 2730, 706, 16, 23, "Print",ExpressionUUID->"4b3b406d-f13f-4eaf-8b2a-21d13f033c77"],
+Cell[116778, 2748, 609, 12, 23, "Print",ExpressionUUID->"5d289318-c989-41ac-bbbb-82cab0c16e8f"],
+Cell[117390, 2762, 326, 6, 23, "Print",ExpressionUUID->"0307071f-8a21-4ff2-81c4-82ce6f2d57a0"],
+Cell[117719, 2770, 469, 11, 23, "Print",ExpressionUUID->"a4e72650-dc11-40c0-a718-4a78d0a2a4ce"],
+Cell[118191, 2783, 559, 12, 23, "Print",ExpressionUUID->"cc8616a0-fba8-4102-a942-e79a78e01197"],
+Cell[118753, 2797, 304, 6, 23, "Print",ExpressionUUID->"4874c6a5-6e4c-4dc1-8538-d9f5d8134d4c"],
+Cell[119060, 2805, 499, 11, 23, "Print",ExpressionUUID->"a988d0a7-c1e7-45f7-a346-f7bf437918be"],
+Cell[119562, 2818, 544, 12, 23, "Print",ExpressionUUID->"9ed29a62-8c26-4c2e-af6f-61cbc279dbf1"],
+Cell[120109, 2832, 476, 11, 23, "Print",ExpressionUUID->"fec298c9-3d40-4d87-9f91-6dbd2a24b70b"]
 }, Open  ]],
-Cell[34281, 888, 15642, 399, 513, "Output",ExpressionUUID->"ab235eba-2f91-43a8-9856-a1fa699696f3"]
+Cell[120600, 2846, 15642, 399, 433, "Output",ExpressionUUID->"ab235eba-2f91-43a8-9856-a1fa699696f3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[136279, 3250, 2594, 75, 169, "Input",ExpressionUUID->"fa97b17e-a4ef-4925-9702-278b5ba93c14"],
+Cell[CellGroupData[{
+Cell[138898, 3329, 530, 13, 23, "Print",ExpressionUUID->"4bc588f1-475c-4d4c-aeed-8e2ed0ea445a"],
+Cell[139431, 3344, 2919, 74, 296, "Print",ExpressionUUID->"d08c885c-501d-4e3f-ab34-a0312db7091d"]
+}, Open  ]],
+Cell[142365, 3421, 971, 26, 62, "Output",ExpressionUUID->"abb2cd53-20a5-4598-acfa-bb45f60b5047"]
 }, Open  ]]
 }
 ]
