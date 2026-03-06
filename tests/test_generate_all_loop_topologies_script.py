@@ -13,9 +13,13 @@ class GenerateAllLoopTopologiesScriptTests(unittest.TestCase):
         self.assertIn('2 -> 2', text)
         self.assertIn('Adjacencies -> {4}', text)
         self.assertIn('ExcludeTopologies -> Tadpoles', text)
-        self.assertIn('topology" <> ToString[i] <> ".pdf"', text)
+        self.assertIn('topology" <> ToString[index] <> ".ps"', text)
+        self.assertIn('Export[psPath, paint, "PS"]', text)
+        self.assertIn('AutoEdit -> False', text)
         self.assertIn('"all_L_" <> ToString[L] <> ".txt"', text)
         self.assertIn('[topology-list-path]', text)
+        self.assertIn('--list-only', text)
+        self.assertIn('--images-only', text)
 
 
 if __name__ == "__main__":

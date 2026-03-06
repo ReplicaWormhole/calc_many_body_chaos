@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[margin=2.2cm]{geometry}
+\begin{document}
+\section*{SK Matrix-Model Contributions for All L=1 Topologies}
+External assignment (by external-propagator appearance): $\phi_r^1(x_1)\,\phi_a^1(x_2)\,\phi_r^2(x_3)\,\phi_a^2(x_4)$, with $x_1=(t,\mathbf{x})$, $x_2=(0,\mathbf{0})$, $x_3=(t,\mathbf{x})$, $x_4=(0,\mathbf{0})$.
+Translation table used: same-fold $G_{rr}\to G_K=\frac12(G^>+G^<)$, $G_{ra}\to G_R$, $G_{ar}\to G_A$, $G_{aa}\to 0$; cross-fold $G^{12}_{rr}\to G^<$, $G^{21}_{rr}\to G^>$, and any cross-fold propagator with an $a$ endpoint vanishes.
+Contour ordering convention: contour $(2)$ is later than contour $(1)$, matching \texttt{contour\_ra\_translation.txt}.
+Each term carries explicit net matrix-size factor ${N_c}^{p-4}$ (raw loop count $p$ minus the overall $1/N^4$ normalization).
+\section*{Topology 1 (FeynArts Topology 2)}
+\begin{center}
+\includegraphics[width=0.28\textwidth]{../data/topology1.pdf}
+\end{center}
+\noindent Parsed propagators: 6. Internal vertices: 2. Internal half-edges: 8.\\
+\noindent Assignments checked: 1024. Surviving (nonzero vertex weight): 256.\\
+\noindent Raw $N_c$ power: 1. Net power in $C(t)$: -3.
+\noindent Explicit surviving terms:
+\begin{equation*}
+\mathcal{T}_{1,1} = - 16 g_{2}^{2}\,N_c^{-3}\,G^<\left(z_{1},z_{2}\right) \, G^>\left(x_3,z_{1}\right) \, G_A\left(x_2,z_{1}\right) \, G_A\left(x_4,z_{2}\right) \, G_A\left(z_{2},z_{2}\right) \, G_R\left(x_1,z_{1}\right)
+\end{equation*}
+\begin{equation*}
+\mathcal{T}_{1,2} = - 16 g_{2}^{2}\,N_c^{-3}\,G^<\left(z_{1},z_{2}\right) \, G^>\left(x_3,z_{1}\right) \, G_A\left(x_2,z_{1}\right) \, G_A\left(x_4,z_{2}\right) \, G_R\left(x_1,z_{1}\right) \, G_R\left(z_{2},z_{2}\right)
+\end{equation*}
+\section*{Topology 2 (FeynArts Topology 2)}
+\begin{center}
+\includegraphics[width=0.28\textwidth]{../data/topology2.pdf}
+\end{center}
+\noindent Parsed propagators: 6. Internal vertices: 2. Internal half-edges: 8.\\
+\noindent Assignments checked: 1024. Surviving (nonzero vertex weight): 256.\\
+\noindent Raw $N_c$ power: 1. Net power in $C(t)$: -3.
+\[\text{No surviving SK contributions for this topology.}\]
+\section*{Topology 3 (FeynArts Topology 2)}
+\begin{center}
+\includegraphics[width=0.28\textwidth]{../data/topology3.pdf}
+\end{center}
+\noindent Parsed propagators: 6. Internal vertices: 2. Internal half-edges: 8.\\
+\noindent Assignments checked: 1024. Surviving (nonzero vertex weight): 256.\\
+\noindent Raw $N_c$ power: 0. Net power in $C(t)$: -4.
+\noindent Explicit surviving terms:
+\begin{equation*}
+\mathcal{T}_{3,1} = - 16 g_{2}^{2}\,N_c^{-4}\,G^<\left(z_{1},z_{2}\right) \, G^<\left(z_{1},z_{2}\right) \, G_A\left(x_2,z_{1}\right) \, G_A\left(x_4,z_{2}\right) \, G_R\left(x_1,z_{1}\right) \, G_R\left(x_3,z_{2}\right)
+\end{equation*}
+\section*{Topology 4 (FeynArts Topology 2)}
+\begin{center}
+\includegraphics[width=0.28\textwidth]{../data/topology4.pdf}
+\end{center}
+\noindent Parsed propagators: 6. Internal vertices: 2. Internal half-edges: 8.\\
+\noindent Assignments checked: 1024. Surviving (nonzero vertex weight): 256.\\
+\noindent Raw $N_c$ power: 1. Net power in $C(t)$: -3.
+\noindent Explicit surviving terms:
+\begin{equation*}
+\mathcal{T}_{4,1} = - 16 g_{2}^{2}\,N_c^{-3}\,G^<\left(x_1,z_{1}\right) \, G^>\left(z_{1},z_{2}\right) \, G_A\left(x_2,z_{2}\right) \, G_A\left(x_4,z_{1}\right) \, G_A\left(z_{2},z_{2}\right) \, G_R\left(x_3,z_{1}\right)
+\end{equation*}
+\begin{equation*}
+\mathcal{T}_{4,2} = - 16 g_{2}^{2}\,N_c^{-3}\,G^<\left(x_1,z_{1}\right) \, G^>\left(z_{1},z_{2}\right) \, G_A\left(x_2,z_{2}\right) \, G_A\left(x_4,z_{1}\right) \, G_R\left(x_3,z_{1}\right) \, G_R\left(z_{2},z_{2}\right)
+\end{equation*}
+\section*{Topology 5 (FeynArts Topology 2)}
+\begin{center}
+\includegraphics[width=0.28\textwidth]{../data/topology5.pdf}
+\end{center}
+\noindent Parsed propagators: 6. Internal vertices: 2. Internal half-edges: 8.\\
+\noindent Assignments checked: 1024. Surviving (nonzero vertex weight): 256.\\
+\noindent Raw $N_c$ power: 0. Net power in $C(t)$: -4.
+\[\text{No surviving SK contributions for this topology.}\]
+\section*{Topology 6 (FeynArts Topology 2)}
+\begin{center}
+\includegraphics[width=0.28\textwidth]{../data/topology6.pdf}
+\end{center}
+\noindent Parsed propagators: 6. Internal vertices: 2. Internal half-edges: 8.\\
+\noindent Assignments checked: 1024. Surviving (nonzero vertex weight): 256.\\
+\noindent Raw $N_c$ power: 0. Net power in $C(t)$: -4.
+\[\text{No surviving SK contributions for this topology.}\]
+\section*{Topology 7 (FeynArts Topology 2)}
+\begin{center}
+\includegraphics[width=0.28\textwidth]{../data/topology7.pdf}
+\end{center}
+\noindent Parsed propagators: 6. Internal vertices: 2. Internal half-edges: 8.\\
+\noindent Assignments checked: 1024. Surviving (nonzero vertex weight): 256.\\
+\noindent Raw $N_c$ power: 1. Net power in $C(t)$: -3.
+\[\text{No surviving SK contributions for this topology.}\]
+\end{document}

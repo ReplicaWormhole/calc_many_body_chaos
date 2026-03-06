@@ -15,7 +15,28 @@ repoRoot = FileNameJoin[{repoDir, ".."}];
 AppendTo[$Path, "/home/lev/Projects/mathematica/FeynArts-3.11"];
 Needs["FeynArts`"];
 
-args = Rest[$ScriptCommandLine];
+rawArgs =
+  If[$ScriptCommandLine =!= {},
+    Rest[$ScriptCommandLine],
+    Module[{cmd = Rest[$CommandLine], scriptPos},
+      scriptPos = FirstPosition[cmd, _?(StringQ[#] && StringMatchQ[#, "*.wls"] &)];
+      If[scriptPos === Missing["NotFound"],
+        {},
+        Drop[cmd, scriptPos[[1]]]
+      ]
+    ]
+  ];
+
+flagArgs = Select[rawArgs, StringStartsQ["--"]];
+args = Select[rawArgs, Not@*StringStartsQ["--"]];
+
+listOnlyQ = MemberQ[flagArgs, "--list-only"];
+imagesOnlyQ = MemberQ[flagArgs, "--images-only"];
+
+If[listOnlyQ && imagesOnlyQ,
+  Print["Use at most one of --list-only or --images-only."];
+  Exit[1];
+];
 
 If[Length[args] < 1,
   Print["Usage: wolframscript -file scripts/generate_all_loop_topologies.wls <L> [output-dir] [topology-list-path]"];
@@ -45,28 +66,70 @@ If[!DirectoryQ[outputDir], CreateDirectory[outputDir, CreateIntermediateDirector
 Print["Loop order: ", L];
 Print["Output dir: ", outputDir];
 
-topsExpr = CreateTopologies[
-  L,
-  2 -> 2,
-  Adjacencies -> {4},
-  ExcludeTopologies -> Tadpoles
-];
+loadTopologyList[path_] :=
+  Module[{text, expr},
+    text = Import[path, "Text"];
+    expr = ToExpression[text];
+    Cases[expr, Topology[_][__], Infinity]
+  ];
 
-tops = Cases[topsExpr, Topology[_][__], Infinity];
+createTopologyList[loopOrder_] :=
+  Module[{topsExpr},
+    topsExpr = CreateTopologies[
+      loopOrder,
+      2 -> 2,
+      Adjacencies -> {4},
+      ExcludeTopologies -> Tadpoles
+    ];
+    Cases[topsExpr, Topology[_][__], Infinity]
+  ];
+
+exportTopologyList[tops_, path_] :=
+  Export[path, InputForm[TopologyList @@ tops], "String"];
+
+renderTopologyImage[top_, index_, outDir_] :=
+  Module[{paint, singleTop, psPath},
+    singleTop = TopologyList @@ {top};
+    paint = Paint[
+      singleTop,
+      PaintLevel -> {Topologies},
+      ColumnsXRows -> {1, 1},
+      Numbering -> Simple,
+      AutoEdit -> False,
+      DisplayFunction -> Identity
+    ];
+    psPath = FileNameJoin[{outDir, "topology" <> ToString[index] <> ".ps"}];
+    Export[psPath, paint, "PS"];
+  ];
+
+tops =
+  If[imagesOnlyQ,
+    loadTopologyList[topologyListPath],
+    createTopologyList[L]
+  ];
 
 If[tops === {},
   Print["No topologies generated for L=", L];
   Exit[0];
 ];
 
-Do[
-  Export[
-    FileNameJoin[{outputDir, "topology" <> ToString[i] <> ".pdf"}],
-    Paint[tops[[i]]]
-  ],
-  {i, Length[tops]}
+If[!imagesOnlyQ,
+  exportTopologyList[tops, topologyListPath];
+  Print["Saved topology list to ", topologyListPath];
 ];
-Export[topologyListPath, InputForm[TopologyList @@ tops], "String"];
 
-Print["Generated ", Length[tops], " topology PDFs."];
-Print["Saved topology list to ", topologyListPath];
+If[!listOnlyQ,
+  Do[
+    renderTopologyImage[tops[[i]], i, outputDir],
+    {i, Length[tops]}
+  ];
+  Print["Generated ", Length[tops], " topology PostScript files."];
+];
+
+If[listOnlyQ,
+  Print["Skipped image rendering (--list-only)."];
+];
+
+If[imagesOnlyQ,
+  Print["Loaded topology list from ", topologyListPath];
+];

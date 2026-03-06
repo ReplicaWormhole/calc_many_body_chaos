@@ -1,0 +1,116 @@
+Let \(I,J\in\{1,2\}\) label the two full contours, and define on each contour
+\[
+\phi_r^{(I)}=\frac12\bigl(\phi_1^{(I)}+\phi_2^{(I)}\bigr),\qquad
+\phi_a^{(I)}=\phi_1^{(I)}-\phi_2^{(I)}.
+\]
+
+Also define
+\[
+G^>(t,x)=\langle \phi(t,x)\phi(0)\rangle,\qquad
+G^<(t,x)=\langle \phi(0)\phi(t,x)\rangle,
+\]
+and
+\[
+G_R(t,x)=\theta(t)\bigl(G^>(t,x)-G^<(t,x)\bigr),\qquad
+G_A(t,x)=-\theta(-t)\bigl(G^>(t,x)-G^<(t,x)\bigr).
+\]
+
+Assuming contour \((2)\) is later than contour \((1)\), the \(ra\)-basis two-point functions are:
+
+## Diagonal contour blocks
+\[
+G^{(11)}_{ra}(t,x)=G^{(22)}_{ra}(t,x)=
+\begin{pmatrix}
+\frac12\bigl(G^>(t,x)+G^<(t,x)\bigr) & G_R(t,x) \\
+G_A(t,x) & 0
+\end{pmatrix},
+\]
+where rows/columns are ordered as \((r,a)\).
+
+Equivalently,
+\[
+\langle \phi_r^{(I)}(t,x)\phi_r^{(I)}(0)\rangle
+=\frac12\bigl(G^>(t,x)+G^<(t,x)\bigr),
+\]
+\[
+\langle \phi_r^{(I)}(t,x)\phi_a^{(I)}(0)\rangle
+=G_R(t,x),
+\]
+\[
+\langle \phi_a^{(I)}(t,x)\phi_r^{(I)}(0)\rangle
+=G_A(t,x),
+\]
+\[
+\langle \phi_a^{(I)}(t,x)\phi_a^{(I)}(0)\rangle
+=0,
+\qquad I=1,2.
+\]
+
+## Off-diagonal contour blocks
+\[
+G^{(12)}_{ra}(t,x)=
+\begin{pmatrix}
+G^<(t,x) & 0 \\
+0 & 0
+\end{pmatrix},
+\qquad
+G^{(21)}_{ra}(t,x)=
+\begin{pmatrix}
+G^>(t,x) & 0 \\
+0 & 0
+\end{pmatrix}.
+\]
+
+Equivalently,
+\[
+\langle \phi_r^{(1)}(t,x)\phi_r^{(2)}(0)\rangle = G^<(t,x),
+\qquad
+\langle \phi_r^{(2)}(t,x)\phi_r^{(1)}(0)\rangle = G^>(t,x),
+\]
+and all other mixed-contour correlators vanish:
+\[
+\langle \phi_r^{(1)}(t,x)\phi_a^{(2)}(0)\rangle = 0,
+\qquad
+\langle \phi_a^{(1)}(t,x)\phi_r^{(2)}(0)\rangle = 0,
+\qquad
+\langle \phi_a^{(1)}(t,x)\phi_a^{(2)}(0)\rangle = 0,
+\]
+\[
+\langle \phi_r^{(2)}(t,x)\phi_a^{(1)}(0)\rangle = 0,
+\qquad
+\langle \phi_a^{(2)}(t,x)\phi_r^{(1)}(0)\rangle = 0,
+\qquad
+\langle \phi_a^{(2)}(t,x)\phi_a^{(1)}(0)\rangle = 0.
+\]
+
+## Full block matrix
+Thus the full \(2\times 2\) contour matrix in \(ra\) space is
+\[
+G^{(IJ)}_{ra}(t,x)=
+\begin{pmatrix}
+G^{(11)}_{ra}(t,x) & G^{(12)}_{ra}(t,x) \\
+G^{(21)}_{ra}(t,x) & G^{(22)}_{ra}(t,x)
+\end{pmatrix},
+\]
+with
+\[
+G^{(11)}_{ra}=G^{(22)}_{ra}=
+\begin{pmatrix}
+\frac12(G^>+G^<) & G_R \\
+G_A & 0
+\end{pmatrix},
+\qquad
+G^{(12)}_{ra}=
+\begin{pmatrix}
+G^< & 0 \\
+0 & 0
+\end{pmatrix},
+\qquad
+G^{(21)}_{ra}=
+\begin{pmatrix}
+G^> & 0 \\
+0 & 0
+\end{pmatrix}.
+\]
+
+If instead contour \((1)\) is later than contour \((2)\), swap \(G^<\leftrightarrow G^>\) in the off-diagonal blocks.

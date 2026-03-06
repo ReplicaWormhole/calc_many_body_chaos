@@ -33,22 +33,34 @@ def load_base_module():
 base = load_base_module()
 
 
-def run_wolfram_topology_generation(loop_order: int, image_dir: Path, topology_list_path: Path) -> None:
-    wolframscript = shutil.which("wolframscript")
-    if wolframscript is None:
-        raise RuntimeError("wolframscript not found in PATH; cannot generate topologies on the fly")
+def resolve_wolfram_command(script_path: Path) -> List[str]:
+    kernel = shutil.which("WolframKernel")
+    if kernel is not None:
+        return [kernel, "-script", str(script_path)]
 
+    wolframscript = shutil.which("wolframscript")
+    if wolframscript is not None:
+        return [wolframscript, "-file", str(script_path)]
+
+    raise RuntimeError(
+        "Neither WolframKernel nor wolframscript was found in PATH; cannot generate topologies on the fly"
+    )
+
+
+def run_wolfram_topology_generation(
+    loop_order: int, image_dir: Path, topology_list_path: Path, mode: str | None = None
+) -> None:
     image_dir.mkdir(parents=True, exist_ok=True)
     topology_list_path.parent.mkdir(parents=True, exist_ok=True)
 
     cmd = [
-        wolframscript,
-        "-file",
-        str(WLS_SCRIPT),
+        *resolve_wolfram_command(WLS_SCRIPT),
         str(loop_order),
         str(image_dir),
         str(topology_list_path),
     ]
+    if mode is not None:
+        cmd.append(mode)
     try:
         subprocess.run(
             cmd,
@@ -57,12 +69,65 @@ def run_wolfram_topology_generation(loop_order: int, image_dir: Path, topology_l
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
+            timeout=300,
         )
+    except subprocess.TimeoutExpired as exc:
+        tail = "\n".join((exc.stdout or "").splitlines()[-60:])
+        raise RuntimeError(
+            f"Wolfram topology generation timed out for L={loop_order} after 300s:\n{tail}"
+        ) from exc
     except subprocess.CalledProcessError as exc:
         tail = "\n".join((exc.stdout or "").splitlines()[-60:])
         raise RuntimeError(
             f"Wolfram topology generation failed for L={loop_order}:\n{tail}"
         ) from exc
+
+
+def convert_ps_images_to_pdf(image_dir: Path) -> None:
+    ps2pdf = shutil.which("ps2pdf")
+    if ps2pdf is None:
+        raise RuntimeError("ps2pdf not found in PATH; cannot convert topology images to PDF")
+
+    ps_paths = sorted(image_dir.glob("topology*.ps"))
+    if not ps_paths:
+        raise FileNotFoundError(f"No topology PostScript files found in {image_dir}")
+
+    for ps_path in ps_paths:
+        pdf_path = ps_path.with_suffix(".pdf")
+        try:
+            subprocess.run(
+                [ps2pdf, str(ps_path), str(pdf_path)],
+                check=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                text=True,
+            )
+        except subprocess.CalledProcessError as exc:
+            tail = "\n".join((exc.stdout or "").splitlines()[-60:])
+            raise RuntimeError(f"ps2pdf failed for {ps_path}:\n{tail}") from exc
+
+
+def count_generated_images(image_dir: Path) -> int:
+    return sum(1 for _ in image_dir.glob("topology*.pdf"))
+
+
+def ensure_generated_artifacts(topology_list_path: Path, image_dir: Path, require_images: bool) -> int:
+    if not topology_list_path.exists():
+        raise FileNotFoundError(f"Generated topology list not found: {topology_list_path}")
+
+    text = topology_list_path.read_text(encoding="utf-8")
+    block_count = len(base.extract_topology_blocks(text))
+    if block_count == 0:
+        raise ValueError(f"No Topology[...] entries found in generated file {topology_list_path}")
+
+    if require_images:
+        image_count = count_generated_images(image_dir)
+        if image_count != block_count:
+            raise RuntimeError(
+                f"Generated image count mismatch for {image_dir}: found {image_count}, expected {block_count}"
+            )
+
+    return block_count
 
 
 def image_path_for_index(index: int, out_path: Path, image_dir: Path) -> str:
@@ -154,8 +219,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--loops", "-L", type=int, default=1, help="Loop order L for CreateTopologies")
     parser.add_argument(
         "--output",
-        default="output/commutator_contrib_dynamic_L1.tex",
-        help="Output LaTeX path",
+        default=None,
+        help="Output LaTeX path; defaults to output/commutator_contrib_dynamic_L<loops>.tex",
     )
     parser.add_argument(
         "--generated-dir",
@@ -164,11 +229,6 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--Nc-symbol", default="N_c", help="LaTeX symbol for matrix size")
     parser.add_argument("--g-symbol", default="g_2", help="Symbol for coupling")
-    parser.add_argument(
-        "--no-compile",
-        action="store_true",
-        help="Generate .tex but skip automatic PDF compilation",
-    )
     return parser.parse_args()
 
 
@@ -177,7 +237,11 @@ def main() -> None:
     if args.loops < 0:
         raise ValueError(f"Loop order must be non-negative, got {args.loops}")
 
-    output_path = Path(args.output)
+    output_path = (
+        Path(args.output)
+        if args.output is not None
+        else REPO_ROOT / "output" / f"commutator_contrib_dynamic_L{args.loops}.tex"
+    )
     generated_dir = (
         Path(args.generated_dir)
         if args.generated_dir is not None
@@ -186,13 +250,27 @@ def main() -> None:
     image_dir = generated_dir / "images"
     topology_list_path = generated_dir / f"all_L_{args.loops}.txt"
 
-    print(f"Generating L={args.loops} topologies via Wolfram/FeynArts")
-    run_wolfram_topology_generation(args.loops, image_dir=image_dir, topology_list_path=topology_list_path)
+    print(f"Generating L={args.loops} topology list via Wolfram/FeynArts")
+    run_wolfram_topology_generation(
+        args.loops,
+        image_dir=image_dir,
+        topology_list_path=topology_list_path,
+        mode="--list-only",
+    )
+    topology_count = ensure_generated_artifacts(topology_list_path, image_dir, require_images=False)
+
+    print(f"Rendering {topology_count} topology image(s)")
+    run_wolfram_topology_generation(
+        args.loops,
+        image_dir=image_dir,
+        topology_list_path=topology_list_path,
+        mode="--images-only",
+    )
+    convert_ps_images_to_pdf(image_dir)
+    ensure_generated_artifacts(topology_list_path, image_dir, require_images=True)
 
     text = topology_list_path.read_text(encoding="utf-8")
     blocks = base.extract_topology_blocks(text)
-    if not blocks:
-        raise ValueError(f"No Topology[...] entries found in generated file {topology_list_path}")
 
     topologies = [base.parse_topology(block) for block in blocks]
     g_symbol = sp.Symbol(args.g_symbol)
@@ -208,11 +286,8 @@ def main() -> None:
 
     write_latex_report(results, output_path, nc_symbol=args.Nc_symbol, loop_order=args.loops, image_dir=image_dir)
     print(f"Wrote LaTeX report to {output_path}")
-    if args.no_compile:
-        print("Skipping PDF compilation (--no-compile set)")
-    else:
-        pdf_path = base.compile_latex(output_path)
-        print(f"Compiled PDF report to {pdf_path}")
+    pdf_path = base.compile_latex(output_path)
+    print(f"Compiled PDF report to {pdf_path}")
 
 
 if __name__ == "__main__":

@@ -543,11 +543,6 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--Nc-symbol", default="N_c", help="LaTeX symbol for matrix size")
     parser.add_argument("--g-symbol", default="g_2", help="Symbol for coupling")
-    parser.add_argument(
-        "--no-compile",
-        action="store_true",
-        help="Generate .tex but skip automatic PDF compilation",
-    )
     return parser.parse_args()
 
 
@@ -576,11 +571,8 @@ def main() -> None:
 
     write_latex_report(results, output_path, nc_symbol=args.Nc_symbol, g_symbol=args.g_symbol)
     print(f"Wrote LaTeX report to {output_path}")
-    if args.no_compile:
-        print("Skipping PDF compilation (--no-compile set)")
-    else:
-        pdf_path = compile_latex(output_path)
-        print(f"Compiled PDF report to {pdf_path}")
+    pdf_path = compile_latex(output_path)
+    print(f"Compiled PDF report to {pdf_path}")
 
 
 if __name__ == "__main__":

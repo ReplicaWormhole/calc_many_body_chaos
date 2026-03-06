@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[margin=2.2cm]{geometry}
+\begin{document}
+\section*{SK Matrix-Model Contributions to the Squared Commutator}
+External assignment (by external-propagator appearance): $\phi_r^1(x_1)\,\phi_a^1(x_2)\,\phi_r^2(x_3)\,\phi_a^2(x_4)$, with $x_1=(t,\mathbf{x})$, $x_2=(0,\mathbf{0})$, $x_3=(t,\mathbf{x})$, $x_4=(0,\mathbf{0})$.
+Propagator notation: $G^{c_1 c_2}_{\ell_1\ell_2}(z,y)$ (upper indices: time folds, lower indices: r/a labels).
+Translation table used: same-fold $G_{rr}\to G_K=\frac12(G^>+G^<)$, $G_{ra}\to G_R$, $G_{ar}\to G_A$, $G_{aa}\to 0$; cross-fold $G^{12}_{rr}\to G^<$, $G^{21}_{rr}\to G^>$, and any cross-fold propagator with an $a$ endpoint vanishes.
+Contour ordering convention: contour $(2)$ is later than contour $(1)$, matching \texttt{contour\_ra\_translation.txt}.
+Each term carries explicit net matrix-size factor ${N_c}^{p-4}$ (raw loop count $p$ minus the overall $1/N^4$ normalization).
+\section*{Topology 2}
+\noindent Parsed propagators: 8. Internal vertices: 3. Internal half-edges: 12.\\
+\noindent Assignments checked: 32768. Surviving (nonzero vertex weight): 4096.\\
+\noindent Raw $N_c$ power: 0. Net power in $C(t)$: -4.
+\noindent Explicit surviving terms:
+\begin{equation*}
+\mathcal{T}_{1} = 128 i g_{2}^{3}\,N_c^{-4}\,G^<\left(z_{1},z_{3}\right) \, G^<\left(z_{2},z_{3}\right) \, G_A\left(x_2,z_{2}\right) \, G_A\left(x_4,z_{3}\right) \, G_A\left(z_{2},z_{1}\right) \, G_K\left(x_1,z_{1}\right) \, G_R\left(x_3,z_{3}\right) \, G_R\left(z_{2},z_{1}\right)
+\end{equation*}
+\begin{equation*}
+\mathcal{T}_{2} = 128 i g_{2}^{3}\,N_c^{-4}\,G^<\left(z_{1},z_{3}\right) \, G^<\left(z_{2},z_{3}\right) \, G_A\left(x_2,z_{2}\right) \, G_A\left(x_4,z_{3}\right) \, G_A\left(z_{2},z_{1}\right) \, G_K\left(z_{2},z_{1}\right) \, G_R\left(x_1,z_{1}\right) \, G_R\left(x_3,z_{3}\right)
+\end{equation*}
+\end{document}

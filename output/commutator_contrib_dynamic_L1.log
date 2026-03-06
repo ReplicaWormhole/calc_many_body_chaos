@@ -1,0 +1,622 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.12.10)  6 MAR 2026 00:19
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**commutator_contrib_dynamic_L1.tex
+(./commutator_contrib_dynamic_L1.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen141
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count195
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count196
+\leftroot@=\count197
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count198
+\DOTSCASE@=\count199
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count266
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count267
+\dotsspace@=\muskip16
+\c@parentequation=\count268
+\dspbrk@lvl=\count269
+\tag@help=\toks18
+\row@=\count270
+\column@=\count271
+\maxfields@=\count272
+\andhelp@=\toks19
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks20
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count273
+\Gm@cntv=\count274
+\c@Gm@tempcnt=\count275
+\Gm@bindingoffset=\dimen152
+\Gm@wd@mp=\dimen153
+\Gm@odd@mp=\dimen154
+\Gm@even@mp=\dimen155
+\Gm@layoutwidth=\dimen156
+\Gm@layoutheight=\dimen157
+\Gm@layouthoffset=\dimen158
+\Gm@layoutvoffset=\dimen159
+\Gm@dimlist=\toks23
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count276
+\l__pdf_internal_box=\box53
+)
+(./commutator_contrib_dynamic_L1.aux)
+\openout1 = `commutator_contrib_dynamic_L1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count277
+\scratchdimen=\dimen160
+\scratchbox=\box54
+\nofMPsegments=\count278
+\nofMParguments=\count279
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count280
+\MPscratchDim=\dimen161
+\MPnumerator=\count281
+\makeMPintoPDFobject=\count282
+\everyMPtoPDFconversion=\toks25
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(62.59596pt, 489.10307pt, 62.59596pt)
+* v-part:(T,H,B)=(62.59596pt, 669.77806pt, 62.59596pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=489.10307pt
+* \textheight=669.77806pt
+* \oddsidemargin=-9.67403pt
+* \evensidemargin=-9.67403pt
+* \topmargin=-46.67403pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<generated/L2/images/topology1.pdf, id=1, 208.78pt x 208.78pt>
+File: generated/L2/images/topology1.pdf Graphic file (type pdf)
+<use generated/L2/images/topology1.pdf>
+Package pdftex.def Info: generated/L2/images/topology1.pdf  used on input line 
+13.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology2.pdf, id=2, 208.78pt x 208.78pt>
+File: generated/L2/images/topology2.pdf Graphic file (type pdf)
+<use generated/L2/images/topology2.pdf>
+Package pdftex.def Info: generated/L2/images/topology2.pdf  used on input line 
+27.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology3.pdf, id=3, 208.78pt x 208.78pt>
+File: generated/L2/images/topology3.pdf Graphic file (type pdf)
+<use generated/L2/images/topology3.pdf>
+Package pdftex.def Info: generated/L2/images/topology3.pdf  used on input line 
+35.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./generated/L2/images/topo
+logy1.pdf> <./generated/L2/images/topology2.pdf
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology2.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology4.pdf, id=47, 208.78pt x 208.78pt>
+File: generated/L2/images/topology4.pdf Graphic file (type pdf)
+<use generated/L2/images/topology4.pdf>
+Package pdftex.def Info: generated/L2/images/topology4.pdf  used on input line 
+43.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology5.pdf, id=48, 208.78pt x 208.78pt>
+File: generated/L2/images/topology5.pdf Graphic file (type pdf)
+<use generated/L2/images/topology5.pdf>
+Package pdftex.def Info: generated/L2/images/topology5.pdf  used on input line 
+51.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [2 <./generated/L2/images/topology3.pdf> <./generated/L2/images/topology4.pdf
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology4.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+> <./generated/L2/images/topology5.pdf
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology5.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology6.pdf, id=95, 208.78pt x 208.78pt>
+File: generated/L2/images/topology6.pdf Graphic file (type pdf)
+<use generated/L2/images/topology6.pdf>
+Package pdftex.def Info: generated/L2/images/topology6.pdf  used on input line 
+59.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology7.pdf, id=96, 208.78pt x 208.78pt>
+File: generated/L2/images/topology7.pdf Graphic file (type pdf)
+<use generated/L2/images/topology7.pdf>
+Package pdftex.def Info: generated/L2/images/topology7.pdf  used on input line 
+73.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [3 <./generated/L2/images/topology6.pdf> <./generated/L2/images/topology7.pdf
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology7.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology8.pdf, id=129, 208.78pt x 208.78pt>
+File: generated/L2/images/topology8.pdf Graphic file (type pdf)
+<use generated/L2/images/topology8.pdf>
+Package pdftex.def Info: generated/L2/images/topology8.pdf  used on input line 
+111.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology9.pdf, id=130, 208.78pt x 208.78pt>
+File: generated/L2/images/topology9.pdf Graphic file (type pdf)
+<use generated/L2/images/topology9.pdf>
+Package pdftex.def Info: generated/L2/images/topology9.pdf  used on input line 
+119.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology10.pdf, id=131, 208.78pt x 208.78pt>
+File: generated/L2/images/topology10.pdf Graphic file (type pdf)
+<use generated/L2/images/topology10.pdf>
+Package pdftex.def Info: generated/L2/images/topology10.pdf  used on input line
+ 127.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [4 <./generated/L2/images/topology8.pdf> <./generated/L2/images/topology9.pdf
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology9.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology11.pdf, id=165, 208.78pt x 208.78pt>
+File: generated/L2/images/topology11.pdf Graphic file (type pdf)
+<use generated/L2/images/topology11.pdf>
+Package pdftex.def Info: generated/L2/images/topology11.pdf  used on input line
+ 162.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology12.pdf, id=166, 208.78pt x 208.78pt>
+File: generated/L2/images/topology12.pdf Graphic file (type pdf)
+<use generated/L2/images/topology12.pdf>
+Package pdftex.def Info: generated/L2/images/topology12.pdf  used on input line
+ 179.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [5 <./generated/L2/images/topology10.pdf> <./generated/L2/images/topology11.pd
+f
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology11.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology13.pdf, id=199, 208.78pt x 208.78pt>
+File: generated/L2/images/topology13.pdf Graphic file (type pdf)
+<use generated/L2/images/topology13.pdf>
+Package pdftex.def Info: generated/L2/images/topology13.pdf  used on input line
+ 235.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [6 <./generated/L2/images/topology12.pdf> <./generated/L2/images/topology13.pd
+f
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology13.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology14.pdf, id=232, 208.78pt x 208.78pt>
+File: generated/L2/images/topology14.pdf Graphic file (type pdf)
+<use generated/L2/images/topology14.pdf>
+Package pdftex.def Info: generated/L2/images/topology14.pdf  used on input line
+ 243.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology15.pdf, id=233, 208.78pt x 208.78pt>
+File: generated/L2/images/topology15.pdf Graphic file (type pdf)
+<use generated/L2/images/topology15.pdf>
+Package pdftex.def Info: generated/L2/images/topology15.pdf  used on input line
+ 251.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology16.pdf, id=234, 208.78pt x 208.78pt>
+File: generated/L2/images/topology16.pdf Graphic file (type pdf)
+<use generated/L2/images/topology16.pdf>
+Package pdftex.def Info: generated/L2/images/topology16.pdf  used on input line
+ 259.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [7 <./generated/L2/images/topology14.pdf> <./generated/L2/images/topology15.pd
+f
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology15.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology17.pdf, id=268, 208.78pt x 208.78pt>
+File: generated/L2/images/topology17.pdf Graphic file (type pdf)
+<use generated/L2/images/topology17.pdf>
+Package pdftex.def Info: generated/L2/images/topology17.pdf  used on input line
+ 279.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology18.pdf, id=269, 208.78pt x 208.78pt>
+File: generated/L2/images/topology18.pdf Graphic file (type pdf)
+<use generated/L2/images/topology18.pdf>
+Package pdftex.def Info: generated/L2/images/topology18.pdf  used on input line
+ 287.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [8 <./generated/L2/images/topology16.pdf> <./generated/L2/images/topology17.pd
+f
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology17.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology19.pdf, id=302, 208.78pt x 208.78pt>
+File: generated/L2/images/topology19.pdf Graphic file (type pdf)
+<use generated/L2/images/topology19.pdf>
+Package pdftex.def Info: generated/L2/images/topology19.pdf  used on input line
+ 313.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology20.pdf, id=303, 208.78pt x 208.78pt>
+File: generated/L2/images/topology20.pdf Graphic file (type pdf)
+<use generated/L2/images/topology20.pdf>
+Package pdftex.def Info: generated/L2/images/topology20.pdf  used on input line
+ 321.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [9 <./generated/L2/images/topology18.pdf> <./generated/L2/images/topology19.pd
+f
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology19.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology21.pdf, id=337, 208.78pt x 208.78pt>
+File: generated/L2/images/topology21.pdf Graphic file (type pdf)
+<use generated/L2/images/topology21.pdf>
+Package pdftex.def Info: generated/L2/images/topology21.pdf  used on input line
+ 329.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology22.pdf, id=338, 208.78pt x 208.78pt>
+File: generated/L2/images/topology22.pdf Graphic file (type pdf)
+<use generated/L2/images/topology22.pdf>
+Package pdftex.def Info: generated/L2/images/topology22.pdf  used on input line
+ 349.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [10 <./generated/L2/images/topology20.pdf> <./generated/L2/images/topology21.p
+df
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology21.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology23.pdf, id=371, 208.78pt x 208.78pt>
+File: generated/L2/images/topology23.pdf Graphic file (type pdf)
+<use generated/L2/images/topology23.pdf>
+Package pdftex.def Info: generated/L2/images/topology23.pdf  used on input line
+ 375.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology24.pdf, id=372, 208.78pt x 208.78pt>
+File: generated/L2/images/topology24.pdf Graphic file (type pdf)
+<use generated/L2/images/topology24.pdf>
+Package pdftex.def Info: generated/L2/images/topology24.pdf  used on input line
+ 395.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [11 <./generated/L2/images/topology22.pdf> <./generated/L2/images/topology23.p
+df
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology23.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology25.pdf, id=405, 208.78pt x 208.78pt>
+File: generated/L2/images/topology25.pdf Graphic file (type pdf)
+<use generated/L2/images/topology25.pdf>
+Package pdftex.def Info: generated/L2/images/topology25.pdf  used on input line
+ 415.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [12 <./generated/L2/images/topology24.pdf> <./generated/L2/images/topology25.p
+df
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology25.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology26.pdf, id=438, 208.78pt x 208.78pt>
+File: generated/L2/images/topology26.pdf Graphic file (type pdf)
+<use generated/L2/images/topology26.pdf>
+Package pdftex.def Info: generated/L2/images/topology26.pdf  used on input line
+ 483.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [13 <./generated/L2/images/topology26.pdf>]
+<generated/L2/images/topology27.pdf, id=458, 208.78pt x 208.78pt>
+File: generated/L2/images/topology27.pdf Graphic file (type pdf)
+<use generated/L2/images/topology27.pdf>
+Package pdftex.def Info: generated/L2/images/topology27.pdf  used on input line
+ 545.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology28.pdf, id=459, 208.78pt x 208.78pt>
+File: generated/L2/images/topology28.pdf Graphic file (type pdf)
+<use generated/L2/images/topology28.pdf>
+Package pdftex.def Info: generated/L2/images/topology28.pdf  used on input line
+ 580.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [14 <./generated/L2/images/topology27.pdf> <./generated/L2/images/topology28.p
+df
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology28.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology29.pdf, id=493, 208.78pt x 208.78pt>
+File: generated/L2/images/topology29.pdf Graphic file (type pdf)
+<use generated/L2/images/topology29.pdf>
+Package pdftex.def Info: generated/L2/images/topology29.pdf  used on input line
+ 597.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology30.pdf, id=494, 208.78pt x 208.78pt>
+File: generated/L2/images/topology30.pdf Graphic file (type pdf)
+<use generated/L2/images/topology30.pdf>
+Package pdftex.def Info: generated/L2/images/topology30.pdf  used on input line
+ 653.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [15 <./generated/L2/images/topology29.pdf>]
+<generated/L2/images/topology31.pdf, id=513, 208.78pt x 208.78pt>
+File: generated/L2/images/topology31.pdf Graphic file (type pdf)
+<use generated/L2/images/topology31.pdf>
+Package pdftex.def Info: generated/L2/images/topology31.pdf  used on input line
+ 661.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [16 <./generated/L2/images/topology30.pdf> <./generated/L2/images/topology31.p
+df
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology31.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology32.pdf, id=546, 208.78pt x 208.78pt>
+File: generated/L2/images/topology32.pdf Graphic file (type pdf)
+<use generated/L2/images/topology32.pdf>
+Package pdftex.def Info: generated/L2/images/topology32.pdf  used on input line
+ 723.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology33.pdf, id=547, 208.78pt x 208.78pt>
+File: generated/L2/images/topology33.pdf Graphic file (type pdf)
+<use generated/L2/images/topology33.pdf>
+Package pdftex.def Info: generated/L2/images/topology33.pdf  used on input line
+ 740.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology34.pdf, id=548, 208.78pt x 208.78pt>
+File: generated/L2/images/topology34.pdf Graphic file (type pdf)
+<use generated/L2/images/topology34.pdf>
+Package pdftex.def Info: generated/L2/images/topology34.pdf  used on input line
+ 748.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [17 <./generated/L2/images/topology32.pdf> <./generated/L2/images/topology33.p
+df
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology33.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology35.pdf, id=581, 208.78pt x 208.78pt>
+File: generated/L2/images/topology35.pdf Graphic file (type pdf)
+<use generated/L2/images/topology35.pdf>
+Package pdftex.def Info: generated/L2/images/topology35.pdf  used on input line
+ 768.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology36.pdf, id=582, 208.78pt x 208.78pt>
+File: generated/L2/images/topology36.pdf Graphic file (type pdf)
+<use generated/L2/images/topology36.pdf>
+Package pdftex.def Info: generated/L2/images/topology36.pdf  used on input line
+ 785.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [18 <./generated/L2/images/topology34.pdf> <./generated/L2/images/topology35.p
+df
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology35.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology37.pdf, id=616, 208.78pt x 208.78pt>
+File: generated/L2/images/topology37.pdf Graphic file (type pdf)
+<use generated/L2/images/topology37.pdf>
+Package pdftex.def Info: generated/L2/images/topology37.pdf  used on input line
+ 793.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology38.pdf, id=617, 208.78pt x 208.78pt>
+File: generated/L2/images/topology38.pdf Graphic file (type pdf)
+<use generated/L2/images/topology38.pdf>
+Package pdftex.def Info: generated/L2/images/topology38.pdf  used on input line
+ 801.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [19 <./generated/L2/images/topology36.pdf> <./generated/L2/images/topology37.p
+df
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology37.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./generated/L2/images/topology38.pdf
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology38.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology39.pdf, id=665, 208.78pt x 208.78pt>
+File: generated/L2/images/topology39.pdf Graphic file (type pdf)
+<use generated/L2/images/topology39.pdf>
+Package pdftex.def Info: generated/L2/images/topology39.pdf  used on input line
+ 809.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology40.pdf, id=666, 208.78pt x 208.78pt>
+File: generated/L2/images/topology40.pdf Graphic file (type pdf)
+<use generated/L2/images/topology40.pdf>
+Package pdftex.def Info: generated/L2/images/topology40.pdf  used on input line
+ 817.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+<generated/L2/images/topology41.pdf, id=667, 208.78pt x 208.78pt>
+File: generated/L2/images/topology41.pdf Graphic file (type pdf)
+<use generated/L2/images/topology41.pdf>
+Package pdftex.def Info: generated/L2/images/topology41.pdf  used on input line
+ 828.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [20 <./generated/L2/images/topology39.pdf> <./generated/L2/images/topology40.p
+df
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology40.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<generated/L2/images/topology42.pdf, id=700, 208.78pt x 208.78pt>
+File: generated/L2/images/topology42.pdf Graphic file (type pdf)
+<use generated/L2/images/topology42.pdf>
+Package pdftex.def Info: generated/L2/images/topology42.pdf  used on input line
+ 836.
+(pdftex.def)             Requested size: 136.94826pt x 136.95418pt.
+ [21 <./generated/L2/images/topology41.pdf> <./generated/L2/images/topology42.p
+df
+
+pdfTeX warning: pdflatex (file ./generated/L2/images/topology42.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>] (./commutator_contrib_dynamic_L1.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 2835 strings out of 474222
+ 51500 string characters out of 5748732
+ 1968975 words of memory out of 5000000
+ 25103 multiletter control sequences out of 15000+600000
+ 560223 words of font info for 44 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,6n,65p,326b,190s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmtt10.pfb>
+Output written on commutator_contrib_dynamic_L1.pdf (21 pages, 253174 bytes).
+PDF statistics:
+ 773 PDF objects out of 1000 (max. 8388607)
+ 516 compressed objects within 6 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 211 words of extra memory for PDF output out of 10000 (max. 10000000)
+
