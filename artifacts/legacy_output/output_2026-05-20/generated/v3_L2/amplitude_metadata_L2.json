@@ -1,0 +1,27 @@
+{
+	"loop_order":2,
+	"fixed_external_assignment":[
+		"phi_r^1(x_1)",
+		"phi_a^1(x_2)",
+		"phi_r^2(x_3)",
+		"phi_a^2(x_4)"
+	],
+	"bare_topology_count":42,
+	"inserted_diagram_count":42,
+	"amplitude_count":42,
+	"topology_ids":[
+		2,
+		4,
+		6
+	],
+	"inserted_topology_ids":[
+		2,
+		4,
+		6
+	],
+	"amplitude_counts_by_topology_id":{
+		"2":9,
+		"4":29,
+		"6":4
+	}
+}

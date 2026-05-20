@@ -1,0 +1,34 @@
+{
+	"loop_order":1,
+	"fixed_external_assignment":[
+		"phi_r^1(x_1)",
+		"phi_a^1(x_2)",
+		"phi_r^2(x_3)",
+		"phi_a^2(x_4)"
+	],
+	"amplitude_count":7,
+	"topology_ids":[
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7
+	],
+	"paper_l1":{
+		"one_rung_topology_ids":[
+			3,
+			5,
+			6
+		],
+		"one_rung_per_topology_factor":16,
+		"one_rung_total_factor":48,
+		"self_energy_topology_ids":[
+			1,
+			2,
+			4,
+			7
+		]
+	}
+}

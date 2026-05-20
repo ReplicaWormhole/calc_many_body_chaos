@@ -1,0 +1,2628 @@
+[
+  {
+    "index": 1,
+    "feynarts_topology_id": 2,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 0,
+    "nc_net_power": -4,
+    "nonzero_terms": 2,
+    "propagator_histogram": {
+      "G^<": 4,
+      "G_A": 6,
+      "G_K": 2,
+      "G_R": 4
+    },
+    "term_coefficients": [
+      "128*I*g_2**3",
+      "128*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 2,
+    "feynarts_topology_id": 2,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 0,
+    "nc_net_power": -4,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 3,
+    "feynarts_topology_id": 2,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 0,
+    "nc_net_power": -4,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 4,
+    "feynarts_topology_id": 2,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 0,
+    "nc_net_power": -4,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 5,
+    "feynarts_topology_id": 2,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 0,
+    "nc_net_power": -4,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 6,
+    "feynarts_topology_id": 2,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 0,
+    "nc_net_power": -4,
+    "nonzero_terms": 2,
+    "propagator_histogram": {
+      "G^>": 4,
+      "G_A": 6,
+      "G_K": 2,
+      "G_R": 4
+    },
+    "term_coefficients": [
+      "128*I*g_2**3",
+      "128*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{2}\\right)",
+        "G_K\\left(x_3,z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 7,
+    "feynarts_topology_id": 2,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 10,
+    "propagator_histogram": {
+      "G^<": 15,
+      "G_A": 28,
+      "G_K": 10,
+      "G_R": 22,
+      "G^>": 5
+    },
+    "term_coefficients": [
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_3,z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{3}\\right)",
+        "G_K\\left(x_3,z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_K\\left(z_{2},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)",
+        "G_R\\left(z_{2},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^>\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^>\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{1},z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^>\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{1},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^>\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_K\\left(z_{1},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^>\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)",
+        "G_R\\left(z_{1},z_{3}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 8,
+    "feynarts_topology_id": 2,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 9,
+    "feynarts_topology_id": 2,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 10,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 9,
+    "propagator_histogram": {
+      "G^<": 18,
+      "G_A": 27,
+      "G_K": 9,
+      "G_R": 18
+    },
+    "term_coefficients": [
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{1},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{1},z_{3}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{3}\\right)",
+        "G_K\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{1},z_{3}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{3}\\right)",
+        "G_K\\left(z_{1},z_{3}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_K\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 11,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 3,
+    "propagator_histogram": {
+      "G^<": 6,
+      "G_A": 10,
+      "G_K": 3,
+      "G_R": 5
+    },
+    "term_coefficients": [
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{1}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{1},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_K\\left(z_{1},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 12,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 2,
+    "nc_net_power": -2,
+    "nonzero_terms": 16,
+    "propagator_histogram": {
+      "G^<": 32,
+      "G_A": 48,
+      "G_K": 16,
+      "G_R": 32
+    },
+    "term_coefficients": [
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{1},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{1},z_{3}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{1}\\right)",
+        "G_K\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{1},z_{3}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{1}\\right)",
+        "G_K\\left(z_{1},z_{3}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{1},z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{3}\\right)",
+        "G_K\\left(z_{1},z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{1},z_{1}\\right)",
+        "G_R\\left(z_{1},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{1},z_{3}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{1},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{1},z_{1}\\right)",
+        "G_R\\left(z_{1},z_{3}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(z_{1},z_{3}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{1},z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{1}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{1},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{1},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{1},z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(z_{1},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 13,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 14,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 15,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 2,
+    "nc_net_power": -2,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 16,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 4,
+    "propagator_histogram": {
+      "G^>": 8,
+      "G_A": 12,
+      "G_K": 4,
+      "G_R": 8
+    },
+    "term_coefficients": [
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{1},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{2}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{1},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{1},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{1},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(z_{1},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{1},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 17,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 18,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 2,
+    "nc_net_power": -2,
+    "nonzero_terms": 6,
+    "propagator_histogram": {
+      "G^>": 12,
+      "G_A": 17,
+      "G_K": 6,
+      "G_R": 13
+    },
+    "term_coefficients": [
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{1}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{1},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{1},z_{1}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{1},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{1},z_{1}\\right)",
+        "G_R\\left(z_{1},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{1},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{1},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{1},z_{1}\\right)",
+        "G_R\\left(z_{1},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(z_{1},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{1},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 19,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 2,
+    "nc_net_power": -2,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 20,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 21,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 4,
+    "propagator_histogram": {
+      "G^<": 4,
+      "G^>": 4,
+      "G_A": 12,
+      "G_K": 4,
+      "G_R": 8
+    },
+    "term_coefficients": [
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{1}\\right)",
+        "G_K\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{3},z_{1}\\right)",
+        "G_K\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 22,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 2,
+    "nc_net_power": -2,
+    "nonzero_terms": 6,
+    "propagator_histogram": {
+      "G^<": 12,
+      "G_A": 17,
+      "G_K": 6,
+      "G_R": 13
+    },
+    "term_coefficients": [
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_K\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_3,z_{3}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 23,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 4,
+    "propagator_histogram": {
+      "G^>": 8,
+      "G_A": 14,
+      "G_K": 4,
+      "G_R": 6
+    },
+    "term_coefficients": [
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 24,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 4,
+    "propagator_histogram": {
+      "G^<": 4,
+      "G^>": 4,
+      "G_A": 14,
+      "G_K": 4,
+      "G_R": 6
+    },
+    "term_coefficients": [
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{1}\\right)",
+        "G_K\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{1}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{1}\\right)",
+        "G_K\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{1}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 25,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 2,
+    "nc_net_power": -2,
+    "nonzero_terms": 20,
+    "propagator_histogram": {
+      "G^<": 20,
+      "G_A": 62,
+      "G_K": 20,
+      "G_R": 38,
+      "G^>": 20
+    },
+    "term_coefficients": [
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{1}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{1}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_K\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 26,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 2,
+    "nc_net_power": -2,
+    "nonzero_terms": 18,
+    "propagator_histogram": {
+      "G^<": 26,
+      "G_A": 55,
+      "G_K": 18,
+      "G_R": 35,
+      "G^>": 10
+    },
+    "term_coefficients": [
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{3},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_K\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_K\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{1}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{3},z_{1}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_K\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 27,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 9,
+    "propagator_histogram": {
+      "G^>": 18,
+      "G_A": 27,
+      "G_K": 9,
+      "G_R": 18
+    },
+    "term_coefficients": [
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{2}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_3,z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(x_3,z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 28,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 3,
+    "propagator_histogram": {
+      "G^>": 6,
+      "G_A": 10,
+      "G_K": 3,
+      "G_R": 5
+    },
+    "term_coefficients": [
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{2}\\right)",
+        "G_K\\left(x_3,z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{2}\\right)",
+        "G_K\\left(x_3,z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{2}\\right)",
+        "G_K\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 29,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 2,
+    "nc_net_power": -2,
+    "nonzero_terms": 16,
+    "propagator_histogram": {
+      "G^>": 32,
+      "G_A": 48,
+      "G_K": 16,
+      "G_R": 32
+    },
+    "term_coefficients": [
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{1}\\right)",
+        "G_K\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{2}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(z_{2},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_3,z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(x_3,z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_3,z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(x_3,z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(z_{2},z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{3}\\right)",
+        "G_K\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 30,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 2,
+    "nc_net_power": -2,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 31,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 2,
+    "nc_net_power": -2,
+    "nonzero_terms": 18,
+    "propagator_histogram": {
+      "G^<": 10,
+      "G^>": 26,
+      "G_A": 55,
+      "G_K": 18,
+      "G_R": 35
+    },
+    "term_coefficients": [
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3",
+      "64*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(z_{3},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{1}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(z_{3},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(z_{3},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(z_{3},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{3},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{3},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{3},z_{1}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(z_{3},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(z_{3},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^<\\left(z_{3},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{3},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_K\\left(z_{3},z_{1}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{3},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_K\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_K\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 32,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 2,
+    "nc_net_power": -2,
+    "nonzero_terms": 3,
+    "propagator_histogram": {
+      "G^<": 3,
+      "G^>": 3,
+      "G_A": 10,
+      "G_K": 3,
+      "G_R": 5
+    },
+    "term_coefficients": [
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{3}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{3}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 33,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 2,
+    "nc_net_power": -2,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 34,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 4,
+    "propagator_histogram": {
+      "G^<": 4,
+      "G_A": 10,
+      "G_K": 4,
+      "G_R": 10,
+      "G^>": 4
+    },
+    "term_coefficients": [
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{3}\\right)",
+        "G_K\\left(x_3,z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G^<\\left(z_{1},z_{3}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_K\\left(z_{2},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)",
+        "G_R\\left(z_{2},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(z_{2},z_{3}\\right)",
+        "G^>\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{1},z_{3}\\right)",
+        "G_K\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)",
+        "G_R\\left(z_{1},z_{3}\\right)"
+      ],
+      [
+        "G^>\\left(z_{2},z_{3}\\right)",
+        "G^>\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_K\\left(z_{1},z_{3}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)",
+        "G_R\\left(z_{1},z_{3}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 35,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 2,
+    "nc_net_power": -2,
+    "nonzero_terms": 3,
+    "propagator_histogram": {
+      "G^<": 3,
+      "G^>": 3,
+      "G_A": 10,
+      "G_K": 3,
+      "G_R": 5
+    },
+    "term_coefficients": [
+      "128*I*g_2**3",
+      "128*I*g_2**3",
+      "128*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{1},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{3}\\right)",
+        "G_A\\left(z_{3},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{3}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{1},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{3}\\right)",
+        "G_K\\left(z_{2},z_{3}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{3}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{1},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{3}\\right)",
+        "G_K\\left(z_{3},z_{3}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{3}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 36,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 37,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 38,
+    "feynarts_topology_id": 4,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 2,
+    "nc_net_power": -2,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 39,
+    "feynarts_topology_id": 6,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 0,
+    "nc_net_power": -4,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 40,
+    "feynarts_topology_id": 6,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 0,
+    "nc_net_power": -4,
+    "nonzero_terms": 1,
+    "propagator_histogram": {
+      "G^<": 2,
+      "G_A": 3,
+      "G_K": 1,
+      "G_R": 2
+    },
+    "term_coefficients": [
+      "384*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^<\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{3},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{2}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 41,
+    "feynarts_topology_id": 6,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 0,
+    "nc_net_power": -4,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 42,
+    "feynarts_topology_id": 6,
+    "n_props": 8,
+    "n_internal_vertices": 3,
+    "n_internal_half_edges": 12,
+    "total_assignments": 32768,
+    "surviving_assignments": 4096,
+    "nc_raw_power": 0,
+    "nc_net_power": -4,
+    "nonzero_terms": 1,
+    "propagator_histogram": {
+      "G^>": 2,
+      "G_A": 3,
+      "G_K": 1,
+      "G_R": 2
+    },
+    "term_coefficients": [
+      "384*I*g_2**3"
+    ],
+    "term_signatures": [
+      [
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G^>\\left(z_{3},z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{3},z_{2}\\right)",
+        "G_K\\left(z_{3},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{3},z_{2}\\right)"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,663 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{hyperref}
+
+\title{Blueprint for an Analytic Schwinger--Keldysh Kernel Pipeline}
+\author{calc\_mbcwc project}
+\date{2026-05-20}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\SK}{\mathrm{SK}}
+\newcommand{\eff}{\mathrm{eff}}
+\newcommand{\thm}{\mathrm{th}}
+\newcommand{\R}{\mathrm{R}}
+\newcommand{\A}{\mathrm{A}}
+\newcommand{\W}{\mathrm{W}}
+
+\begin{document}
+\maketitle
+
+\section{Purpose}
+
+The goal is to define the mathematics that the Python pipeline should
+implement.  The input is a weakly coupled finite-temperature model, specified by
+its quadratic kernel, interaction tensors, statistics, and index structure. The
+output is the leading large-time Schwinger--Keldysh ladder kernel and its
+largest positive growth exponent
+\begin{equation}
+  \lambda_L = \max \operatorname{Re}\operatorname{spec} M ,
+\end{equation}
+where \(M\) is the linearized ladder evolution operator.
+
+The immediate acceptance benchmark is Stanford's weakly coupled Hermitian
+matrix \(\Phi^4\) theory \cite{Stanford:2015owe}.  The general pipeline should
+reduce to the formulas in Sections~\ref{sec:stanford} and~\ref{sec:numerics}
+when that model is selected.
+
+\section{Model Input}
+
+Represent the Lorentzian action as
+\begin{equation}
+  S[\phi]
+  =
+  \frac{1}{2}\int_x \phi_I(x) D^{-1}_{IJ}(\partial)\phi_J(x)
+  -
+  \sum_{\alpha\in \mathcal V}
+  \frac{g_\alpha}{n_\alpha!}
+  \int_x
+  T^\alpha_{I_1\cdots I_{n_\alpha}}
+  \phi_{I_1}(x)\cdots \phi_{I_{n_\alpha}}(x).
+  \label{eq:model}
+\end{equation}
+Here \(I,J\) are collective labels: species, matrix indices, internal indices,
+and spin/statistics labels. The parser should store:
+\begin{itemize}
+  \item the quadratic inverse propagator \(D^{-1}_{IJ}(k)\);
+  \item interaction arity \(n_\alpha\), coupling \(g_\alpha\), and tensor
+  \(T^\alpha\);
+  \item index-contraction rules and large-\(N\) power counting;
+  \item dispersion branches \(E_a(\mathbf p)\), either exact or from the poles
+  of the retarded propagator.
+\end{itemize}
+
+\section{Schwinger--Keldysh Doubling}
+
+For each bosonic field introduce contour fields \(\phi_1,\phi_2\), or
+equivalently \(r/a\) fields
+\begin{equation}
+  \phi_1 = \phi_r + \frac{1}{2}\phi_a,
+  \qquad
+  \phi_2 = \phi_r - \frac{1}{2}\phi_a .
+  \label{eq:ra-map}
+\end{equation}
+The Schwinger--Keldysh action is
+\begin{equation}
+  S_{\SK}[\phi_r,\phi_a]
+  =
+  S[\phi_1] - S[\phi_2].
+  \label{eq:sk-action}
+\end{equation}
+For a single monomial \(\phi^n\), the branch-difference identity is
+\begin{equation}
+  \phi_1^n-\phi_2^n
+  =
+  \sum_{\substack{s=1\\s\ \mathrm{odd}}}^{n}
+  \binom{n}{s}2^{1-s}
+  \phi_r^{\,n-s}\phi_a^{\,s}.
+  \label{eq:branch-difference}
+\end{equation}
+Thus every allowed SK interaction vertex contains an odd number of \(a\)-legs.
+This is a required implementation check:
+\begin{equation}
+  S_{\SK}[\phi_r,\phi_a=0]=0.
+  \label{eq:unitarity-check}
+\end{equation}
+
+With the convention in Eq.~\eqref{eq:model}, differentiating the interaction
+part of \(\ii S_{\SK}\) gives the \(r/a\)-basis vertex
+\begin{equation}
+  V^\alpha_{b_1\cdots b_n;I_1\cdots I_n}
+  =
+  -\ii g_\alpha\,
+  T^\alpha_{I_1\cdots I_n}
+  C(b_1,\ldots,b_n),
+  \qquad b_i\in\{r,a\},
+  \label{eq:sk-vertex}
+\end{equation}
+where
+\begin{equation}
+  C(b_1,\ldots,b_n)
+  =
+  \begin{cases}
+    2^{1-s}, & s=\#\{i:b_i=a\}\ \mathrm{odd},\\
+    0,       & s\ \mathrm{even}.
+  \end{cases}
+  \label{eq:vertex-coefficient}
+\end{equation}
+If \(T^\alpha\) is not fully symmetrized, the implementation must sum over
+inequivalent cyclic/orderings specified by the model file.
+
+\section{Thermal Propagators}
+
+For each quasiparticle branch \(a\), define
+\begin{equation}
+  E_a(\mathbf p) = \sqrt{\mathbf p^2 + m_a^2}
+  \quad\hbox{in the scalar benchmark,}
+\end{equation}
+and use the retarded propagator
+\begin{equation}
+  G_{\R,a}(k)
+  =
+  \frac{\ii}{(k^0+\ii0)^2-E_a(\mathbf k)^2-\Pi_{\R,a}(k)} .
+  \label{eq:retarded-general}
+\end{equation}
+Equivalently, in spectral form,
+\begin{equation}
+  G_{\R,a}(k)
+  =
+  \ii\int\frac{\dd\omega}{2\pi}
+  \frac{\rho_a(\omega,\mathbf k)}{k^0-\omega+\ii0}.
+  \label{eq:spectral-retarded}
+\end{equation}
+The half-thermal-circle Wightman function used for rungs is
+\begin{equation}
+  \widetilde G_a(k)
+  =
+  \frac{\rho_a(k)}{2\sinh(\beta k^0/2)}
+  \label{eq:half-wightman}
+\end{equation}
+for bosons. For a free scalar,
+\begin{equation}
+  \rho(k)
+  =
+  \frac{\pi}{E_{\mathbf k}}
+  \bigl[
+    \delta(k^0-E_{\mathbf k})-\delta(k^0+E_{\mathbf k})
+  \bigr],
+\end{equation}
+and therefore
+\begin{equation}
+  \widetilde G(k)
+  =
+  \sum_{s=\pm 1}
+  \frac{\pi\,\delta(k^0-sE_{\mathbf k})}
+       {2E_{\mathbf k}\sinh(\beta E_{\mathbf k}/2)}.
+  \label{eq:free-wightman}
+\end{equation}
+
+\section{Self-Energy and Width}
+
+The leading large-time ladder problem requires dressed side rails. Near the
+quasiparticle pole use
+\begin{equation}
+  G_{\R,a}(k)
+  \simeq
+  \frac{\ii Z_a(\mathbf k)}{2E_a(\mathbf k)}
+  \left[
+    \frac{1}{k^0-E_a(\mathbf k)+\ii\Gamma_a(\mathbf k)}
+    -
+    \frac{1}{k^0+E_a(\mathbf k)+\ii\Gamma_a(\mathbf k)}
+  \right].
+  \label{eq:dressed-retarded}
+\end{equation}
+The width is obtained from the imaginary part of the on-shell retarded
+self-energy,
+\begin{equation}
+  \Gamma_a(\mathbf p)
+  =
+  -\frac{Z_a(\mathbf p)}
+         {2E_a(\mathbf p)}
+  \operatorname{Im}
+  \Pi_{\R,a}\bigl(E_a(\mathbf p)+\ii0,\mathbf p\bigr).
+  \label{eq:width}
+\end{equation}
+
+If a field is massless at tree level, the pipeline must first compute the
+thermal mass from the static self-energy:
+\begin{equation}
+  m_{\eff,a}^2
+  =
+  m_{0,a}^2 + \Pi_{\thm,a}(0,\mathbf 0).
+  \label{eq:thermal-mass-general}
+\end{equation}
+For the Stanford scalar matrix benchmark,
+\begin{equation}
+  m_{\thm}^2 = \frac{2\lambda}{3\beta^2}.
+  \label{eq:stanford-thermal-mass}
+\end{equation}
+
+\section{Rung Construction}
+
+The leading growth kernel is built from rung diagrams: two SK vertices, one on
+each real-time fold, joined by Wightman lines. Abstractly, for external
+on-shell rail species \(A,B\), the rung has the form
+\begin{equation}
+  R_{AB}(q)
+  =
+  \sum_{\gamma\in\mathcal R_{AB}}
+  \frac{\mathcal S_\gamma}{|\operatorname{Aut}\gamma|}
+  \int
+  \prod_{\ell\in I_\gamma}
+  \frac{\dd^d\ell}{(2\pi)^d}
+  \,
+  (2\pi)^d
+  \delta^{(d)}
+  \left(q+\sum_{\ell\in I_\gamma}\sigma_\ell \ell\right)
+  \mathcal I_\gamma(q,\{\ell\}).
+  \label{eq:general-rung}
+\end{equation}
+The integrand is
+\begin{equation}
+  \mathcal I_\gamma
+  =
+  V^{L,\gamma}_{A;\{\alpha_\ell\}}
+  V^{R,\gamma}_{B;\{\beta_\ell\}}
+  \mathcal C_\gamma
+  \prod_{\ell\in I_\gamma}
+  \widetilde G_{\alpha_\ell\beta_\ell}(\ell),
+  \label{eq:rung-integrand}
+\end{equation}
+where \(\mathcal C_\gamma\) is the index/color contraction factor and
+\(\mathcal S_\gamma\) includes statistics signs and multiplicities. The graph
+enumerator must retain only rungs whose large-\(N\) and weak-coupling order can
+contribute to the requested leading limit.
+
+\section{Ladder Equation}
+
+Let \(f_A(\omega,p)\) denote the amputated ladder amplitude with rail species
+\(A\). The exact ladder recursion has the schematic form
+\begin{equation}
+  f_A(\omega,p)
+  =
+  -G_{\R,A}(p)G_{\R,A}(\omega-p)
+  \left[
+    h_A(p)
+    +
+    \sum_B
+    \int\frac{\dd^d k}{(2\pi)^d}
+    R_{AB}(k-p)f_B(\omega,k)
+  \right],
+  \label{eq:ladder-recursion}
+\end{equation}
+where \(h_A\) is the zero-rung source. The large-time growth exponent is
+independent of \(h_A\), so the pipeline drops the inhomogeneous term and keeps
+the homogeneous equation.
+
+Using the pole-pair replacement
+\begin{equation}
+  G_{\R,A}(p)G_{\R,A}(\omega-p)
+  \longrightarrow
+  -
+  \frac{\pi\ii Z_A(\mathbf p)^2}{2E_A(\mathbf p)^2}
+  \frac{
+    \delta(p^0-E_A(\mathbf p))+\delta(p^0+E_A(\mathbf p))
+  }{\omega+2\ii\Gamma_A(\mathbf p)},
+  \label{eq:pole-pair}
+\end{equation}
+the amplitude becomes on-shell supported. Write
+\begin{equation}
+  f_A(\omega,p)
+  =
+  f_A(\omega,\mathbf p)\,
+  \delta\bigl((p^0)^2-E_A(\mathbf p)^2\bigr).
+\end{equation}
+Then the real-time evolution equation is
+\begin{equation}
+  \partial_t f_A(t,\mathbf p)
+  =
+  \sum_B\int
+  \frac{\dd^{d-1}\mathbf k}{(2\pi)^{d-1}}
+  m_{AB}(\mathbf k,\mathbf p) f_B(t,\mathbf k)
+  -
+  2\Gamma_A(\mathbf p)f_A(t,\mathbf p).
+  \label{eq:general-evolution}
+\end{equation}
+The on-shell gain kernel is
+\begin{equation}
+  m_{AB}(\mathbf k,\mathbf p)
+  =
+  \sum_{\eta=\pm}
+  \frac{
+    Z_A(\mathbf p)Z_B(\mathbf k)
+    R_{AB}\bigl(k_\eta-p\bigr)
+  }
+  {4E_A(\mathbf p)E_B(\mathbf k)},
+  \qquad
+  k_\eta-p
+  =
+  \bigl(E_B(\mathbf k)+\eta E_A(\mathbf p),\mathbf k-\mathbf p\bigr),
+  \label{eq:gain-kernel}
+\end{equation}
+with the precise sign sum fixed by the pole assignments and statistics.
+
+The operator implemented numerically is
+\begin{equation}
+  (Mf)_A(\mathbf p)
+  =
+  \sum_B\int
+  \frac{\dd^{d-1}\mathbf k}{(2\pi)^{d-1}}
+  m_{AB}(\mathbf k,\mathbf p) f_B(\mathbf k)
+  -
+  2\Gamma_A(\mathbf p)f_A(\mathbf p).
+  \label{eq:M-general}
+\end{equation}
+Finally,
+\begin{equation}
+  \lambda_L = \max\{\operatorname{Re}\mu:\mu\in\operatorname{spec}M\}.
+  \label{eq:lambda-general}
+\end{equation}
+
+\section{Stanford \texorpdfstring{\(\Phi^4\)}{Phi4} Benchmark}
+\label{sec:stanford}
+
+The benchmark theory is a Hermitian matrix scalar in four spacetime dimensions,
+with
+\begin{equation}
+  \mathcal L
+  =
+  \frac{1}{2}
+  \Tr\left(
+    \dot\Phi^2-(\nabla\Phi)^2-m^2\Phi^2-2g^2\Phi^4
+  \right),
+  \qquad
+  \lambda = g^2N .
+  \label{eq:stanford-lagrangian}
+\end{equation}
+For this theory, the leading rung is
+\begin{equation}
+  R(q)
+  =
+  48\lambda^2
+  \int\frac{\dd^4\ell}{(2\pi)^4}
+  \widetilde G(q/2+\ell)\widetilde G(q/2-\ell).
+  \label{eq:stanford-rung-integral}
+\end{equation}
+The corresponding on-shell kernel is
+\begin{equation}
+  m(\mathbf k,\mathbf p)
+  =
+  \frac{R(k_+)+R(k_-)}{4E_{\mathbf k}E_{\mathbf p}},
+  \qquad
+  k_\pm =
+  \bigl(E_{\mathbf k}\pm E_{\mathbf p},\mathbf k-\mathbf p\bigr).
+  \label{eq:stanford-mkp}
+\end{equation}
+The width can be eliminated in favor of the same rung:
+\begin{equation}
+  \Gamma_{\mathbf p}
+  =
+  \frac{1}{6}
+  \int\frac{\dd^3\mathbf k}{(2\pi)^3}
+  \frac{\sinh(\beta E_{\mathbf p}/2)}
+       {\sinh(\beta E_{\mathbf k}/2)}
+  m(\mathbf k,\mathbf p).
+  \label{eq:stanford-width-rung}
+\end{equation}
+Therefore the eigenvalue equation is
+\begin{equation}
+  \lambda_L f(\mathbf p)
+  =
+  \int\frac{\dd^3\mathbf k}{(2\pi)^3}
+  m(\mathbf k,\mathbf p)
+  \left[
+    f(\mathbf k)
+    -
+    \frac{\sinh(\beta E_{\mathbf p}/2)}
+         {3\sinh(\beta E_{\mathbf k}/2)}
+    f(\mathbf p)
+  \right].
+  \label{eq:stanford-3d}
+\end{equation}
+
+The closed form rung used for validation is
+\begin{equation}
+  R(q)
+  =
+  \frac{6\lambda^2}
+       {\pi\beta |\mathbf q|\sinh(|q^0|\beta/2)}
+  \left[
+    \Theta(-q^2-4m^2)
+    \log\frac{\sinh x_+}{\sinh x_-}
+    +
+    \Theta(q^2)
+    \log\frac{1-e^{-2x_+}}{1-e^{2x_-}}
+  \right],
+  \label{eq:stanford-rung-closed}
+\end{equation}
+where
+\begin{equation}
+  q^2 = -(q^0)^2+|\mathbf q|^2,
+  \qquad
+  x_\pm =
+  \frac{\beta}{4}
+  \left[
+    |q^0|
+    \pm
+    |\mathbf q|
+    \sqrt{1+\frac{4m^2}{|\mathbf q|^2-(q^0)^2}}
+  \right].
+  \label{eq:stanford-xpm}
+\end{equation}
+
+\section{One-Dimensional Reduction and Discretization}
+\label{sec:numerics}
+
+For rotationally invariant scalar models, set \(P=|\mathbf p|\),
+\(K=|\mathbf k|\), \(E_P=\sqrt{P^2+m^2}\). The angular integration uses
+\begin{equation}
+  \int\dd^3\mathbf k
+  =
+  2\pi\int_0^\infty K^2\,\dd K
+  \int_{|K-P|}^{K+P}\frac{y\,\dd y}{KP},
+  \qquad y=|\mathbf k-\mathbf p|.
+  \label{eq:angular-measure}
+\end{equation}
+The Stanford equation becomes
+\begin{equation}
+  \lambda_L f(P)
+  =
+  \int_0^\infty \dd K\, m_1(P,K)
+  \left[
+    f(K)
+    -
+    \frac{\sinh(\beta E_P/2)}
+         {3\sinh(\beta E_K/2)}
+    f(P)
+  \right],
+  \label{eq:stanford-1d}
+\end{equation}
+where \(m_1(P,K)\) is the angle-averaged kernel obtained from
+Eq.~\eqref{eq:stanford-mkp} and Eq.~\eqref{eq:angular-measure}. In the scalar
+benchmark the explicit expression is
+\begin{equation}
+  m_1(P,K)
+  =
+  \frac{3\lambda^2}{(2\pi)^3\beta}
+  \frac{K}{P E_P E_K}
+  \int_{|K-P|}^{K+P}\dd y\,
+  \mathcal B(P,K,y),
+  \label{eq:m1}
+\end{equation}
+with
+\begin{align}
+  \mathcal B(P,K,y)
+  &=
+  \frac{
+    \log\!\left[\sinh x^{+}_{+}/\sinh x^{+}_{-}\right]
+  }
+  {\sinh(\beta E_+/2)}
+  +
+  \frac{
+    \log\!\left[(1-e^{-2x^{-}_{+}})/(1-e^{2x^{-}_{-}})\right]
+  }
+  {\sinh(\beta E_-/2)},                                    \\
+  E_\pm &= |E_K\pm E_P|,                                    \\
+  x^{+}_{\pm}
+  &=
+  \frac{\beta}{4}
+  \left[
+    E_+
+    \pm y\sqrt{1+\frac{4m^2}{y^2-E_+^2}}
+  \right],                                                   \\
+  x^{-}_{\pm}
+  &=
+  \frac{\beta}{4}
+  \left[
+    E_-
+    \pm y\sqrt{1+\frac{4m^2}{y^2-E_-^2}}
+  \right].
+  \label{eq:xpm-1d}
+\end{align}
+The apparent \(E_-=0\) singularity must be handled by an analytic limit, not by
+an arbitrary regulator.
+
+Map the half-line to the unit interval:
+\begin{equation}
+  P(u)=P_0\frac{u}{1-u},
+  \qquad 0<u<1.
+  \label{eq:half-line-map}
+\end{equation}
+Use \(P_0\simeq 3m\) in the small-mass benchmark and \(P_0\simeq m\) away from
+that regime. Define
+\begin{equation}
+  f_2(u)=(1-u)^{-1}P(u)f(P(u)),
+  \label{eq:f2}
+\end{equation}
+\begin{equation}
+  m_2(u,v)
+  =
+  P_0
+  \frac{(1-u)(1-v)}{P(u)K(v)}
+  m_1(P(u),K(v)),
+  \label{eq:m2}
+\end{equation}
+and
+\begin{equation}
+  D(u)
+  =
+  \frac{P(u)}{1-u}
+  \sinh\frac{\beta E_{P(u)}}{2}.
+  \label{eq:D}
+\end{equation}
+Then
+\begin{equation}
+  \lambda_L f_2(u)
+  =
+  \int_0^1\dd v\,m_2(u,v)
+  \left[
+    f_2(v)-\frac{D(v)}{3D(u)}f_2(u)
+  \right].
+  \label{eq:symmetric-equation}
+\end{equation}
+After quadrature with nodes \(u_i\) and weights \(w_i\), assemble
+\begin{equation}
+  M_{ij}
+  =
+  w_j m_2(u_i,u_j)
+  -
+  \delta_{ij}
+  \sum_{\ell}
+  w_\ell m_2(u_i,u_\ell)
+  \frac{D(u_\ell)}{3D(u_i)}.
+  \label{eq:discrete-matrix}
+\end{equation}
+The largest positive eigenvalue of \(M\) is the numerical estimate of
+\(\lambda_L\). The code should symmetrize only after applying the mathematically
+correct similarity/weight transform; otherwise it should explicitly report the
+antisymmetric residual.
+
+\section{Leading-Behavior Extraction}
+
+The extractor should keep the symbolic prefactor of each kernel contribution.
+For a weak-coupling family of kernels,
+\begin{equation}
+  M
+  =
+  \sum_\gamma
+  c_\gamma
+  \beta^{-1}
+  \prod_\alpha
+  \bigl(g_\alpha\beta^{\Delta_\alpha}\bigr)^{n_{\gamma\alpha}}
+  (\beta m_{\eff})^{-r_\gamma}
+  \widehat M_\gamma(\beta m_{\eff},\hbox{dimensionless ratios}),
+  \label{eq:scaling-kernel}
+\end{equation}
+the leading term is selected by the requested asymptotic ordering of
+\(g_\alpha\), \(1/N\), and \(\beta m_{\eff}\). Numerically, this is checked by
+log--log fits:
+\begin{equation}
+  \nu_g =
+  \frac{\partial\log\lambda_L}{\partial\log g},
+  \qquad
+  \nu_m =
+  \frac{\partial\log\lambda_L}{\partial\log m_{\eff}},
+  \qquad
+  \nu_\beta =
+  \frac{\partial\log\lambda_L}{\partial\log \beta}.
+  \label{eq:exponent-fits}
+\end{equation}
+
+For the Stanford benchmark,
+\begin{equation}
+  \lambda_L
+  =
+  c_m\,\frac{\lambda^2}{\beta^2 m}
+  +\cdots,
+  \qquad
+  c_m\simeq 0.025,
+  \qquad m\beta\ll 1,\ m\neq 0.
+  \label{eq:stanford-leading-massive}
+\end{equation}
+For the massless theory,
+\begin{equation}
+  m_{\eff}=m_{\thm}
+  =
+  \sqrt{\frac{2\lambda}{3\beta^2}},
+  \qquad
+  \lambda_L
+  =
+  c_m\sqrt{\frac{3}{2}}\,
+  \frac{\lambda^{3/2}}{\beta}
+  \simeq
+  0.031\,\frac{\lambda^{3/2}}{\beta}.
+  \label{eq:stanford-leading-massless}
+\end{equation}
+
+\section{Implementation Algorithm}
+
+\begin{enumerate}
+  \item Parse the model into the data of Eq.~\eqref{eq:model}.
+  \item Build \(S_{\SK}\) by Eq.~\eqref{eq:sk-action}; verify
+  Eq.~\eqref{eq:unitarity-check} and the odd-\(a\) selection rule.
+  \item Derive SK vertices from Eq.~\eqref{eq:sk-vertex}; store branch
+  coefficients separately from couplings, signs, and index tensors.
+  \item Derive \(G_{\R}\), \(\rho\), and \(\widetilde G\) from
+  Eqs.~\eqref{eq:spectral-retarded}--\eqref{eq:half-wightman}.
+  \item Compute required thermal masses and widths using
+  Eqs.~\eqref{eq:thermal-mass-general} and~\eqref{eq:width}.
+  \item Enumerate leading rung graphs and construct \(R_{AB}\) from
+  Eq.~\eqref{eq:general-rung}.
+  \item Put rails on shell and assemble \(M\) using
+  Eqs.~\eqref{eq:gain-kernel}--\eqref{eq:M-general}.
+  \item Reduce by symmetries: rotational invariance, species blocks, charge
+  sectors, and large-\(N\) planar sectors.
+  \item Discretize the resulting integral equation. For the scalar benchmark,
+  use Eqs.~\eqref{eq:half-line-map}--\eqref{eq:discrete-matrix}.
+  \item Extract \(\lambda_L\), eigenvectors, scaling exponents, and benchmark
+  residuals.
+\end{enumerate}
+
+\section{Required Checks}
+
+The implementation should fail closed if any of these checks fails:
+\begin{itemize}
+  \item \(S_{\SK}[\phi_a=0]=0\).
+  \item No interaction vertex has an even number of \(a\)-legs.
+  \item KMS relation: \(\widetilde G(k)=\rho(k)/(2\sinh(\beta k^0/2))\) for
+  bosons.
+  \item Rung support and theta-function regions agree with the on-shell
+  kinematics.
+  \item Widths satisfy \(\Gamma_a(\mathbf p)\ge 0\).
+  \item The discretized operator reproduces the Stanford coefficients
+  \(0.025\) and \(0.031\) within stated numerical tolerance.
+  \item Leading exponents from symbolic prefactors agree with numerical
+  log--log fits.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{Stanford:2015owe}
+Douglas Stanford,
+\emph{Many-body chaos at weak coupling},
+arXiv:1512.07687,
+\href{https://arxiv.org/abs/1512.07687}{https://arxiv.org/abs/1512.07687}.
+\end{thebibliography}
+
+\end{document}

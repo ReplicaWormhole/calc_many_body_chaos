@@ -45,6 +45,7 @@
 - `output/commutator_contrib_translated.pdf`
 - `output/commutator_contrib_all_L1.tex`
 - `output/commutator_contrib_all_L1.pdf`
+- `check_calculation/internal_logic_review.md`
 
 ## Tests Added
 - `tests/test_calc_commutator_contrib.py`
@@ -55,6 +56,7 @@
 ## Verified Commands
 - `python3 -m unittest discover -s tests -p 'test_calc_commutator_contrib*.py'`
 - `python3 -m unittest discover -s tests -p 'test_generate_all_loop_topologies_script.py'`
+- `python3 -m unittest discover -s tests -p 'test_*.py'`
 - `python3 scripts/calc_commutator_contrib.py --input loop_data.txt --output output/commutator_contrib_translated.tex`
 - `python3 scripts/calc_commutator_contrib_all_L1.py --input all_L_1.txt --output output/commutator_contrib_all_L1.tex`
 - `python3 scripts/calc_commutator_contrib_dynamic.py -L 0 --generated-dir /tmp/calc_mbcwc_verify/L0 --output /tmp/calc_mbcwc_verify/commutator_contrib_dynamic_L0.tex`
@@ -97,9 +99,22 @@
 - The fixed external assignment is:
   - `<phi_r^1(x,t) phi_a^1(0) phi_r^2(x,t) phi_a^2(0)>`
 
+## Internal Logic Review
+- Wrote a review at `check_calculation/internal_logic_review.md`.
+- Main conclusion: the current implementation is useful for low-order structural inspection, but it is not yet a faithful rederivation of the calculation in `source/weak.tex`.
+- Critical issue: `scripts/calc_commutator_contrib.py` is not graph-invariant.
+  - External assignment currently depends on external propagator appearance order.
+  - `N_c` loop counting also depends on incidental propagator ordering at internal vertices.
+  - Reordering the same `Topology[...]` text can change the reported surviving terms and, in some cases, the reported `N_c` power.
+- Critical issue: the pipeline does not include symmetry-factor / insertion-multiplicity information from a FeynArts amplitude stage, so exact coefficient claims should not be trusted.
+- Medium issue: `check_calculation/scripts/build_claim_artifacts.py` reports incorrect `L=3` internal-half-edge metadata when `enumerate_terms=False`.
+- Test status: the full current suite passes, but it does not cover graph-invariance or exact large-`N` counting correctness.
+
 ## Current Blocker
-- No current blocker is known in the verified `L=0,1,2` range.
-- The remaining unverified area is higher-loop runtime scaling in the Python SK assignment enumeration, not headless Wolfram topology/image generation.
+- Current blocker: the symbolic pipeline should not be treated as coefficient-accurate until the graph-order dependence is removed.
+- The remaining unverified area is not only higher-loop runtime scaling; it is also the correctness of external-leg assignment, `N_c` counting, and coefficient reconstruction.
 
 ## Next Step
-- If higher-loop runs become too slow, profile the Python contribution enumeration separately from the Wolfram generation stage.
+- First fix the graph-invariance bugs in `scripts/calc_commutator_contrib.py`.
+- Add regression tests that permute propagators within the same topology block and require identical external mapping, `N_c` power, and translated terms.
+- Only after that should coefficient-level comparisons to the paper be treated as meaningful.

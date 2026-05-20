@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{Journal Entry: Current Project Status}
+\author{calc\_mbcwc}
+\date{2026-05-20}
+
+\begin{document}
+\maketitle
+
+\section*{Status}
+
+The project now has a working first benchmark target for the Stanford matrix
+\(\Phi^4\) Schwinger-Keldysh calculation. The core result is implemented in
+\texttt{scripts/stanford\_phi4\_kernel.py} and tested in
+\texttt{tests/test\_stanford\_phi4\_kernel.py}.
+
+The benchmark is model driven. It starts from the Stanford matrix \(\Phi^4\)
+model, applies the standard Schwinger-Keldysh branch lift
+\[
+  \phi_1 = \phi_r + \frac{1}{2}\phi_a,
+  \qquad
+  \phi_2 = \phi_r - \frac{1}{2}\phi_a,
+\]
+derives the normalized branch-difference coefficients of
+\[
+  \phi_1^4 - \phi_2^4,
+\]
+records the on-shell ladder-kernel equations from the Stanford paper, and
+evaluates the leading fixed-mass and thermal-mass-improved massless behavior.
+
+\section*{Recovered Stanford Answers}
+
+The current pure-Python benchmark reproduces
+\begin{align}
+  m_{\mathrm{th}}^2 &= \frac{2\lambda}{3\beta^2},\\
+  \lambda_L &\simeq 0.025\,\frac{\lambda^2}{\beta^2 m},
+  \qquad m\beta \ll 1,\\
+  \lambda_L &\simeq 0.031\,\frac{\lambda^{3/2}}{\beta},
+  \qquad m = 0,
+\end{align}
+where the massless expression uses the thermal-mass improvement.
+
+The Appendix kernel diagonalization also reproduces the small-mass coefficient
+numerically. For the tested \(m\beta=0.1\) grid,
+\[
+  \frac{\beta^2 m}{\lambda^2}\lambda_L = 0.0256986096,
+\]
+consistent with the quoted Stanford value near \(0.025\).
+
+\section*{Math Audit}
+
+The math audit found and corrected important numerical details. The diagonal
+\(E_-=0\) case in the Appendix kernel now uses the analytic limit rather than
+an artificial epsilon. The inverse hyperbolic-sine factors are evaluated
+stably at large argument. The default momentum mapping scale \(P_0\) is now
+mass-regime aware, using the Stanford recommendation \(P_0 \approx 3m\) in the
+small-mass regime and \(P_0 \approx m\) otherwise. The numerical matrix is
+checked for symmetry before using a symmetric eigensolver.
+
+The symbolic audit clarified that the quantities previously called SK vertex
+weights are normalized branch-difference coefficients only. They do not include
+the interaction sign, coupling, or real-time factor required for full Feynman
+vertex factors. The code now exposes that distinction in the pipeline payload.
+
+\section*{Verification}
+
+The current verification evidence is:
+\begin{itemize}
+  \item \texttt{python3 -m unittest tests/test\_stanford\_phi4\_kernel.py}:
+  20 tests pass.
+  \item A scoped non-Wolfram regression suite: 51 tests pass.
+  \item Full discovery still has known \texttt{WolframKernel}
+  metadata-export segfaults in the Wolfram-dependent tests. Those failures are
+  separate from the pure-Python Stanford benchmark and remain a runtime
+  stability issue to solve later.
+\end{itemize}
+
+\section*{Next Target}
+
+The next research target is to connect the benchmark pipeline to a general
+model-to-Schwinger-Keldysh-kernel pipeline. The current Stanford implementation
+is an acceptance reference: future generalization should keep reproducing these
+answers automatically while replacing Stanford-specific assumptions with data
+derived from an input model.
+
+\end{document}

@@ -1,0 +1,113 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+
+\title{Manual Audit Report For Core Derivation Claims In \texttt{source/weak.tex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Scope}
+This report audits the core derivation in \texttt{source/weak.tex} up to the late-time homogeneous ladder equation. It does not audit the pinching replacements, the on-shell reduction, the one-dimensional kernel reduction, or the numerical extraction of $\lambda_L$. The claim inventory is fixed in \texttt{check\_calculation/claim\_list.md}. Generated evidence is organized under \texttt{check\_calculation/artifacts/}, but the verdicts below are manual judgments rather than automatic script outputs.
+
+\subsection*{C1. Free-Theory Contraction Structure}
+\textbf{Paper claim.} In $\S 2.1$, two of the three free Wick pairings cancel in the squared commutator, and the only surviving pairing gives the two-retarded-rail structure $G_R(x_1,x_2)G_R(x_3,x_4)$, which becomes $-N^{-2}\int d^3\mathbf{x}\,G_R(\mathbf{x},t)^2$ after the coordinate identifications and overall normalization.
+
+\textbf{Artifacts.} \texttt{artifacts/C1\_free\_theory/summary.md}; \texttt{artifacts/C1\_free\_theory/free\_contractions.md}.
+
+\textbf{Manual comparison.} The connected FeynArts $2\to2$ loop-zero topology is not the right witness here, because the paper's free contribution is disconnected. The direct external-pairing witness therefore matters. Using the same contour and $r/a$ translation table as the existing Python translator, the three Wick pairings reduce to:
+\[
+(1,2)(3,4)\mapsto G_R(x_1,x_2)\,G_R(x_3,x_4),\qquad
+(1,3)(2,4)\mapsto 0,\qquad
+(1,4)(2,3)\mapsto 0.
+\]
+The two vanishing pairings fail because they require cross-contour propagators with an $a$ endpoint, which the translator sets to zero. The surviving pairing is exactly the two-retarded-rail structure described in the paper.
+
+\textbf{Verdict.} match
+
+\subsection*{C2. Order-$\lambda$ Correction Is A Self-Energy Dressing, With Retarded Rail}
+\textbf{Paper claim.} In $\S 2.2$ and Fig.~1b, the first correction is a one-loop self-energy dressing, and the contour sum turns the horizontal line into a retarded propagator.
+
+\textbf{Artifacts.} \texttt{artifacts/C2\_order\_lambda/overview.md}; \texttt{artifacts/C2\_order\_lambda/summaries/topology1.md}; \texttt{artifacts/C2\_order\_lambda/summaries/topology3.md}; \texttt{artifacts/C2\_order\_lambda/summaries/topology4.md}.
+
+\textbf{Manual comparison.} The nonzero $L=1$ witnesses do show the expected rail selection. In particular, topology 3 contains one surviving translated term,
+\[
+G^<(z_1,z_2)\,G^<(z_1,z_2)\,G_A(x_2,z_1)\,G_A(x_4,z_2)\,G_R(x_1,z_1)\,G_R(x_3,z_2),
+\]
+so the two side propagators sourced by the $r$-type external insertions are retarded. The other nonzero $L=1$ representatives similarly keep one retarded side rail while the contour-separated bridge is carried by Wightman factors. However, the raw translated expressions do not collapse directly to the single compact self-energy picture of Fig.~1b; they still display the contour-expanded advanced pieces on the opposite side.
+
+\textbf{Verdict.} partial
+
+\textbf{Diagnosis.} The retarded-rail part is directly supported, but the ``one-loop self-energy diagram'' wording already packages together the contour sum and a graphical simplification that the raw symbolic terms have not yet performed.
+
+\subsection*{C3. Order-$\lambda^2$ Splits Into Same-Fold Self-Energy Dressings And Opposite-Fold One-Rung Contributions}
+\textbf{Paper claim.} In $\S 2.3$ and Fig.~3, same-fold insertions give further self-energy dressings, while opposite-fold insertions produce the qualitatively new one-rung sector.
+
+\textbf{Artifacts.} \texttt{artifacts/C3\_order\_lambda2\_split/overview.md}; \texttt{artifacts/C3\_order\_lambda2\_split/summaries/topology40.md}; \texttt{artifacts/C3\_order\_lambda2\_split/summaries/topology12.md}; \texttt{artifacts/C3\_order\_lambda2\_split/summaries/topology25.md}.
+
+\textbf{Manual comparison.} The $L=2$ overview exhibits a sharp split among the nonzero topologies. There is a lower-index-power class with net $N_c^{-4}$ or $N_c^{-3}$ scaling, represented by topology 40, and a higher-index-power class with net $N_c^{-2}$ scaling, represented by topologies 12 and 25. The lower-power class looks like rail dressings plus local insertions; topology 40, for example, has a single surviving translated term with one retarded rail, one same-fold $G_K$, and no large planar enhancement. By contrast, the $N_c^{-2}$ class has many surviving terms and a clear bridge sector built from contour-separated Wightman factors, which is the expected location of the one-rung contribution. This is strong low-order evidence for the paper's structural split.
+
+\textbf{Verdict.} partial
+
+\textbf{Diagnosis.} The split is visible, but the existing symbolic summaries do not label vertices by ``same fold'' versus ``opposite fold'' directly. That last identification is inferred from the translated propagator structure and the planar index counting.
+
+\subsection*{C4. One-Rung Combinatoric And Index-Counting Factor}
+\textbf{Paper claim.} Fig.~5 and the displayed one-rung formula in $\S 2.3$ assign the one-rung sector a total factor of $48$ after dividing by the overall $N^{-4}$ normalization.
+
+\textbf{Artifacts.} \texttt{artifacts/C4\_one\_rung\_factor/overview.md}; \texttt{artifacts/C4\_one\_rung\_factor/summaries/topology12.md}; \texttt{artifacts/C4\_one\_rung\_factor/summaries/topology18.md}; \texttt{artifacts/C4\_one\_rung\_factor/summaries/topology25.md}.
+
+\textbf{Manual comparison.} The audit does recover a distinct candidate one-rung sector: the net-$N_c^{-2}$ topologies at $L=2$. That part is consistent with the paper's claim that the one-rung diagrams are the planar-enhanced order-$\lambda^2$ contribution. What the current translator does \emph{not} recover directly is the paper's precise factor $48$. The candidate topologies appear with different numbers of surviving translated terms, and the raw coefficients are powers such as $64\,i\,g_2^3$ rather than an immediate ``three index structures times $4\cdot4$ rotations'' decomposition.
+
+\textbf{Verdict.} partial
+
+\textbf{Diagnosis.} The current evidence is enough to isolate the right planar sector, but not enough to reconstruct the exact combinatoric factor as stated. The missing step is likely the paper's planar rotation and external-cap counting convention, which is not encoded one-for-one in the translator's term aggregation.
+
+\subsection*{C5. Propagator-Type Claim: Rails Retarded, Rungs Wightman}
+\textbf{Paper claim.} The overview paragraph of Section 2, Fig.~3b, and the displayed one-rung formula in $\S 2.3$ state that the side rails become retarded propagators, while the rung is built from Wightman correlators.
+
+\textbf{Artifacts.} \texttt{artifacts/C5\_propagator\_types/summaries/L1\_topology3.md}; \texttt{artifacts/C5\_propagator\_types/summaries/L2\_topology12.md}.
+
+\textbf{Manual comparison.} The evidence supports the qualitative distinction, but not in the paper's fully compressed form. At $L=1$, topology 3 contains exactly two Wightman factors and two retarded rails, with the opposite-side factors appearing as advanced propagators:
+\[
+G^<(z_1,z_2)\,G^<(z_1,z_2)\,G_A(x_2,z_1)\,G_A(x_4,z_2)\,G_R(x_1,z_1)\,G_R(x_3,z_2).
+\]
+At $L=2$, the candidate one-rung representative again shows contour-separated Wightman factors together with retarded side propagation, but the raw term list still contains $G_A$ and $G_K$ insertions. So the translator already sees the Wightman bridge and the retarded rail support, yet it has not reduced the full contour-expanded answer to the paper's compact rail/rung statement.
+
+\textbf{Verdict.} partial
+
+\textbf{Diagnosis.} The claim holds after the contour-sum simplification used in the paper. The raw generated terms expose the same ingredients, but still retain unreduced advanced and Keldysh pieces.
+
+\subsection*{C6. Higher Orders Generate The Dressed Ladder Family}
+\textbf{Paper claim.} In $\S 2.4$ and Fig.~6, the leading higher-order diagrams are dressed ladders, and the ladder family persists when one adds more rungs.
+
+\textbf{Artifacts.} \texttt{artifacts/C6\_higher\_order\_ladders/summaries/L2\_topology12.md}; \texttt{artifacts/C6\_higher\_order\_ladders/blocks/L3\_topology128\_block.txt}; \texttt{artifacts/C6\_higher\_order\_ladders/summaries/L3\_topology128.md}.
+
+\textbf{Manual comparison.} The selected $L=3$ witness,
+\[
+\texttt{Topology[8][Incoming, Incoming, Outgoing, Outgoing, Internal, Internal, Loop[1], Loop[2], Loop[3], Loop[3]]},
+\]
+extends the $L=2$ one-rung-type pattern by introducing one additional internal vertex and a doubled bridge between the right-side nodes while keeping the side self-energy decorations. This is exactly the sort of finite-order persistence one wants to see for a ladder family. The evidence is therefore positive as a low-order witness: there are explicit $L=2$ and $L=3$ representatives whose graph structure is naturally read as ``previous ladder plus one more rung/decorated insertion.''
+
+\textbf{Verdict.} partial
+
+\textbf{Diagnosis.} The claim is only supported here as low-order structural evidence. This pass does not, and cannot, promote that evidence into an all-orders proof.
+
+\subsection*{C7. Late-Time Passage From The Inhomogeneous Recursion To The Homogeneous Ladder Equation}
+\textbf{Paper claim.} Between the inhomogeneous recursion and the subsequent homogeneous ladder equation in $\S 2.4$, the paper drops the zero-rung term on the grounds that the growing late-time part dominates while the inhomogeneous term decays.
+
+\textbf{Artifacts.} \texttt{artifacts/C7\_late\_time\_homogeneous\_limit/summaries/L2\_topology12.md}; \texttt{artifacts/C7\_late\_time\_homogeneous\_limit/summaries/L3\_topology128.md}; \texttt{artifacts/C7\_late\_time\_homogeneous\_limit/blocks/L3\_topology128\_block.txt}.
+
+\textbf{Manual comparison.} The finite-order evidence is consistent with a recursive rung-insertion picture: the $L=3$ witness has the structure expected from adding another rung or dressing to the $L=2$ witness. That supports the use of a recursion relation. What the artifacts do \emph{not} test directly is the asymptotic argument used to discard the inhomogeneous term. The statement that the zero-rung contribution decays while the recursive piece controls the growth exponent is a late-time analytic approximation, not something mechanically decided by the symbolic topology listings alone.
+
+\textbf{Verdict.} partial
+
+\textbf{Diagnosis.} This claim only holds after an omitted later step: the paper's late-time growth argument. The finite-order topology evidence supports the recursive setup but does not by itself prove the homogeneous reduction.
+
+\section*{Overall Assessment}
+The strongest matches are the free-theory contraction structure and the existence of a distinct planar-enhanced one-rung sector at order $\lambda^2$. The rest of the core derivation is supported only partially by the current mechanical evidence, mostly because the paper's statements are already diagrammatically compressed relative to the raw contour-expanded symbolic terms. No outright contradiction was found in this pass, but several claims rely on simplifications or asymptotic projections that are not themselves directly encoded in the generated artifacts.
+
+\end{document}

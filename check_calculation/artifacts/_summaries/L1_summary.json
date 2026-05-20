@@ -1,0 +1,172 @@
+[
+  {
+    "index": 1,
+    "feynarts_topology_id": 2,
+    "n_props": 6,
+    "n_internal_vertices": 2,
+    "n_internal_half_edges": 8,
+    "total_assignments": 1024,
+    "surviving_assignments": 256,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 2,
+    "propagator_histogram": {
+      "G^<": 2,
+      "G^>": 2,
+      "G_A": 5,
+      "G_R": 3
+    },
+    "term_coefficients": [
+      "-16*g_2**2",
+      "-16*g_2**2"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^>\\left(x_3,z_{1}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 2,
+    "feynarts_topology_id": 2,
+    "n_props": 6,
+    "n_internal_vertices": 2,
+    "n_internal_half_edges": 8,
+    "total_assignments": 1024,
+    "surviving_assignments": 256,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 3,
+    "feynarts_topology_id": 2,
+    "n_props": 6,
+    "n_internal_vertices": 2,
+    "n_internal_half_edges": 8,
+    "total_assignments": 1024,
+    "surviving_assignments": 256,
+    "nc_raw_power": 0,
+    "nc_net_power": -4,
+    "nonzero_terms": 1,
+    "propagator_histogram": {
+      "G^<": 2,
+      "G_A": 2,
+      "G_R": 2
+    },
+    "term_coefficients": [
+      "-16*g_2**2"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G^<\\left(z_{1},z_{2}\\right)",
+        "G_A\\left(x_2,z_{1}\\right)",
+        "G_A\\left(x_4,z_{2}\\right)",
+        "G_R\\left(x_1,z_{1}\\right)",
+        "G_R\\left(x_3,z_{2}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 4,
+    "feynarts_topology_id": 2,
+    "n_props": 6,
+    "n_internal_vertices": 2,
+    "n_internal_half_edges": 8,
+    "total_assignments": 1024,
+    "surviving_assignments": 256,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 2,
+    "propagator_histogram": {
+      "G^<": 2,
+      "G^>": 2,
+      "G_A": 5,
+      "G_R": 3
+    },
+    "term_coefficients": [
+      "-16*g_2**2",
+      "-16*g_2**2"
+    ],
+    "term_signatures": [
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{1},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_A\\left(z_{2},z_{2}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)"
+      ],
+      [
+        "G^<\\left(x_1,z_{1}\\right)",
+        "G^>\\left(z_{1},z_{2}\\right)",
+        "G_A\\left(x_2,z_{2}\\right)",
+        "G_A\\left(x_4,z_{1}\\right)",
+        "G_R\\left(x_3,z_{1}\\right)",
+        "G_R\\left(z_{2},z_{2}\\right)"
+      ]
+    ]
+  },
+  {
+    "index": 5,
+    "feynarts_topology_id": 2,
+    "n_props": 6,
+    "n_internal_vertices": 2,
+    "n_internal_half_edges": 8,
+    "total_assignments": 1024,
+    "surviving_assignments": 256,
+    "nc_raw_power": 0,
+    "nc_net_power": -4,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 6,
+    "feynarts_topology_id": 2,
+    "n_props": 6,
+    "n_internal_vertices": 2,
+    "n_internal_half_edges": 8,
+    "total_assignments": 1024,
+    "surviving_assignments": 256,
+    "nc_raw_power": 0,
+    "nc_net_power": -4,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  },
+  {
+    "index": 7,
+    "feynarts_topology_id": 2,
+    "n_props": 6,
+    "n_internal_vertices": 2,
+    "n_internal_half_edges": 8,
+    "total_assignments": 1024,
+    "surviving_assignments": 256,
+    "nc_raw_power": 1,
+    "nc_net_power": -3,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  }
+]

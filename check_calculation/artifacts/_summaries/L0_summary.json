@@ -1,0 +1,17 @@
+[
+  {
+    "index": 1,
+    "feynarts_topology_id": 1,
+    "n_props": 4,
+    "n_internal_vertices": 1,
+    "n_internal_half_edges": 4,
+    "total_assignments": 32,
+    "surviving_assignments": 16,
+    "nc_raw_power": 0,
+    "nc_net_power": -4,
+    "nonzero_terms": 0,
+    "propagator_histogram": {},
+    "term_coefficients": [],
+    "term_signatures": []
+  }
+]
